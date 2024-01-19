@@ -1,5 +1,3 @@
-# algorithm-tailwind-express-ejs
-
 # Basic Setup
 ```
 npm init -y
