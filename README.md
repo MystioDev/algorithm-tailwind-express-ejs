@@ -29,3 +29,18 @@ module.exports = {
     "build": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/styles.css && nodemon index.js"
   },
 ```
+
+## Run
+```
+npm run dev
+```
+
+## Build
+```
+npm run build
+```
+
+## Initalize TailwindCSS (NOT necessary)
+```
+npm run initCss
+```
