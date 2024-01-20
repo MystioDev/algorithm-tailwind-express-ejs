@@ -6,7 +6,6 @@ const path = require("path");
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
-app.use("/favicon.ico", express.static("/public/images/icon_1024_1024.png"));
 
 app.get("/", (req, res) => {
   res.render("HomePage", {
