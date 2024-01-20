@@ -11,9 +11,17 @@
       type="image/x-icon"
     />
   </head>
-  <body class="bg-slate-900">
-    <h1 class="text-white"><%= locals.title %></h1>
+  <body class="bg-slate-900 relative min-h-screen">
+    <%- include('../views/components/BlurFull.ejs') %>
 
-    <%- include("../views/templates/Home/HeroSection.ejs") -%>
+    <!---->
+    <%- include('../views/components/NavBar.ejs') %>
+
+    <!---->
+    <%- include('../views/templates/Home/HeroSection.ejs') %>
+
+    <!---->
+    <%- include('../views/components/Ellipse.ejs', { width: "5", height: "2",
+    top: "24", left: "24" }) %>
   </body>
 </html>
