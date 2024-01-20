@@ -6,16 +6,43 @@ const path = require("path");
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/favicon.ico", express.static("/public/images/icon_1024_1024.png"));
 
 app.get("/", (req, res) => {
   res.render("HomePage", {
-    title: "Hello World!",
-    url: req.protocol + "://" + req.headers.host,
+    title: " - Főoldal",
   });
+});
+
+app.get("/algorithms", (req, res) => {
+  res.render("AlgorithmPage", {
+    title: " - Algoritmusok",
+  });
+});
+
+app.get("/about", (req, res) => {
+  res.render("AboutPage", {
+    title: " - Rólunk",
+  });
+});
+
+app.get("/quiz", (req, res) => {
+  res.render("QuizPage", {
+    title: " - Testek, kvízek",
+  });
+});
+
+app.get("*", (req, res, next) => {
+  app.get("*", (request, respond, next) => {
+    respond.render("404", {
+      title: " - Az oldal nem található",
+    });
+  });
+  next();
 });
 
 app.listen(port, () => {
   console.log(
-    `\n\nApp is running on port ${port}:\n  url: http://localhost:${port}\n`
+    `\n\nAlgorithm ⚡️ App is running:\n\n  port: ${port}\n  url: http://localhost:${port}/\n  time: ${Date()}\n`
   );
 });
