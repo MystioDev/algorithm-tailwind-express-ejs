@@ -1,7 +1,7 @@
 {
   "name": "algorithm-tailwind-express-ejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "```\r npm init -y\r npm i express\r npm i ejs\r npm i nodemon --save-dev\r npx tailwindcss init\r npm i -D tailwindcss@latest postcss@latest autoprefixer@latest\r ```",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js --watch views -e ejs algorithm-tailwind-express-ejs/index.js --exec \"npm run build\"",
@@ -16,6 +16,17 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "nodemon": "^3.0.3",
+    "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MystioDev/algorithm-tailwind-express-ejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MystioDev/algorithm-tailwind-express-ejs/issues"
+  },
+  "homepage": "https://github.com/MystioDev/algorithm-tailwind-express-ejs#readme"
 }
