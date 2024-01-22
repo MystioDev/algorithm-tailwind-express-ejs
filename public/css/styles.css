@@ -662,6 +662,10 @@ video {
   margin-top: 6rem;
 }
 
+.mt-48 {
+  margin-top: 12rem;
+}
+
 .flex {
   display: flex;
 }
@@ -982,10 +986,4 @@ video {
 .hover\:text-sky-500:hover {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
-}
-
-@media (min-width: 640px) {
-  .sm\:mt-48 {
-    margin-top: 12rem;
-  }
 }
