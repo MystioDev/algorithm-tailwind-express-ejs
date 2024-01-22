@@ -27,7 +27,7 @@ app.get("/about", (req, res) => {
 
 app.get("/quiz", (req, res) => {
   res.render("QuizPage", {
-    title: " - Testek, kvízek",
+    title: " - Tesztek, kvízek",
   });
 });
 
