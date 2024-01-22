@@ -642,6 +642,10 @@ video {
   margin-right: auto;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -1017,6 +1021,10 @@ video {
 
 .text-opacity-60 {
   --tw-text-opacity: 0.6;
+}
+
+.text-opacity-80 {
+  --tw-text-opacity: 0.8;
 }
 
 .underline {
