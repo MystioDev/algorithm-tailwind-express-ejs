@@ -4,6 +4,8 @@
   <body class="bg-slate-900">
     <%- include('../views/components/NavBar.ejs') %>
 
-    <!---->
+    <% data.forEach(element => { %>
+     <div class=""><%= element.name %></div>
+    <% }) %>
   </body>
 </html>
