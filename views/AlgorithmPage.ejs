@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <%- include('../views/components/Head.ejs') %>
+<%- include('../views/components/Head.ejs') %>
+
   <body class="bg-slate-900 overflow-x-hidden">
     <%- include('../views/components/BlurFull.ejs') %>
 
-    <%- include('../views/components/NavBar.ejs') %>
+      <%- include('../views/components/NavBar.ejs') %>
 
-    <% data.forEach(element => { %>
-     <div class=""><%= element.name %></div>
-    <% }) %>
+
+        <%- include('../views/templates/Algorithm/Algorithmpage.ejs') %>
   </body>
+
 </html>

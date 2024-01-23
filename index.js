@@ -25,6 +25,13 @@ app.get("/about", (req, res) => {
   });
 });
 
+
+app.get("/algorithm", (req, res) => {
+  res.render("AlgorithmPage", {
+    title: " - Algoritm"
+  });
+});
+
 app.get("/quiz", (req, res) => {
   res.render("QuizPage", {
     title: " - Tesztek, kvízek",
