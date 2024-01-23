@@ -1,0 +1,29 @@
+<main class="flex flex-col justify-center items-center h-[80svh] relative">
+    <div
+      class="absolute inset-0 h-[100svh] w-auto bg-[url('/images/blob_bg.png')] bg-origin-padding -z-50"
+    ></div>
+    <img
+      src="/images/<%= locals.imageName %>"
+      alt="Oldal szinbólum"
+      class="mt-48 w-[86px] h-[86px]"
+    />
+  
+    <div class="mt-12 text-8xl text-white font-bold font-mono text-center">
+      <%= locals.title %>
+    </div>
+  
+    <div class="w-[670px] h-[91px] text-center mt-3 leading-7">
+      <div class="text-white text-opacity-50 text-[32px] font-bold font-mono">
+        <%= locals.desc %>
+      </div>
+    </div>
+  
+    <% if (locals.arrow === true) { %>
+        <img
+            src="/images/scroll_down.svg"
+            alt="Görgess tovább"
+            class="w-20 h-20 mt-24 animate-bounce"
+        />
+    <% } %>
+  </main>
+  
