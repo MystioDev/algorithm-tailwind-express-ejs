@@ -21,9 +21,7 @@ exports.algorithms = (req, res) => {
 
     con.query(
       "SELECT `name`, `description`, `level`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;",
-      (error, respond, fields) => {
-        console.log(fields);
-
+      (error, respond) => {
         res.render("AlgorithmPage", {
           title: " - Algoritmusok",
           data: respond,
