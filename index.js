@@ -15,6 +15,12 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/algorithm", (req, res) => {
+  res.render("AlgorithmPage", {
+    title: " - Algoritm"
+  });
+});
+
 app.get("/algorithms", (req, res) => {
   algorithms.algorithms(req, res);
 });

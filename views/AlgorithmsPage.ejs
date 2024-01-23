@@ -17,5 +17,9 @@
     <% data.forEach(element => { %>
      <div class=""><%= element.name %></div>
     <% }) %>
+
+    <%- include('../views/components/LevelTitleBadge.ejs', {
+        content: "Ir."
+    }) %>
   </body>
 </html>
