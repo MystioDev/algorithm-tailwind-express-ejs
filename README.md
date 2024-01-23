@@ -4,6 +4,7 @@
 npm init -y
 npm i express
 npm i ejs
+npm i mysql
 npm i nodemon --save-dev
 npx tailwindcss init
 npm i -D tailwindcss@latest postcss@latest autoprefixer@latest
