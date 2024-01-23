@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <%- include('../views/components/Head.ejs') %>
+  <body class="bg-slate-900 overflow-x-hidden">
+    <%- include('../views/components/BlurFull.ejs') %>
+
+    <%- include('../views/components/NavBar.ejs') %>
+
+    <%- include('../views/components/SiteHeroPage.ejs', {
+      title: "Algoritmusok",
+      desc: "Leírás bruhuhuhuuh uasfguasfas",
+      arrow: true,
+      imageName: "icon_1024_1024_transparent.png"
+    }) %>
+
+    <% data.forEach(element => { %>
+     <div class=""><%= element.name %></div>
+    <% }) %>
+  </body>
+</html>
