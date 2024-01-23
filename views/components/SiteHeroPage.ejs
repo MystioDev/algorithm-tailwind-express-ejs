@@ -25,4 +25,8 @@
     class="w-20 h-20 mt-24 animate-bounce"
   />
   <% } %>
+
+  <% if (locals.sideBar === true) { %>
+    <%- include('./AskHelp.ejs') %>
+  <% } %>
 </main>
