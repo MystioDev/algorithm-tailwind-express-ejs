@@ -686,6 +686,10 @@ video {
   margin-top: 6rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-48 {
   margin-top: 12rem;
 }
@@ -1019,6 +1023,10 @@ video {
 
 .font-normal {
   font-weight: 400;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
 }
 
 .tracking-\[14\.40px\] {
