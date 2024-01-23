@@ -6,13 +6,6 @@
 
     <%- include('../views/components/NavBar.ejs') %>
 
-    <%- include('../views/components/SiteHeroPage.ejs', {
-      title: "Algoritmusok",
-      desc: "Leírás bruhuhuhuuh uasfguasfas",
-      arrow: false,
-      imageName: "icon_1024_1024_transparent.png"
-    }) %>
-
     <% data.forEach(element => { %>
      <div class=""><%= element.name %></div>
     <% }) %>
