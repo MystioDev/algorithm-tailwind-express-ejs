@@ -654,6 +654,10 @@ video {
   margin-right: auto;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -692,10 +696,6 @@ video {
 
 .mt-48 {
   margin-top: 12rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .flex {
@@ -752,6 +752,10 @@ video {
 
 .h-\[70px\] {
   height: 70px;
+}
+
+.h-\[76px\] {
+  height: 76px;
 }
 
 .h-\[80px\] {
@@ -844,6 +848,10 @@ video {
 
 .w-\[670px\] {
   width: 670px;
+}
+
+.w-\[76px\] {
+  width: 76px;
 }
 
 .w-\[86px\] {

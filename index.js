@@ -38,6 +38,7 @@ app.get("/algorithm", (req, res) => {
   });
 });
 
+
 app.get("/quiz", (req, res) => {
   res.render("QuizPage", {
     title: " - Tesztek, kvízek",
