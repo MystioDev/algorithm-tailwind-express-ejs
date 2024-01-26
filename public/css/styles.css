@@ -1026,6 +1026,10 @@ video {
   background-image: url('/images/purple_ellipse.png');
 }
 
+.bg-\[url\(\'\/images\/red_ellipse\.png\'\)\] {
+  background-image: url('/images/red_ellipse.png');
+}
+
 .bg-\[url\(\'\/images\/yellow_ellipse\.png\'\)\] {
   background-image: url('/images/yellow_ellipse.png');
 }
