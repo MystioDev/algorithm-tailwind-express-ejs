@@ -3,4 +3,7 @@
   <span class="text-center text-white text-[32px] font-bold font-mono"
     ><%= locals.title %></span
   >
+
+  <% if (locals.LevelTitleBadge === true) { %> <%-
+  include('./LevelTitleBadge.ejs') %> <% } %>
 </div>
