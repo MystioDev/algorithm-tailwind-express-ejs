@@ -1,23 +1,18 @@
 <main class="flex flex-col justify-center items-center h-[80svh] relative">
-    <div class="absolute inset-0 h-[100svh] w-auto bg-[url('/images/blob_bg.png')] bg-origin-padding -z-50">
-    </div>
-    <%- include('../../components/LevelTitleBadge.ejs', {
-        content: "Jr."
-    }) %>
-    <div class="mt-12 text-8xl text-white font-bold font-mono text-center">
-        Lineáris Keresés
-    </div>
+    <%- include('../../components/LevelTitleBadge.ejs', { content: "Jr." }) %>
 
-    <div class="mt-12 w-[870px] text-center text-white text-opacity-50 text-[32px] font-bold font-mono">Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Doloremque
-        officiis veritatis mollitia nemo ad iure harum voluptates error dolorum
-        accusamus, quia placeat, veniam fugiat excepturi ex dicta. Dolores, illo
-        veniam? lo
-    </div>
+        <%- include('../../components/LevelAlgorithm.ejs', {AlgorithmName: "Lineáris Keresés" }) %>
+            <div class="mt-12 w-[870px] text-center text-white text-opacity-50 text-[32px] font-bold font-mono">Lorem
+                ipsum
+                dolor sit amet consectetur adipisicing elit. Doloremque
+                officiis veritatis mollitia nemo ad iure harum voluptates error dolorum
+                accusamus, quia placeat, veniam fugiat excepturi ex dicta. Dolores, illo
+                veniam? lo
+            </div>
 
-    <div class="">
+            <div class="">
 
-        <%= locals.jzahbsgu || "lorem ipsum" %>
+                <%= locals.jzahbsgu || "lorem ipsum" %>
 
-    </div>
+            </div>
 </main>
