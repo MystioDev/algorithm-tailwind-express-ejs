@@ -722,6 +722,10 @@ video {
   height: 100svh;
 }
 
+.h-\[248px\] {
+  height: 248px;
+}
+
 .h-\[30px\] {
   height: 30px;
 }
@@ -816,6 +820,10 @@ video {
 
 .w-\[30px\] {
   width: 30px;
+}
+
+.w-\[323px\] {
+  width: 323px;
 }
 
 .w-\[37px\] {
@@ -951,6 +959,12 @@ video {
 
 .gap-20 {
   gap: 5rem;
+}
+
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-x-hidden {
