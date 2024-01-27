@@ -21,16 +21,10 @@
   </div>
 
   <div class="flex justify-center items-center gap-12 mt-16">
-    <button
-      class="flex justify-center items-center w-[173px] h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono">
-      Kezdés
-    </button>
-
     <div
       class="w-[460px] h-[60px] flex justify-start items-center bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
-      <div class="ml-4 flex">
-        <img src="/images/search_light_gray.svg" alt="Kereső" class="w-8 h-8" />
-        <div class="relative w-96 h-8 ml-6">
+      <div class="flex">
+        <div class="relative w-96 h-8 ml-3">
           <input
             type="text"
             name="searchBar"
@@ -40,24 +34,43 @@
             class="fake-place-holder absolute text-left text-white text-opacity-50 text-2xl font-bold font-mono w-full h-8 -z-10">
             Lineáris keresés...
           </div>
-
-          <script>
-            const inputField = document.getElementById("searchBar");
-
-            inputField.addEventListener("keypress", () => {
-              if (inputField.value.length >= 0) {
-                document
-                  .querySelector(".fake-place-holder")
-                  .classList.add("hidden");
-              } else {
-                document
-                  .querySelector(".fake-place-holder")
-                  .classList.remove("hidden");
-              }
-            });
-          </script>
         </div>
+        <div class="w-0.5 mr-3 bg-neutral-700"></div>
+        <img
+          src="/images/search_light_gray.svg"
+          alt="Kereső"
+          class="w-8 h-8 mr-3" />
+
+        <script>
+          const inputField = document.getElementById("searchBar");
+
+          inputField.addEventListener("keypress", () => {
+            if (inputField.value.length >= 0) {
+              document
+                .querySelector(".fake-place-holder")
+                .classList.add("hidden");
+            } else {
+              document
+                .querySelector(".fake-place-holder")
+                .classList.remove("hidden");
+            }
+          });
+        </script>
       </div>
+    </div>
+    <div class="absolute left-1/2 -ml-0.5 w-0.5 h-16 bg-gray-600"></div>
+    <div class="flex justify-center items-center">
+      <span class="text-[32px] text-white font-bold font-mono text-center">
+        Nem tudod hol kezdj?
+      </span>
+      <span class="text-white text-opacity-50 text-[32px] font-bold font-mono"
+        >Próbáld ki szint felmérő tesztünket, melyel segítünk felfedezni
+        jelenlegi tudás szinted.
+      </span>
+      <button
+        class="flex justify-center items-center w-[173px] h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono">
+        Kezdjük!
+      </button>
     </div>
   </div>
 
