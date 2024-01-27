@@ -1,12 +1,9 @@
 <main class="flex flex-col justify-center items-center h-[80svh] relative">
     <div class="absolute inset-0 h-[100svh] w-auto bg-[url('/images/blob_bg.png')] bg-origin-padding -z-50">
     </div>
-    <div class="flex text-center items-center justify-center">
-        <div class="w-[76px] h-[76px] bg-zinc-300 rounded-full">
-            <p class="w-[76px] h-[76px] mt-3 text-neutral-800 text-[32px] font-bold">Jr.</p>
-        </div>
-    </div>
-
+    <%- include('../../components/LevelTitleBadge.ejs', {
+        content: "Jr."
+    }) %>
     <div class="mt-12 text-8xl text-white font-bold font-mono text-center">
         Lineáris Keresés
     </div>
@@ -16,5 +13,11 @@
         officiis veritatis mollitia nemo ad iure harum voluptates error dolorum
         accusamus, quia placeat, veniam fugiat excepturi ex dicta. Dolores, illo
         veniam? lo
+    </div>
+
+    <div class="">
+
+        <%= locals.jzahbsgu || "lorem ipsum" %>
+
     </div>
 </main>
