@@ -1,18 +1,9 @@
 <main class="flex flex-col justify-center items-center h-[80svh] relative">
-    <%- include('../../components/LevelTitleBadge.ejs', { content: "Jr." }) %>
+    <%- include('../../components/LevelTitleBadge.ejs', { content: "Jr." || "A Szint betöltése nem sikerült" }) %>
 
-        <%- include('../../components/LevelAlgorithm.ejs', {AlgorithmName: "Lineáris Keresés" }) %>
-            <div class="mt-12 w-[870px] text-center text-white text-opacity-50 text-[32px] font-bold font-mono">Lorem
-                ipsum
-                dolor sit amet consectetur adipisicing elit. Doloremque
-                officiis veritatis mollitia nemo ad iure harum voluptates error dolorum
-                accusamus, quia placeat, veniam fugiat excepturi ex dicta. Dolores, illo
-                veniam? lo
-            </div>
+        <%- include('../../components/LevelAlgorithm.ejs', {AlgorithmName: "Lineáris Keresés"
+            || "Az Algoritmus betöltése nem sikerült" } ) %>
 
-            <div class="">
-
-                <%= locals.jzahbsgu || "lorem ipsum" %>
-
-            </div>
+            <%- include('../../components/LevelAlgorithmDesc.ejs',{AlgorithmDesc: "ipsum dolor ánté ale Vodinecsár Productionáré"
+                || "Az Algoritmus leírásának betöltése nem sikerült" }) %>
 </main>
