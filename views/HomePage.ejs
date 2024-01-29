@@ -3,24 +3,12 @@
   <%- include('../views/components/Head.ejs') %>
 
   <body class="bg-slate-900 relative min-h-screen overflow-x-hidden">
-    <%- include('../views/components/BlurFull.ejs') %>
+    <%- include('../views/components/AskHelp.ejs') %> <%-
+    include('../views/components/NavBar.ejs') %> <%-
+    include('../views/templates/Home/HeroSection.ejs') %> <%-
+    include('../views/templates/Home/Information.ejs') %> <%-
+    include('../views/templates/Home/LevelSection.ejs') %>
 
-    <!---->
-    <%- include('../views/components/AskHelp.ejs') %>
-
-    <!---->
-    <%- include('../views/components/NavBar.ejs') %>
-
-    <!---->
-    <%- include('../views/templates/Home/HeroSection.ejs') %>
-
-    <!---->
-    <%- include('../views/templates/Home/Information.ejs') %>
-
-    <!---->
-    <%- include('../views/templates/Home/LevelSection.ejs') %>
-
-    <!---->
     <div class="flex justify-center space-x-8">
       <!---->
       <%- include('../views/components/Card.ejs', { title: "Szint definiálása" ,
@@ -33,7 +21,6 @@
       LevelTitleBadge: true, color: "bg-purple-900", opacity: "opacity-75" }) %>
     </div>
 
-    <!---->
     <%- include('../views/components/Footer.ejs') %>
   </body>
 </html>

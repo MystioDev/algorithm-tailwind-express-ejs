@@ -2,15 +2,32 @@
 <html lang="hu">
   <%- include('../views/components/Head.ejs') %>
 
-  <body class="bg-slate-900 overflow-x-hidden">
-    <%- include('../views/components/BlurFull.ejs') %>
+  <body class="bg-slate-900 h-full overflow-x-hidden bg-[url('/images/blob_bg.png')]">
 
-    <!---->
     <%- include('../views/components/NavBar.ejs') %>
 
-    <!---->
-    <%- include('../views/components/SiteHeroPage.ejs', { title: "Algoritmusok"
-    , desc: "Leírás bruhuhuhuuh uasfguasfas" , arrow: true, sideBar: true,
-    imageName: "icon_1024_1024_transparent.png" }) %>
+    <%- include('../views/templates/Algorithms/AlgorithmsHeroSection.ejs', {
+      title: "Algoritmusok Listája",
+      desc: "Leírás az algoritmusokról ha kell majd ki tudja lol",
+      sideBar: true,
+      imageName: "icon_1024_1024_transparent.png"
+    }) %>
+
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+    <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
   </body>
 </html>

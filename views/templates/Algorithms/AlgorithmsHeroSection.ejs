@@ -1,0 +1,23 @@
+<main class="flex flex-col justify-center items-center h-full relative">
+  <div
+    class="absolute inset-0 w-auto bg-origin-padding -z-50"
+  ></div>
+  <img
+    src="/images/<%= locals.imageName %>"
+    alt="Oldal szinbólum"
+    class="w-[86px] h-[86px]"
+  />
+
+  <div class="mt-12 text-8xl text-white font-bold font-mono text-center">
+    <%= locals.title %>
+  </div>
+
+  <div class="w-[670px] h-[91px] text-center mt-3 leading-7">
+    <div class="text-white text-opacity-50 text-[32px] font-bold font-mono">
+      <%= locals.desc %>
+    </div>
+  </div>
+
+  <% if (locals.sideBar === true) { %> <%-
+  include('../../components/AskHelp.ejs') %> <% } %>
+</main>
