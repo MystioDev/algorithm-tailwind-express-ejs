@@ -674,10 +674,6 @@ video {
   margin-left: -0.125rem;
 }
 
-.-mt-12 {
-  margin-top: -3rem;
-}
-
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -804,6 +800,10 @@ video {
 
 .h-\[90px\] {
   height: 90px;
+}
+
+.h-\[90svh\] {
+  height: 90svh;
 }
 
 .h-\[91px\] {
