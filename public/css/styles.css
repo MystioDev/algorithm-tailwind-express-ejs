@@ -1120,6 +1120,11 @@ video {
   background-color: transparent;
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-zinc-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(212 212 216 / var(--tw-bg-opacity));
@@ -1290,11 +1295,6 @@ video {
   letter-spacing: 4.80px;
 }
 
-.text-neutral-800 {
-  --tw-text-opacity: 1;
-  color: rgb(38 38 38 / var(--tw-text-opacity));
-}
-
 .text-sky-500 {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
@@ -1323,6 +1323,10 @@ video {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.opacity-100 {
+  opacity: 1;
 }
 
 .opacity-75 {
