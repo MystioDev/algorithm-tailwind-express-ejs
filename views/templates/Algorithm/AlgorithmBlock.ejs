@@ -25,7 +25,7 @@
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('DOMContentLoaded', () => {
         var code = document.getElementById('codelines');
         var lines = code.textContent.split('\n');
 
@@ -36,7 +36,7 @@
       });
     </script>
 
-    <%- include('../../components/AlgorithmCodeEx.ejs', { codeex: "asdsasdf" || "Az Algoritmus betöltése nem sikerült"
+    <%- include('./AlgorithmCodeEx.ejs', { codeex: "asdsasdf\nasfasfaf\n   auszfguafga" || "Az Algoritmus betöltése nem sikerült"
       }) %>
 
   </div>
