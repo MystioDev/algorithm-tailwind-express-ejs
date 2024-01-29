@@ -806,6 +806,10 @@ video {
   height: 91px;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .min-h-full {
   min-height: 100%;
 }
