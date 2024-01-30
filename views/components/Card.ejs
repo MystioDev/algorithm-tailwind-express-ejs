@@ -6,5 +6,6 @@
 
   <% if (locals.LevelTitleBadge === true) { %> <%-
   include('./LevelTitleBadge.ejs', { content: locals.content, textColor:
-  locals.textColor }) %> <% } %>
+  locals.textColor }) %> <% } %> <% if (locals.LevelIconBadge === true) { %> <%-
+  include('./LevelIconBadge.ejs') %> <% } %>
 </div>
