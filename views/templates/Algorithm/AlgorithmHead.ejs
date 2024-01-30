@@ -1,9 +1,11 @@
 <main class="flex flex-col justify-center items-center h-[80svh] relative">
-    <%- include('../../components/LevelTitleBadge.ejs', { content: "Jr." || "A Szint betöltése nem sikerült" }) %>
+    <div class="relative flex justify-center items-center">
+        <%- include('../../components/LevelTitleBadge.ejs', { content: locals.data.level || "A Szint betöltése nem sikerült", textColor: "text-neutral-900" }) %>
+    </div>
 
-        <%- include('../../components/LevelAlgorithm.ejs', {AlgorithmName: "Lineáris Keresés"
-            || "Az Algoritmus betöltése nem sikerült" } ) %>
+    <%- include('../../components/LevelAlgorithm.ejs', { AlgorithmName: locals.data.name
+        || "Az Algoritmus betöltése nem sikerült" } ) %>
 
-            <%- include('../../components/LevelAlgorithmDesc.ejs',{AlgorithmDesc: "ipsum dolor ánté ale Vodinecsár Productionáré"
-                || "Az Algoritmus leírásának betöltése nem sikerült" }) %>
+    <%- include('../../components/LevelAlgorithmDesc.ejs',{ AlgorithmDesc: locals.data.description
+        || "Az Algoritmus leírásának betöltése nem sikerült" }) %>
 </main>

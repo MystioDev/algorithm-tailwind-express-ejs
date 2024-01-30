@@ -9,22 +9,66 @@
     <%- include('../views/templates/Algorithms/AlgorithmsHeroSection.ejs', {
       title: "Algoritmusok Listája",
       desc: "Leírás az algoritmusokról ha kell majd ki tudja lol",
-      imageName: "icon_1024_1024_transparent.png"
+      imageName: "icon_1024_1024_transparent.png",
+      sideBar: true
     }) %>
 
     <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
 
-    <article class="flex justify-center items-center">
+    <article class="flex justify-center items-center flex-col gap-8 mt-32">
+      <div class="flex justify-start w-[90%]">
+        <h1 class="text-white text-[50px] font-bold text-left">Kezdő Szint</h1>
+      </div>
+      <div class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
+
+        <% locals.data.forEach(element => { %>
+          <% if (element.level === "Jr.") { %>
+            <a href="/algoritmusok/<%= element.url %>" class="">
+              <%- include('../views/components/Card.ejs', {
+                LevelTitleBadge: true,
+                content: element.level,
+                title: element.name,
+                textColor: "text-neutral-900"
+              }) %>
+            </a>
+          <% } %>
+        <% }) %>
+      </div>
+
+      <div class="flex justify-start w-[90%]">
+        <h1 class="text-white text-[50px] font-bold text-left">Középhaladó Szint</h1>
+      </div>
+      <div class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
+
+        <% locals.data.forEach(element => { %>
+          <% if (element.level === "Ir.") { %>
+            <a href="/algoritmusok/<%= element.url %>" class="">
+              <%- include('../views/components/Card.ejs', {
+                LevelTitleBadge: true,
+                content: element.level,
+                title: element.name,
+                textColor: "text-neutral-900"
+              }) %>
+            </a>
+          <% } %>
+        <% }) %>
+      </div>
+
+      <div class="flex justify-start w-[90%]">
+        <h1 class="text-white text-[50px] font-bold text-left">Haladó Szint</h1>
+      </div>
       <div class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
         <% locals.data.forEach(element => { %>
-          <a href="/algoritmusok/<%= element.url %>" class="">
-            <%- include('../views/components/Card.ejs', {
-              LevelTitleBadge: true,
-              content: element.level,
-              title: element.name,
-              textColor: "text-neutral-900"
-            }) %>
-          </a>
+          <% if (element.level === "Sr.") { %>
+            <a href="/algoritmusok/<%= element.url %>" class="">
+              <%- include('../views/components/Card.ejs', {
+                LevelTitleBadge: true,
+                content: element.level,
+                title: element.name,
+                textColor: "text-neutral-900"
+              }) %>
+            </a>
+          <% } %>
         <% }) %>
       </div>
     </article>

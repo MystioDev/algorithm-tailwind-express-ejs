@@ -2,6 +2,12 @@
 <html lang="hu">
   <%- include('../views/components/Head.ejs') %>
 
+  <body class="bg-slate-900 relative min-h-screen overflow-x-hidden bg-[url('/images/blob_bg.png')]">
+    <%- include('../views/components/NavBar.ejs') %>
+
+    <%- include('../views/components/SiteHeroPage.ejs', { title: "Rólunk" ,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." , arrow:
+    false, sideBar: true, imageName: "about_icon.png" }) %>
   <body class="bg-slate-900 relative min-h-screen overflow-x-hidden">
     <%- include('../views/components/NavBar.ejs') %> <%-
     include('../views/components/SiteHeroPage.ejs', { title: "Rólunk" , desc:

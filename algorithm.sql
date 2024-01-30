@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Jan 23. 21:04
+-- Létrehozás ideje: 2024. Jan 30. 21:03
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -31,6 +31,7 @@ CREATE TABLE `algorithms` (
   `name` varchar(100) NOT NULL,
   `description` varchar(250) NOT NULL,
   `level` varchar(10) NOT NULL,
+  `url` varchar(250) NOT NULL,
   `solution_id` int(11) NOT NULL,
   `python_id` int(11) NOT NULL,
   `java_id` int(11) NOT NULL,
@@ -42,103 +43,12 @@ CREATE TABLE `algorithms` (
 -- A tábla adatainak kiíratása `algorithms`
 --
 
-INSERT INTO `algorithms` (`name`, `description`, `level`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id`) VALUES
-('Kiválogatás', 'ez legjobb', 'jr', 1, 3, 3, 3, 7),
-('Lineáris keresés', 'ez aztán végképp', 'sr', 4, 2, 2, 2, 6),
-('Maximum Kiválasztás', 'Ez jó', 'jr', 0, 0, 0, 0, 4),
-('Megszámlálás', 'ennél jobb nincs', 'jr', 2, 4, 4, 4, 8),
-('Minimum Érték kiválasztás', 'ez is jó', 'ir', 3, 1, 1, 1, 5);
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `language_c_sharp`
---
-
-CREATE TABLE `language_c_sharp` (
-  `name` varchar(100) NOT NULL,
-  `id` int(11) NOT NULL,
-  `code` varchar(1024) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
-
---
--- A tábla adatainak kiíratása `language_c_sharp`
---
-
-INSERT INTO `language_c_sharp` (`name`, `id`, `code`) VALUES
-('Maximum Érték kiválasztás', 0, 'blabla c# code Max'),
-('Minimum Érték kiválasztás', 1, 'blabla c# code Min'),
-('Lineáris keresés', 2, 'blabla c# code Linear'),
-('Kiválogatás', 3, 'blabla c# code Kiv'),
-('Megszámlálás', 4, 'blabla c# code Megsz');
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `language_java`
---
-
-CREATE TABLE `language_java` (
-  `name` varchar(100) NOT NULL,
-  `id` int(11) NOT NULL,
-  `code` varchar(1024) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
-
---
--- A tábla adatainak kiíratása `language_java`
---
-
-INSERT INTO `language_java` (`name`, `id`, `code`) VALUES
-('Maximum Érték kiválasztás', 0, 'blabla java code Max'),
-('Minimum Érték kiválasztás', 1, 'blabla java code Min'),
-('Lineáris keresés', 2, 'blabla java code Linear'),
-('Kiválogatás', 3, 'blabla java code Kiv'),
-('Megszámlálás', 4, 'blabla java code Megsz');
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `language_python`
---
-
-CREATE TABLE `language_python` (
-  `name` varchar(100) NOT NULL,
-  `id` int(11) NOT NULL,
-  `code` varchar(1024) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
-
---
--- A tábla adatainak kiíratása `language_python`
---
-
-INSERT INTO `language_python` (`name`, `id`, `code`) VALUES
-('Maximum Érték kiválasztás', 0, 'blabla python code Max'),
-('Minimum Érték kiválasztás', 1, 'blabla python code Min'),
-('Lineáris keresés', 2, 'blabla python code Linear'),
-('Kiválogatás', 3, 'blabla python code Kiv'),
-('Megszámlálás', 4, 'blabla python code Megsz');
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `solutions`
---
-
-CREATE TABLE `solutions` (
-  `id` int(11) NOT NULL,
-  `visual` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
-
---
--- A tábla adatainak kiíratása `solutions`
---
-
-INSERT INTO `solutions` (`id`, `visual`) VALUES
-(0, '/images/icon_1024_1024_transparent.png'),
-(1, '/images/icon_1024_1024_transparent.png'),
-(2, '/images/icon_1024_1024_transparent.png'),
-(3, '/images/icon_1024_1024_transparent.png'),
-(4, '/images/icon_1024_1024_transparent.png');
+INSERT INTO `algorithms` (`name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id`) VALUES
+('Kiválogatás', 'ez legjobb', 'Jr.', 'kivalogatas', 1, 3, 3, 3, 7),
+('Lineáris keresés', 'ez aztán végképp', 'Sr.', 'linearis-kereses', 4, 2, 2, 2, 6),
+('Maximum Kiválasztás', 'Ez jó', 'Jr.', 'maximum-kivalasztas', 0, 0, 0, 0, 4),
+('Megszámlálás', 'ennél jobb nincs', 'Ir.', 'megszamlalas', 2, 4, 4, 4, 8),
+('Minimum Érték kiválasztás', 'ez is jó', 'Ir.', 'maximum-ertek-kivalasztas', 3, 1, 1, 1, 5);
 
 --
 -- Indexek a kiírt táblákhoz
@@ -154,31 +64,6 @@ ALTER TABLE `algorithms`
   ADD KEY `languages_py` (`python_id`),
   ADD KEY `languages_java` (`java_id`),
   ADD KEY `languages_c_sharp` (`c_sharp_id`);
-
---
--- A tábla indexei `language_c_sharp`
---
-ALTER TABLE `language_c_sharp`
-  ADD UNIQUE KEY `id` (`id`);
-
---
--- A tábla indexei `language_java`
---
-ALTER TABLE `language_java`
-  ADD UNIQUE KEY `id` (`id`);
-
---
--- A tábla indexei `language_python`
---
-ALTER TABLE `language_python`
-  ADD UNIQUE KEY `id` (`id`);
-
---
--- A tábla indexei `solutions`
---
-ALTER TABLE `solutions`
-  ADD UNIQUE KEY `id` (`id`),
-  ADD UNIQUE KEY `id_2` (`id`);
 
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
