@@ -653,8 +653,8 @@ video {
   left: 4rem;
 }
 
-.top-\[10\%\] {
-  top: 10%;
+.top-\[7\%\] {
+  top: 7%;
 }
 
 .-z-10 {
@@ -1043,6 +1043,10 @@ video {
 
 .gap-20 {
   gap: 5rem;
+}
+
+.gap-24 {
+  gap: 6rem;
 }
 
 .gap-8 {
