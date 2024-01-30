@@ -13,5 +13,20 @@
     }) %>
 
     <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
+
+    <article class="flex justify-center items-center">
+      <div class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
+        <% locals.data.forEach(element => { %>
+          <a href="/algoritmusok/<%= element.url %>" class="">
+            <%- include('../views/components/Card.ejs', {
+              LevelTitleBadge: true,
+              content: element.level,
+              title: element.name,
+              textColor: "text-neutral-900"
+            }) %>
+          </a>
+        <% }) %>
+      </div>
+    </article>
   </body>
 </html>

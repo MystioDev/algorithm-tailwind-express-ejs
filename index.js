@@ -4,6 +4,7 @@ const port = 3000;
 const path = require("path");
 
 const algorithms = require("./src/algorithms");
+const algorithm = require("./src/algorithm");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -15,31 +16,29 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/algorithm", (req, res) => {
+app.get("/algoritmus", (req, res) => {
   res.render("AlgorithmPage", {
     title: " - Algoritm"
   });
 });
 
-app.get("/algorithms", (req, res) => {
+app.get("/algoritmusok", (req, res) => {
   algorithms.algorithms(req, res);
 });
 
-app.get("/about", (req, res) => {
+app.get("/algoritmusok/*", (req, res) => {
+  let rawUrl = req.url.replace("/algoritmusok/", "")
+
+  algorithm.algorithm(req, res, rawUrl);
+})
+
+app.get("/rolunk", (req, res) => {
   res.render("AboutPage", {
     title: " - Rólunk",
   });
 });
 
-
-app.get("/algorithm", (req, res) => {
-  res.render("AlgorithmPage", {
-    title: " - Algoritm"
-  });
-});
-
-
-app.get("/quiz", (req, res) => {
+app.get("/teszt", (req, res) => {
   res.render("QuizPage", {
     title: " - Tesztek, kvízek",
   });
