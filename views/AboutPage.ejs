@@ -2,22 +2,25 @@
 <html lang="hu">
   <%- include('../views/components/Head.ejs') %>
 
-  <body class="bg-slate-900 relative min-h-screen overflow-x-hidden bg-[url('/images/blob_bg.png')]">
-    <%- include('../views/components/NavBar.ejs') %>
-
-    <%- include('../views/components/SiteHeroPage.ejs', { title: "Rólunk" ,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." , arrow:
-    false, sideBar: true, imageName: "about_icon.png" }) %>
+  <body
+    class="bg-slate-900 relative min-h-screen overflow-x-hidden bg-[url('/images/blob_bg.png')]">
+    <%- include('../views/components/NavBar.ejs') %> <%-
+    include('../views/components/SiteHeroPage.ejs', { title: "Rólunk" , desc:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit." , arrow: false,
+    sideBar: true, imageName: "about_icon.png" }) %>
 
     <div class="flex justify-center space-x-8">
+      <!---->
       <%- include('../views/components/Card.ejs', { title: "Király Márk" ,
-      LevelTitleBadge: false }) %>
-
+      LevelTitleBadge: false, IconImgBadge: true, imageName: "km_logo.png" }) %>
+      <!---->
       <%- include('../views/components/Card.ejs' , { title: "Váradi Marcell",
-      LevelTitleBadge: false }) %>
-
+      LevelTitleBadge: false, IconImgBadge: true, imageName: "md_logo-black.png"
+      }) %>
+      <!---->
       <%- include('../views/components/Card.ejs' , { title: "Vodenicsár Rajmund"
-      , LevelTitleBadge: false }) %>
+      , LevelTitleBadge: false, IconImgBadge: true, imageName: "VP_logo.png" })
+      %>
     </div>
 
     <%- include('../views/components/Footer.ejs') %>
