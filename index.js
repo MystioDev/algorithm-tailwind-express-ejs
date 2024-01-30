@@ -44,6 +44,16 @@ app.get("/teszt", (req, res) => {
   });
 });
 
+app.get("/search", (req, res) => {
+  let rawSearchData = req.query.searchBar;
+  let searchData = rawSearchData.toLowerCase().replace(/\s/g, "-")
+
+  res.render("SearchPage", {
+    title: ` - "${searchData}"`,
+    searchedKeys: { defaultSearch: rawSearchData, urlSetSearchData: searchData }
+  })
+})
+
 app.get("*", (req, res, next) => {
   app.get("*", (request, respond, next) => {
     respond.render("404", {

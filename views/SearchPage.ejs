@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <%- include('../views/components/Head.ejs') %>
+  <body class="bg-slate-900 overflow-x-hidden bg-[url('/images/blob_bg.png')]">
+    <%- include('../views/components/NavBar.ejs') %>
+
+    <%- include('../views/components/SiteHeroPage.ejs', { 
+            title: "Keresés" ,
+            desc: `Keresési találatok "${locals.searchedKeys.defaultSearch}"-ra` , 
+            arrow: false, 
+            sideBar: true, 
+            imageName: "search_light_gray.svg" 
+        }) 
+    %>
+  </body>
+</html>
