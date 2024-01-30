@@ -2,10 +2,12 @@
 <html lang="hu">
 <%- include('../views/components/Head.ejs') %>
 
-  <body class="bg-slate-900 overflow-x-hidden">
+  <body class="bg-slate-900 overflow-x-hidden bg-[url('/images/blob_bg.png')]">
     <%- include('../views/components/NavBar.ejs') %>
 
-    <%- include('../views/templates/Algorithm/AlgorithmHead.ejs') %>
+    <%- include('../views/templates/Algorithm/AlgorithmHead.ejs', {
+      data: locals.data
+    }) %>
 
     <%- include('../views/templates/Algorithm/AlgorithmBlock.ejs') %>
   </body>
