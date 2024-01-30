@@ -1,0 +1,35 @@
+const mysql = require("mysql");
+
+const express = require("express");
+const path = require("path");
+
+const app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
+
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "", // admin
+  database: "algorithm", // database
+});
+
+exports.algorithm = (req, res, rawUrl) => {
+  con.connect((err) => {
+    if (err) console.log(err.message);
+
+    con.query("SELECT `name`, `url` FROM `algorithms`;", (error, respond) => {
+      if (error) console.log(error.message);
+
+        respond.forEach((element, item) => {
+            if (rawUrl === element.url) {
+                res.render("AlgorithmPage", {
+                    title: ` - ${element.name}`,
+                    data: element,
+                  });
+            }
+        });
+    });
+  });
+};

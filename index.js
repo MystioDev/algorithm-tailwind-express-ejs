@@ -4,6 +4,7 @@ const port = 3000;
 const path = require("path");
 
 const algorithms = require("./src/algorithms");
+const algorithm = require("./src/algorithm");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -24,6 +25,12 @@ app.get("/algoritmus", (req, res) => {
 app.get("/algoritmusok", (req, res) => {
   algorithms.algorithms(req, res);
 });
+
+app.get("/algoritmusok/*", (req, res) => {
+  let rawUrl = req.url.replace("/algoritmusok/", "")
+
+  algorithm.algorithm(req, res, rawUrl);
+})
 
 app.get("/rolunk", (req, res) => {
   res.render("AboutPage", {
