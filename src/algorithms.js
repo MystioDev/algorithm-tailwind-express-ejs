@@ -20,7 +20,7 @@ exports.algorithms = (req, res) => {
     if (err) console.log(err.message);
 
     con.query(
-      "SELECT `name`, `description`, `level`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;",
+      "SELECT `name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;",
       (error, respond) => {
         res.render("AlgorithmsPage", {
           title: " - Algoritmusok",
