@@ -9,16 +9,19 @@
     include('../views/templates/Home/Information.ejs') %> <%-
     include('../views/templates/Home/LevelSection.ejs') %>
 
-    <div class="flex justify-center space-x-8">
+    <div class="flex justify-around space-x-8">
       <!---->
       <%- include('../views/components/Card.ejs', { title: "Szint definiálása" ,
-      LevelTitleBadge: true, content: "Jr.", color: "bg-cyan-900/50" }) %>
+      LevelTitleBadge: true, LevelIconBadge: true, icon_style: "rounded-full",
+      content: "Jr.", color: "bg-cyan-900/50" }) %>
       <!---->
       <%- include('../views/components/Card.ejs', { title: "Szint definiálása" ,
-      LevelTitleBadge: true, content: "Ir.", color: "bg-red-900/50" }) %>
+      LevelTitleBadge: true, LevelIconBadge: true, icon_style: "rounded-lg",
+      content: "Ir.", color: "bg-red-900/50" }) %>
       <!---->
-      <%- include('../views/components/Card.ejs', { title: "Szint definiálása" ,
-      LevelTitleBadge: true, content: "Sr.", color: "bg-purple-900/50" }) %>
+      <%- include('../views/components/Card.ejs', {title: "Szint definiálása" ,
+      LevelTitleBadge: true, LevelIconBadge: true, icon_style: "", content:
+      "Sr.", color: "bg-purple-900/50" }) %>
     </div>
 
     <%- include('../views/components/Footer.ejs') %>
