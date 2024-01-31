@@ -645,6 +645,10 @@ video {
   top: -2.5rem;
 }
 
+.-top-14 {
+  top: -3.5rem;
+}
+
 .left-5 {
   left: 1.25rem;
 }
@@ -762,8 +766,16 @@ video {
   display: none;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .h-20 {
   height: 5rem;
+}
+
+.h-28 {
+  height: 7rem;
 }
 
 .h-4 {
@@ -850,6 +862,10 @@ video {
   height: 91px;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-full {
   height: 100%;
 }
@@ -874,8 +890,16 @@ video {
   width: 33.333333%;
 }
 
+.w-14 {
+  width: 3.5rem;
+}
+
 .w-20 {
   width: 5rem;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .w-4 {
@@ -989,6 +1013,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-8 {
+  --tw-translate-y: 2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -1055,6 +1084,10 @@ video {
 
 .gap-24 {
   gap: 6rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-8 {
