@@ -14,4 +14,30 @@
   <!---->
   <% if (locals.IconImgBadge === true) { %> <%- include('./IconImgBadge.ejs') %>
   <% } %>
+
+  <!---->
+  <% if (locals.SocialBadge === true) { %>
+  <div class="flex justify-center space-x-20">
+    <div>
+      <!---->
+      <%- include('./SocialBadge.ejs') %>
+    </div>
+    <div>
+      <!---->
+      <%- include('./SocialBadge.ejs') %>
+    </div>
+    <div>
+      <!---->
+      <%- include('./SocialBadge.ejs') %>
+    </div>
+    <div>
+      <!---->
+      <%- include('./SocialBadge.ejs') %>
+    </div>
+    <div>
+      <!---->
+      <%- include('./SocialBadge.ejs') %>
+    </div>
+  </div>
+  <% } %>
 </div>
