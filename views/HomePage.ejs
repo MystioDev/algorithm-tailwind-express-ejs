@@ -2,13 +2,13 @@
 <html lang="hu">
 <%- include('../views/components/Head.ejs') %>
 
-  <body class="bg-slate-900 relative min-h-screen overflow-x-hidden">
+  <body class="bg-slate-900 bg-[url('/images/blob_bg.png')] bg-clip-content bg-center font-mono relative min-h-screen overflow-x-hidden">
+    <%- include('../views/components/NavBar.ejs') %>
     <%- include('../views/components/AskHelp.ejs') %>
-      <%- include('../views/components/NavBar.ejs') %>
-        <%- include('../views/templates/Home/HeroSection.ejs') %>
+    <%- include('../views/templates/Home/HeroSection.ejs') %>
 
-          <!-- <%- include('../views/templates/Home/Information.ejs')%>  -->
-          <!--  <%- include('../views/templates/Home/LevelSection.ejs') %> -->
+    <!-- <%- include('../views/templates/Home/Information.ejs')%>  -->
+    <!--  <%- include('../views/templates/Home/LevelSection.ejs') %> -->
 
 
 
