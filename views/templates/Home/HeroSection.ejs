@@ -36,7 +36,7 @@
           </button>
           <script>
             const inputField = document.getElementById("searchBar");
-            inputField.addEventListener("keypress", () => {
+            inputField.addEventListener("keydown", () => {
               if (inputField.value.length >= 0) {
                 document
                   .querySelector(".fake-place-holder")

@@ -689,6 +689,10 @@ video {
   z-index: 50;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -807,6 +811,10 @@ video {
   height: 2rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .h-\[100svh\] {
   height: 100svh;
 }
@@ -853,6 +861,10 @@ video {
 
 .h-\[76px\] {
   height: 76px;
+}
+
+.h-\[800px\] {
+  height: 800px;
 }
 
 .h-\[80px\] {
@@ -915,6 +927,10 @@ video {
   width: 7rem;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -929,6 +945,10 @@ video {
 
 .w-\[200px\] {
   width: 200px;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .w-\[30px\] {
@@ -993,6 +1013,10 @@ video {
 
 .w-\[90\%\] {
   width: 90%;
+}
+
+.w-\[900px\] {
+  width: 900px;
 }
 
 .w-\[90px\] {
@@ -1061,6 +1085,10 @@ video {
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1241,6 +1269,10 @@ video {
   --tw-bg-opacity: 0.9;
 }
 
+.bg-\[url\(\'\/images\/Ellipse\.png\'\)\] {
+  background-image: url('/images/Ellipse.png');
+}
+
 .bg-\[url\(\'\/images\/blob_bg\.png\'\)\] {
   background-image: url('/images/blob_bg.png');
 }
@@ -1322,6 +1354,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-4 {
