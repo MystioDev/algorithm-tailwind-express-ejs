@@ -1,0 +1,134 @@
+<article class="flex flex-col justify-center items-center h-[80svh] relative">
+  <div
+    class="absolute inset-0 h-[100svh] w-auto bg-[url('/images/Ellipse.png')] bg-origin-padding -z-50"></div>
+
+  <img
+    src="/images/question_icon.png"
+    alt="Oldal szinbólum"
+    class="mt-48 w-[86px] h-[86px]" />
+
+  <div class="mt-20 text-8xl text-white font-bold font-mono text-center">
+    <span>Kérdésed van?</span>
+  </div>
+
+  <span
+    class="mt-12 w-[870px] text-center text-white text-opacity-50 text-[32px] font-bold font-mono"
+    >Számunkra fontos a véleményetek!</span
+  >
+
+  <div
+    class="relative w-[1000px] h-[800px] p-8 flex items-center flex-col bg-neutral-900 bg-opacity-20 rounded-[10px] shadow border border-neutral-700 backdrop-blur-sm">
+    <div class="flex">
+      <div
+        class="h-[60px] m-2 justify-start flex items-center bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+        <div class="flex items-center">
+          <img
+            src="/images/question_mark_icon.png"
+            alt="Kereső"
+            class="w-4 h-6 mr-3 transition-all" />
+          <form id="" action="" class="relative w-[300px] h-8 ml-3">
+            <input
+              type="text"
+              name="subjectInput"
+              id="subjectInput"
+              class="absolute outline-0 border-0 bg-transparent text-white text-opacity-50 text-xl font-bold font-mono w-full h-8" />
+            <div
+              class="fake-place-holder-for-subject absolute text-left text-white text-opacity-50 text-xl font-bold font-mono w-full h-8 -z-10">
+              Segítségre van szükségem!
+            </div>
+          </form>
+          <script>
+            const inputField = document.getElementById("subjectInput");
+            inputField.addEventListener("keypress", () => {
+              if (inputField.value.length >= 0) {
+                document
+                  .querySelector(".fake-place-holder-for-subject")
+                  .classList.add("hidden");
+              } else {
+                document
+                  .querySelector(".fake-place-holder-for-subject")
+                  .classList.remove("hidden");
+              }
+            });
+          </script>
+        </div>
+      </div>
+
+      <div
+        class="h-[60px] m-2 justify-start flex items-center bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+        <div class="flex items-center">
+          <img
+            src="/images/at.svg"
+            alt="Kereső"
+            class="w-8 h-8 mr-3 transition-all" />
+          <form id="" action="" class="relative w-[300px] h-8 ml-3">
+            <input
+              type="text"
+              name="emailInput"
+              id="emailInput"
+              class="absolute outline-0 border-0 bg-transparent text-white text-opacity-50 text-xl font-bold font-mono w-full h-8" />
+            <div
+              class="fake-place-holder-for-email absolute text-left text-white text-opacity-50 text-2xl font-bold font-mono w-full h-8 -z-10">
+              example@email.hu
+            </div>
+          </form>
+          <script>
+            inputField = document.getElementById("emailInput");
+            inputField.addEventListener("keypress", () => {
+              if (inputField.value.length >= 0) {
+                document
+                  .querySelector(".fake-place-holder-for-email")
+                  .classList.add("hidden");
+              } else {
+                document
+                  .querySelector(".fake-place-holder-for-email")
+                  .classList.remove("hidden");
+              }
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="h-[100px] m-2 w-full justify-start flex items-center bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+      <div class="flex items-center">
+        <form id="" action="" class="relative w-[300px] h-8 ml-3">
+          <input
+            type="text"
+            name="descInput"
+            id="descInput"
+            class="absolute outline-0 border-0 bg-transparent text-white text-opacity-50 text-xl font-bold font-mono w-full h-8" />
+          <div
+            class="fake-place-holder-for-desc absolute text-left text-white text-opacity-50 text-2xl font-bold font-mono w-full h-8 -z-10">
+            Túl szép lett a weboldalunk :)
+          </div>
+        </form>
+        <img
+          src="/images/desc_icon.png"
+          alt="Kereső"
+          class="w-8 h-8 mr-3 transition-all" />
+        <script>
+          inputField = document.getElementById("descInput");
+          inputField.addEventListener("keypress", () => {
+            if (inputField.value.length >= 0) {
+              document
+                .querySelector(".fake-place-holder-for-desc")
+                .classList.add("hidden");
+            } else {
+              document
+                .querySelector(".fake-place-holder-for-desc")
+                .classList.remove("hidden");
+            }
+          });
+        </script>
+      </div>
+    </div>
+
+    <a
+      href=""
+      class="flex justify-end items-center p-2 h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono mt-5 md:mt-0">
+      Küldés
+    </a>
+  </div>
+</article>

@@ -677,6 +677,10 @@ video {
   z-index: 50;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -786,6 +790,10 @@ video {
   height: 2rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .h-\[100svh\] {
   height: 100svh;
 }
@@ -828,6 +836,10 @@ video {
 
 .h-\[76px\] {
   height: 76px;
+}
+
+.h-\[800px\] {
+  height: 800px;
 }
 
 .h-\[80px\] {
@@ -904,6 +916,10 @@ video {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-\[1000px\] {
+  width: 1000px;
 }
 
 .w-\[200px\] {
@@ -1220,6 +1236,10 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
+.bg-\[url\(\'\/images\/Ellipse\.png\'\)\] {
+  background-image: url('/images/Ellipse.png');
+}
+
 .bg-\[url\(\'\/images\/blob_bg\.png\'\)\] {
   background-image: url('/images/blob_bg.png');
 }
@@ -1293,6 +1313,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-32 {
