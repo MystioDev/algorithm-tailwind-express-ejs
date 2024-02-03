@@ -1520,6 +1520,15 @@ video {
   transition-duration: 150ms;
 }
 
+.focus-within\:border-4:focus-within {
+  border-width: 4px;
+}
+
+.focus-within\:border-cyan-400:focus-within {
+  --tw-border-opacity: 1;
+  border-color: rgb(34 211 238 / var(--tw-border-opacity));
+}
+
 .hover\:scale-125:hover {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
