@@ -26,10 +26,11 @@
         <li class="text-center text-white transition-all hover:text-sky-500 text-4xl lg:text-base my-4 lg:my-0 font-bold font-mono">
           <a href="/rolunk" class="">Rólunk</a>
         </li>
-        <li
-          class="hidden lg:block w-[37px] h-[37px] bg-zinc-300 relative rounded-full shadow backdrop-blur-sm scale-1 transition-all hover:scale-125">
-          <img src="/images/search.svg" alt="Kereső" class="w-6 h-6 absolute inset-1.5" />
-        </li>
+        <% if (locals.searchYes) { %>
+          <li class="hidden lg:block w-[37px] h-[37px] bg-zinc-300 relative rounded-full shadow backdrop-blur-sm scale-1 transition-all hover:scale-125">
+            <img src="/images/search.svg" alt="Kereső" class="w-6 h-6 absolute inset-1.5" />
+          </li>
+        <% } %>
       </ul>
     </div>
   </div>
