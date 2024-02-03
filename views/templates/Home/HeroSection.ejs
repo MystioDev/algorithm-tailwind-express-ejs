@@ -1,24 +1,28 @@
 <main class="flex flex-col justify-center items-center h-[90svh] relative">
-  <div class="absolute inset-0 h-[150svh] w-auto bg-[url('/images/blob_bg.png')] bg-origin-padding -z-50"></div>
+  <div class="absolute inset-0 h-[100svh] w-auto bg-[url('/images/blob_bg.png')] bg-origin-padding -z-50"></div>
   <img src="/images/lightning.png" alt="Oldal szinbólum"
-    class="ml-20 mt-[500px] w-[86px] h-[86px] sm:w-[110px] sm:h-[110px] sm:mt-[600px]" />
+    class="ml-20 md:ml-0 mt-[500px] w-[86px] h-[86px] sm:w-[110px] sm:h-[110px] sm:mt-[600px] sm:ml-0" />
 
-  <div class="mt-12 ml-20 text-2xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
+  <div
+    class="mt-12 ml-20 sm:ml-0 text-2xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
     Tanulni szeretnél? <br />A legjobb helyen jársz!
   </div>
 
-  <div class=" ml-20 w-[500px] h-[91px] text-center mt-3 leading-7">
-    <span class="text-white text-opacity-50 text-[16px] font-bold font-mono">Fontos tudnivalók és leírások az
+  <div class="ml-20 sm:ml-0 w-[500px] md:w-[670px] h-[91px] md:h-[110px] text-center mt-3 leading-7">
+    <span class="text-white text-opacity-50 text-[16px] md:text-[32px] font-bold font-mono">Fontos tudnivalók és
+      leírások az
     </span><span class="text-sky-500 text-[16px] block font-bold font-mono">algoritmizálás</span><span
       class="text-white text-opacity-50 text-[16px] font-bold font-mono">
       rejtelmeiről</span>
   </div>
 
-  <div class="md:flex p-10 mt-10 text-center">
-    <div class="mb-5 md:w-1/2">
+
+
+  <div class="md:flex items-center p-10 mt-10 text-center gap-12">
+    <div class="mb-5 md:w-1/2 md:flex md:justify-end">
       <div
         class="h-[60px] w-full justify-around flex items-center bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
-        <div class="flex">
+        <div class="flex items-center">
           <form id="searchForm" action="/search" class="relative w-[300px] h-8 ml-3">
             <input type="text" name="searchBar" id="searchBar"
               class="absolute outline-0 border-0 bg-transparent text-white text-opacity-50 text-xl font-bold font-mono w-full h-8" />
@@ -53,10 +57,10 @@
         </div>
       </div>
     </div>
-    <div class="absolute -ml-0.5 w-0.5 h-20 bg-gray-600 hidden"></div>
+    <div class="hidden md:block absolute md:left-1/2 w-0.5 h-24 bg-gray-600"></div>
     <div class="flex md:w-1/2 justify-center flex-col items-center mb-5">
       <div class="flex flex-col pb-4">
-        <span class="text-[20px] text-white font-bold font-mono text-center">
+        <span class="text-[20px] md:text-[30px] text-white font-bold font-mono text-center">
           Nem tudod hol kezdj?
         </span>
         <span class="text-white text-opacity-50 text-[16px] font-bold font-mono px-32 text-center mb-5">Próbáld ki szint
@@ -65,7 +69,7 @@
         </span>
       </div>
       <a href=""
-        class="flex justify-center mr-5 items-center w-full h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono">
+        class="flex justify-center items-center w-full h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono mt-5 md:mt-0">
         Kezdjük!
       </a>
     </div>
