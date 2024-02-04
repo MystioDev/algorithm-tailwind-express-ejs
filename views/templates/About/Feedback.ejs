@@ -39,7 +39,7 @@
           </form>
           <script>
             const inputField = document.getElementById("subjectInput");
-            inputField.addEventListener("keypress", () => {
+            inputField.addEventListener("keydown", () => {
               if (inputField.value.length >= 0) {
                 document
                   .querySelector(".fake-place-holder-for-subject")
@@ -73,9 +73,9 @@
             </div>
           </form>
           <script>
-            inputField = document.getElementById("emailInput");
-            inputField.addEventListener("keypress", () => {
-              if (inputField.value.length >= 0) {
+            let inputFieldEmail = document.getElementById("emailInput");
+            inputFieldEmail.addEventListener("keydown", () => {
+              if (inputFieldEmail.value.length >= 0) {
                 document
                   .querySelector(".fake-place-holder-for-email")
                   .classList.add("hidden");
@@ -109,9 +109,9 @@
           alt="Kereső"
           class="w-8 h-8 mr-3 transition-all" />
         <script>
-          inputField = document.getElementById("descInput");
-          inputField.addEventListener("keypress", () => {
-            if (inputField.value.length >= 0) {
+          let inputFieldDesc = document.getElementById("descInput");
+          inputFieldDesc.addEventListener("keydown", () => {
+            if (inputFieldDesc.value.length >= 0) {
               document
                 .querySelector(".fake-place-holder-for-desc")
                 .classList.add("hidden");
