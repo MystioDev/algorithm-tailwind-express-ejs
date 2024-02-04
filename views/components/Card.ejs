@@ -1,35 +1,12 @@
-<div
-  class="relative w-64 lg:w-[396px] h-40 p-4 lg:h-[248px] flex justify-center items-center flex-col bg-neutral-900 bg-opacity-20 rounded-[10px] shadow border border-neutral-700 backdrop-blur-sm">
-  <span class="text-center text-white text-[32px] font-bold font-mono"
-    ><%= locals.title %></span
-  >
+<div class="relative w-48 lg:w-[396px] h-40 p-4 lg:h-[248px] flex justify-center items-center flex-col bg-neutral-900 bg-opacity-20 rounded-[10px] shadow border border-neutral-700 backdrop-blur-sm">
+  <span class="text-center text-white text-xl md:text-[32px] font-bold font-mono">
+    <%= locals.title %>
+  </span>
 
   <% if (locals.LevelTitleBadge === true) { %> <%-
   include('./LevelTitleBadge.ejs', { content: locals.content, textColor:
   locals.textColor }) %> <% } %>
-  <!---->
+
   <% if (locals.LevelIconBadge === true) { %> <%-
   include('./LevelIconBadge.ejs') %> <% } %>
-
-  <!---->
-  <% if (locals.IconImgBadge === true) { %> <%- include('./IconImgBadge.ejs') %>
-  <% } %>
-
-  <!---->
-  <% if (locals.SocialBadge === true) { %>
-  <div class="flex justify-center items-center flex-col flex-wrap w-auto h-auto">
-    <div class="flex gap-4">
-      <!---->
-      <%- include('./SocialBadge.ejs') %>
-      <!---->
-      <%- include('./SocialBadge.ejs') %>
-      <!---->
-      <%- include('./SocialBadge.ejs') %>
-      <!---->
-      <%- include('./SocialBadge.ejs') %>
-      <!---->
-      <%- include('./SocialBadge.ejs') %>
-    </div>
-  </div>
-  <% } %>
 </div>

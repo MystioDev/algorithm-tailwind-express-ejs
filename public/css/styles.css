@@ -939,12 +939,12 @@ video {
   width: 1rem;
 }
 
-.w-6 {
-  width: 1.5rem;
+.w-48 {
+  width: 12rem;
 }
 
-.w-64 {
-  width: 16rem;
+.w-6 {
+  width: 1.5rem;
 }
 
 .w-8 {
@@ -1133,10 +1133,6 @@ video {
 
 .gap-20 {
   gap: 5rem;
-}
-
-.gap-24 {
-  gap: 6rem;
 }
 
 .gap-28 {
@@ -1333,17 +1329,9 @@ video {
   --tw-gradient-to: #854d0e var(--tw-gradient-to-position);
 }
 
-.bg-clip-content {
-  background-clip: content-box;
-}
-
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .bg-origin-padding {
