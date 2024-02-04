@@ -707,6 +707,10 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -717,6 +721,10 @@ video {
 
 .ml-0 {
   margin-left: 0px;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .ml-3 {
@@ -753,6 +761,10 @@ video {
 
 .mt-32 {
   margin-top: 8rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-48 {
@@ -1771,6 +1783,11 @@ video {
   .\32xl\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .\32xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 
   .\32xl\:text-8xl {
