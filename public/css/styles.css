@@ -859,6 +859,10 @@ video {
   height: 70px;
 }
 
+.h-\[70svh\] {
+  height: 70svh;
+}
+
 .h-\[76px\] {
   height: 76px;
 }
@@ -989,10 +993,6 @@ video {
 
 .w-\[600px\] {
   width: 600px;
-}
-
-.w-\[670px\] {
-  width: 670px;
 }
 
 .w-\[76px\] {
