@@ -14,7 +14,29 @@
           Algorithm
         </div>
       </div>
-      <div class="block lg:hidden text-white" id="toggle-menu">menü</div>
+      <div class="block lg:hidden text-white" id="toggle-menu">
+        <button id="nav-menu" class="z-20 flex items-center p-4 box-border">
+          <div class="relative transition-transform ease-in-out duration-75 transform rotate-0 space-y-2 box-border mr-auto">
+            <span class="bg-white block w-8 h-0.5 transition-all ease-in-out duration-200 transform"></span>
+            <span class="bg-white block w-8 h-0.5 transition-all ease-in-out duration-200 transform"></span>
+          </div>
+        </button>
+
+        <script>
+          document.querySelector("#nav-menu").addEventListener("click", () => {
+            const span1_2 = document.querySelector("#nav-menu>div>span:nth-child(1)");
+            const span2_2 = document.querySelector("#nav-menu>div>span:nth-child(2)");
+
+            if (!span2_2.classList.contains("w-4")) {
+              span2_2.classList.add("w-4");
+              span2_2.classList.remove("w-8");
+            } else {
+              span2_2.classList.remove("w-4");
+              span2_2.classList.add("w-8");
+            }
+          })
+        </script>
+      </div>
     </div>
     <div
       id="hamburger-menu"
@@ -61,8 +83,6 @@
   let isOpen = false;
   document.querySelector("#toggle-menu").addEventListener("click", () => {
     if (!isOpen) {
-      console.log("nyitva");
-
       document
         .querySelector("#hamburger-menu")
         .classList.remove("hidden", "-z-50");
@@ -86,21 +106,24 @@
     }
 
     if (isOpen) {
-      console.log("csukva");
+      let x = 0;
 
-      document
-        .querySelector("#hamburger-menu")
-        .classList.add("hidden", "-z-50");
-
-      document.querySelectorAll("#nav-item").forEach(element => {
-        console.log(element)
-        setTimeout(() => {
-          element.classList.add(
+      setInterval(() => {
+        if (document.querySelectorAll("#nav-item").length >= x) {
+          document.querySelectorAll("#nav-item")[x].classList.add(
             "-translate-x-24",
             "opacity-0"
           )
-        }, 200);
-      })
+
+          document
+            .querySelector("#hamburger-menu")
+            .classList.add("hidden", "-z-50");
+
+          x++;
+        } else {
+          x = 0;
+        }
+      }, 100);
 
       isOpen = false;
       return;
