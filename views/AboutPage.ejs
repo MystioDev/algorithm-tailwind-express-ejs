@@ -10,17 +10,17 @@
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." , arrow:
     false, sideBar: true, imageName: "about_icon.png" }) %>
 
-    <div class="flex justify-center space-x-8">
+    <div class="flex justify-center items-center flex-wrap gap-28 lg:gap-8">
       <!---->
-      <%- include('../views/components/Card.ejs', { title: "Király Márk" ,
+      <%- include('../views/components/SocialCard.ejs', { title: "Király Márk" ,
       LevelTitleBadge: false, IconImgBadge: true, SocialBadge: true, imageName:
       "km_logo.png" }) %>
       <!---->
-      <%- include('../views/components/Card.ejs' , { title: "Váradi Marcell",
+      <%- include('../views/components/SocialCard.ejs' , { title: "Váradi Marcell",
       LevelTitleBadge: false, IconImgBadge: true, SocialBadge: true, imageName:
       "md_logo-black.png" }) %>
       <!---->
-      <%- include('../views/components/Card.ejs' , { title: "Vodenicsár Rajmund"
+      <%- include('../views/components/SocialCard.ejs' , { title: "Vodenicsár Rajmund"
       , LevelTitleBadge: false, IconImgBadge: true, SocialBadge: true,
       imageName: "VP_logo.png" }) %>
     </div>
