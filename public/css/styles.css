@@ -1681,6 +1681,10 @@ video {
     width: 12rem;
   }
 
+  .md\:w-\[60\%\] {
+    width: 60%;
+  }
+
   .md\:w-\[670px\] {
     width: 670px;
   }
