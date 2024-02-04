@@ -715,6 +715,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -849,6 +853,10 @@ video {
 
 .h-\[100vh\] {
   height: 100vh;
+}
+
+.h-\[110vh\] {
+  height: 110vh;
 }
 
 .h-\[248px\] {
@@ -1671,6 +1679,10 @@ video {
 
   .md\:h-\[110px\] {
     height: 110px;
+  }
+
+  .md\:h-\[80svh\] {
+    height: 80svh;
   }
 
   .md\:w-1\/2 {

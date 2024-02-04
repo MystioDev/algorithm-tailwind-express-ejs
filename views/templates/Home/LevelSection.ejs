@@ -1,4 +1,4 @@
-<article class="flex flex-col justify-center items-center h-[80svh] relative">
+<article class="flex flex-col justify-center items-center h-[110vh] md:h-[80svh] mb-12 relative">
   <div
     class="absolute inset-0 h-[100svh] w-auto bg-[url('/images/yellow_ellipse.png')] bg-origin-padding -z-50"></div>
 
@@ -7,22 +7,24 @@
     alt="Oldal szinbólum"
     class="mt-48 w-[90px] h-[90px]" />
 
-  <span class="absolute translate-x-72 -translate-y-16 text-white"
-    >1000001 1101100 1100111 1101111 1110010 1101001 1110100 1101000
-    1101101</span
-  >
+  <!--
+  <span class="absolute translate-x-72 -translate-y-16 text-white">
+    1000001 1101100 1100111 1101111 1110010 1101001 1110100 1101000 1101101
+  </span>
+  -->
 
-  <div class="mt-20 text-8xl text-white font-bold font-mono text-center">
+  <div class="mt-20 text-2xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
     Nálunk nem számít a
     <span
-      class="text-8xl bg-gradient-to-b from-yellow-50 via-yellow-500 to-yellow-800 ... text-transparent bg-clip-text font-bold font-mono"
+      class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl bg-gradient-to-b from-yellow-50 via-yellow-500 to-yellow-800 ... text-transparent bg-clip-text font-bold font-mono"
       >szint</span
     >
   </div>
 
-  <span
-    class="mt-12 w-[870px] text-center text-white text-opacity-50 text-[32px] font-bold font-mono"
-    >Legyél bármilyen szinten, mi mindenki számára biztosítunk tanulási
-    lehetőséget</span
-  >
+  <span class="mt-12 mb-32 w-[80%] text-center text-white text-opacity-50 text-xl md:text-[32px] font-bold font-mono">
+    Legyél bármilyen szinten, mi mindenki számára biztosítunk tanulási
+    lehetőséget
+  </span>
+
+  <%- include('../Algorithms/AlgorithmsLevels.ejs') %>
 </article>
