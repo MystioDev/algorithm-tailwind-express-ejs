@@ -1801,6 +1801,10 @@ video {
     margin-right: 0px;
   }
 
+  .lg\:mt-64 {
+    margin-top: 16rem;
+  }
+
   .lg\:block {
     display: block;
   }
