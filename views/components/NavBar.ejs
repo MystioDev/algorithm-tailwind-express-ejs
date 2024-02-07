@@ -65,6 +65,8 @@
   </div>
 </nav>
 <script>
+  let isOpen = false;
+
   document.querySelector("#nav-menu").addEventListener("click", () => {
     const span1_2 = document.querySelector("#nav-menu>div>span:nth-child(1)");
     const span2_2 = document.querySelector("#nav-menu>div>span:nth-child(2)");
@@ -72,14 +74,16 @@
     if (!span2_2.classList.contains("w-4")) {
       span2_2.classList.add("w-4");
       span2_2.classList.remove("w-8");
+
+      isOpen = false;
     } else {
       span2_2.classList.remove("w-4");
       span2_2.classList.add("w-8");
+
+      isOpen = true;
     }
   })
-</script>
-<script>
-  let isOpen = false;
+
   document.querySelector("#toggle-menu").addEventListener("click", () => {
     if (!isOpen) {
       document
