@@ -1,11 +1,8 @@
 <main class="flex flex-col justify-center items-center h-[70svh] relative">
-  <img
-    src="/images/<%= locals.imageName %>"
-    alt="Oldal szinbólum"
-    class="mt-48 w-[86px] h-[86px]"
-  />
+  <img src="/images/<%= locals.imageName %>" alt="Oldal szinbólum" class="mt-48 w-[86px] h-[86px]" />
 
-  <div class="mt-12 text-3xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
+  <div
+    class="mt-12 text-3xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
     <%= locals.title %>
   </div>
 
@@ -15,15 +12,11 @@
     </div>
   </div>
 
-  <% if (locals.arrow === true) { %>
-  <img
-    src="/images/scroll_down.svg"
-    alt="Görgess tovább"
-    class="w-20 h-20 mt-24 animate-bounce"
-  />
-  <% } %>
+  <% if (locals.arrow===true) { %>
+    <img src="/images/scroll_down.svg" alt="Görgess tovább" class="w-20 h-20 mt-24 animate-bounce" />
+    <% } %>
 
-  <% if (locals.sideBar === true) { %>
-    <%- include('./AskHelp.ejs') %>
-  <% } %>
+      <% if (locals.sideBar===true) { %>
+        <%- include('./AskHelp.ejs') %>
+          <% } %>
 </main>

@@ -1,76 +1,79 @@
 <main class="flex flex-col justify-center items-center h-[100svh] w-[100svw] relative">
   <%- include('../../components/AskHelp.ejs') %>
-  <img src="/images/lightning.png" alt="Oldal szinbólum"
-    class="ml-0 w-[86px] h-[86px] sm:w-[110px] sm:h-[110px] mt-[400px] sm:mt-32 sm:ml-0" />
+    <img src="/images/lightning.png" alt="Oldal szinbólum"
+      class="ml-0 w-[86px] h-[86px] sm:w-[110px] sm:h-[110px] mt-[400px] sm:mt-32 sm:ml-0" />
 
-  <div
-    class="mt-12 ml-0 text-3xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
-    Tanulni szeretnél? <br />A legjobb helyen jársz!
-  </div>
-
-  <div class="ml-0 inline-block md:w-[670px] h-[91px] md:h-[110px] text-center mt-3 leading-7">
-    <div class="text-white p-2 text-opacity-50 text-xl md:text-[32px] font-bold font-mono">
-      Fontos tudnivalók és
-      leírások az <span class="text-sky-500 text-2xl md:text-[32px] font-bold font-mono">algoritmizálás</span> rejtelmeiről
+    <div
+      class="mt-12 ml-0 text-3xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
+      Tanulni szeretnél? <br />A legjobb helyen jársz!
     </div>
-  </div>
 
-  <div class="w-auto md:flex items-center mt-10 text-center gap-12">
-    <div class="mb-5 p-3 md:w-1/2 md:flex md:justify-end">
-      <div
-        class="h-[60px] w-full justify-around flex items-center bg-neutral-900 bg-opacity-20 rounded-[10px] border focus-within:border-cyan-400 focus-within:border-4 border-neutral-700">
-        <div class="w-full flex items-center">
-          <form id="searchForm" action="/search" class="relative w-full h-8 ml-3">
-            <input type="text" name="searchBar" id="searchBar"
-              class="absolute left-0 outline-0 border-0 bg-transparent text-white text-opacity-50 text-xl font-bold font-mono w-full h-7 md:h-8" />
-            <div
-              class="fake-place-holder absolute text-left text-white text-opacity-50 text-xl md:text-2xl font-bold font-mono w-full h-7 md:h-8 -z-10">
-              Lineáris keresés...
-            </div>
-          </form>
-          <div class="h-8 w-[3px] mr-3 bg-neutral-700"></div>
-          <button class="" id="searchSubmit">
-            <img src="/images/search_light_gray.svg" alt="Kereső"
-              class="w-8 h-8 mr-3 transition-all hover:opacity-75" />
-          </button>
-          <script>
-            const inputField = document.getElementById("searchBar");
-            inputField.addEventListener("keydown", () => {
-              if (inputField.value.length >= 0) {
-                document
-                  .querySelector(".fake-place-holder")
-                  .classList.add("hidden");
-              } else {
-                document
-                  .querySelector(".fake-place-holder")
-                  .classList.remove("hidden");
-              }
-            });
+    <div class="ml-0 inline-block md:w-[670px] h-[91px] md:h-[110px] text-center mt-3 leading-7">
+      <div class="text-white p-2 text-opacity-50 text-xl md:text-[32px] font-bold font-mono">
+        Fontos tudnivalók és
+        leírások az <span class="text-sky-500 text-2xl md:text-[32px] font-bold font-mono">algoritmizálás</span>
+        rejtelmeiről
+      </div>
+    </div>
 
-            document.getElementById("searchSubmit").addEventListener("click", () => {
-              window.location.href = `/search/?searchBar=${inputField.value}`;
-            })
-          </script>
+    <div class="w-auto md:flex items-center mt-10 text-center gap-12">
+      <div class="mb-5 p-3 md:w-1/2 md:flex md:justify-end">
+        <div
+          class="h-[60px] w-full justify-around flex items-center bg-neutral-900 bg-opacity-20 rounded-[10px] border focus-within:border-cyan-400 focus-within:border-4 border-neutral-700">
+          <div class="w-full flex items-center">
+            <form id="searchForm" action="/search" class="relative w-full h-8 ml-3">
+              <input type="text" name="searchBar" id="searchBar"
+                class="absolute left-0 outline-0 border-0 bg-transparent text-white text-opacity-50 text-xl font-bold font-mono w-full h-7 md:h-8" />
+              <div
+                class="fake-place-holder absolute text-left text-white text-opacity-50 text-xl md:text-2xl font-bold font-mono w-full h-7 md:h-8 -z-10">
+                Lineáris keresés...
+              </div>
+            </form>
+            <div class="h-8 w-[3px] mr-3 bg-neutral-700"></div>
+            <button class="" id="searchSubmit">
+              <img src="/images/search_light_gray.svg" alt="Kereső"
+                class="w-8 h-8 mr-3 transition-all hover:opacity-75" />
+            </button>
+            <script>
+              const inputField = document.getElementById("searchBar");
+              inputField.addEventListener("keydown", () => {
+                if (inputField.value.length >= 0) {
+                  document
+                    .querySelector(".fake-place-holder")
+                    .classList.add("hidden");
+                } else {
+                  document
+                    .querySelector(".fake-place-holder")
+                    .classList.remove("hidden");
+                }
+              });
+
+              document.getElementById("searchSubmit").addEventListener("click", () => {
+                window.location.href = `/search/?searchBar=${inputField.value}`;
+              })
+            </script>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hidden md:block absolute md:left-1/2 w-0.5 h-24 bg-gray-600"></div>
-    <div class="flex w-auto md:w-1/2 justify-center flex-col p-3 items-center mb-5">
-      <div class="flex flex-col">
-        <span class="text-[20px] md:text-[30px] text-white font-bold font-mono text-center">
-          Nem tudod hol kezdj?
-        </span>
-        <span class="text-white text-opacity-50 text-[16px] md:text-xl font-bold font-mono px-4 2xl:px-32 text-center mb-0 sm:mb-5">Próbáld ki szint
-          felmérő tesztünket, melyel segítünk felfedezni
-          jelenlegi tudás szinted.
-        </span>
+      <div class="hidden md:block absolute md:left-1/2 w-0.5 h-24 bg-gray-600"></div>
+      <div class="flex w-auto md:w-1/2 justify-center flex-col p-3 items-center mb-5">
+        <div class="flex flex-col">
+          <span class="text-[20px] md:text-[30px] text-white font-bold font-mono text-center">
+            Nem tudod hol kezdj?
+          </span>
+          <span
+            class="text-white text-opacity-50 text-[16px] md:text-xl font-bold font-mono px-4 2xl:px-32 text-center mb-0 sm:mb-5">Próbáld
+            ki szint
+            felmérő tesztünket, melyel segítünk felfedezni
+            jelenlegi tudás szinted.
+          </span>
+        </div>
+        <a href=""
+          class="flex justify-center items-center w-full md:w-48 h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono mt-5 md:mt-0">
+          Kezdjük!
+        </a>
       </div>
-      <a href=""
-        class="flex justify-center items-center w-full md:w-48 h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono mt-5 md:mt-0">
-        Kezdjük!
-      </a>
     </div>
-  </div>
 
-  <img src="/images/scroll_down.svg" alt="Görgess tovább" class="hidden md:block w-20 h-20 animate-bounce mb-5" />
+    <img src="/images/scroll_down.svg" alt="Görgess tovább" class="hidden md:block w-20 h-20 animate-bounce mb-5" />
 </main>

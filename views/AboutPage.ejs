@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <%- include('../views/components/Head.ejs') %>
+<%- include('../views/components/Head.ejs') %>
 
-  <body
-    class="bg-slate-900 relative min-h-screen overflow-x-hidden bg-[url('/images/blob_bg.png')]">
+  <body class="bg-slate-900 relative min-h-screen overflow-x-hidden bg-[url('/images/blob_bg.png')]">
     <%- include('../views/components/NavBar.ejs') %>
-    <!---->
-    <%- include('../views/components/SiteHeroPage.ejs', { title: "Rólunk" ,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." , arrow:
-    false, sideBar: true, imageName: "about_icon.png" }) %>
+      <!---->
+      <%- include('../views/components/SiteHeroPage.ejs', { title: "Rólunk" ,
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." , arrow: false, sideBar: true,
+        imageName: "about_icon.png" }) %>
 
-    <div class="flex justify-center items-center flex-wrap gap-28 lg:gap-8">
-      <!---->
-      <%- include('../views/components/SocialCard.ejs', { title: "Király Márk" ,
-      LevelTitleBadge: false, IconImgBadge: true, SocialBadge: true, imageName:
-      "km_logo.png" }) %>
-      <!---->
-      <%- include('../views/components/SocialCard.ejs' , { title: "Váradi Marcell",
-      LevelTitleBadge: false, IconImgBadge: true, SocialBadge: true, imageName:
-      "md_logo-black.png" }) %>
-      <!---->
-      <%- include('../views/components/SocialCard.ejs' , { title: "Vodenicsár Rajmund"
-      , LevelTitleBadge: false, IconImgBadge: true, SocialBadge: true,
-      imageName: "VP_logo.png" }) %>
-    </div>
-    <!---->
-    <%- include('../views/templates/About/Feedback.ejs') %>
-    <!---->
-    <%- include('../views/components/Footer.ejs') %>
+        <div class="flex justify-center items-center flex-wrap gap-28 lg:gap-8">
+          <!---->
+          <%- include('../views/components/SocialCard.ejs', { title: "Király Márk" , LevelTitleBadge: false,
+            IconImgBadge: true, SocialBadge: true, imageName: "km_logo.png" }) %>
+            <!---->
+            <%- include('../views/components/SocialCard.ejs' , { title: "Váradi Marcell" , LevelTitleBadge: false,
+              IconImgBadge: true, SocialBadge: true, imageName: "md_logo-black.png" }) %>
+              <!---->
+              <%- include('../views/components/SocialCard.ejs' , { title: "Vodenicsár Rajmund" , LevelTitleBadge: false,
+                IconImgBadge: true, SocialBadge: true, imageName: "VP_logo.png" }) %>
+        </div>
+        <!---->
+        <%- include('../views/templates/About/Feedback.ejs') %>
+          <!---->
+          <%- include('../views/components/Footer.ejs') %>
   </body>
+
 </html>
