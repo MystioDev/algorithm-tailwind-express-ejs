@@ -88,44 +88,47 @@
 
       let x = 0;
 
-      setInterval(() => {
-        if (document.querySelectorAll("#nav-item").length > x) {
+      let animate = setInterval(() => {
+        if (document.querySelectorAll("#nav-item").length === x) {
+          x = 0;
+
+          isOpen = true;
+          clearInterval(animate);
+        } else {
           document.querySelectorAll("#nav-item")[x].classList.remove(
             "-translate-x-24",
             "opacity-0"
           )
+          
           x++;
-        } else {
-          x = 0;
         }
-      }, 100);
 
-      isOpen = true;
-      return;
+      }, 100);
     }
 
     if (isOpen) {
-      let x = 0;
+      let y = 0;
 
-      setInterval(() => {
-        if (document.querySelectorAll("#nav-item").length > x) {
-          document.querySelectorAll("#nav-item")[x].classList.add(
+      let animateClose = setInterval(() => {
+        if (document.querySelectorAll("#nav-item").length !== y) {
+          document.querySelectorAll("#nav-item")[y].classList.add(
             "-translate-x-24",
             "opacity-0"
           )
+
+          y++;
+        } else {
+          y = 0;
 
           document
             .querySelector("#hamburger-menu")
             .classList.add("hidden", "-z-50");
 
-          x++;
-        } else {
-          x = 0;
+          isOpen = false;
+          clearInterval(animateClose)
         }
-      }, 1000);
-
-      isOpen = false;
-      return;
+      }, 100);
     }
+    
   });
 </script>
