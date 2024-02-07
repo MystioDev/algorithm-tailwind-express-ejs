@@ -771,6 +771,10 @@ video {
   margin-top: 3rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1130,6 +1134,10 @@ video {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.resize-none {
+  resize: none;
 }
 
 .flex-col {

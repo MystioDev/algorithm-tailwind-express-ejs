@@ -75,17 +75,17 @@
     </div>
 
     <div
-      class="h-[100px] w-full justify-start flex items-center bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
-      <div class="flex items-center w-full">
+      class="h-[100px] w-full justify-start flex bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+      <div class="flex w-full">
         <form id="" action="" class="relative w-full h-8 ml-3">
-          <input type="text" name="descInput" id="descInput"
-            class="absolute outline-0 border-0 bg-transparent text-white text-opacity-50 text-xl font-bold font-mono w-full" />
+          <textarea name="descInput" id="descInput" rows="3"
+            class="absolute mt-2 outline-0 border-0 bg-transparent text-white text-opacity-50 text-xl font-bold font-mono w-full resize-none"></textarea>
           <div
-            class="fake-place-holder-for-desc absolute text-left text-white text-opacity-50 text-[16px] md:text-xl font-bold font-mono w-full -z-10">
+            class="mt-2 fake-place-holder-for-desc absolute text-left text-white text-opacity-50 text-[16px] md:text-xl font-bold font-mono w-full -z-10">
             Túl szép lett a weboldalunk :)
           </div>
         </form>
-        <img src="/images/desc_icon.png" alt="Kereső" class="w-8 h-8 mr-3 transition-all" />
+        <img src="/images/desc_icon.png" alt="Kereső" class="w-8 h-8 mr-3 mt-2 transition-all" />
         <script>
           let inputFieldDesc = document.getElementById("descInput");
           inputFieldDesc.addEventListener("keydown", () => {
