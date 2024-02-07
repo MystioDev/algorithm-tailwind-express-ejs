@@ -96,7 +96,6 @@
         if (document.querySelectorAll("#nav-item").length === x) {
           x = 0;
 
-          isOpen = true;
           clearInterval(animate);
         } else {
           document.querySelectorAll("#nav-item")[x].classList.remove(
@@ -128,7 +127,6 @@
             .querySelector("#hamburger-menu")
             .classList.add("hidden", "-z-50");
 
-          isOpen = false;
           clearInterval(animateClose)
         }
       }, 100);
