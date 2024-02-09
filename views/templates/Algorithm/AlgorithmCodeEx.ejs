@@ -1,3 +1,22 @@
-<code id="codelines" class="bg-purple-300 font-bold p-2">
-    <%= locals.codeex%>
+<code id="codelines" class="">
+    <ol start="0" class="font-bold p-5 list-inside list-decimal text-white" id="codelist">
+        
+    </ol>
 </code>
+
+<script>
+
+    let content = `<%= locals.content %>`;
+
+    let code = document.getElementById('codelines');
+    let list = document.getElementById("codelist");
+    let lines = content.split('\n');
+
+    for (let i = 0; i < lines.length; i++) {
+
+
+        list.innerHTML += `<li>${lines[i]}</li>`;
+
+    }
+
+</script>

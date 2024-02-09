@@ -24,20 +24,7 @@
       </button>
     </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        var code = document.getElementById('codelines');
-        var lines = code.textContent.split('\n');
-
-        for (var i = 0; i < lines.length - 1; i++) {
-          lines[i] = (i + 1) + ' ' + lines[i] + '<br>';
-        }
-        code.innerHTML = lines.join('\n');
-      });
-    </script>
-
-    <%- include('./AlgorithmCodeEx.ejs', { codeex: "asdsasdf\nasfasfaf\n   auszfguafga" || "Az Algoritmus betöltése nem sikerült"
-      }) %>
+    <%- include('./AlgorithmCodeEx.ejs', {content:'let a=0 \n let list=document.getElementById("codelist");' }) %>
 
   </div>
 </div>
