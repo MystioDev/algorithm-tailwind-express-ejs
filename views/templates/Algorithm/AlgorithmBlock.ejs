@@ -7,24 +7,29 @@
   <div
     class="w-[600px] h-[500px] bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
     <div class="flex">
-      <button
+      <button id="python"
         class="flex justify-start gap-2 items-center text-center w-[200px] h-[80px] bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 rounded-tl-lg border-fuchsia-500 border-opacity-20">
         <img class="w-[30px] h-[30px] ml-4" src="/images/pythonlogo.png" alt="Python logo" />
         <p class="text-white text-[20px] font-bold font-mono">Python</p>
       </button>
-      <button
+      <button id="java"
         class="flex justify-start gap-2 items-center text-center w-[200px] h-[80px] bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 border-fuchsia-500 border-opacity-20">
         <img class="w-[40px] h-[40px] ml-4" src="/images/java.png" alt="Java logo" />
         <p class="text-white text-[20px] font-bold font-mono">Java</p>
       </button>
-      <button
+      <button id="csharp"
         class="flex justify-start gap-2 items-center text-center w-[200px] h-[80px] bg-neutral-800 bg-opacity-20 rounded-tr-[10px] border-r-2 border-t-4 border-fuchsia-500 border-opacity-20 backdrop-blur-sm">
         <img class="w-[40px] h-[40px] ml-4" src="/images/c-sharp.png" alt="Java logo" />
         <p class="text-white text-[20px] font-bold font-mono">C-Sharp</p>
       </button>
     </div>
 
-    <%- include('./AlgorithmCodeEx.ejs', {content:'let a=0 \n let list=document.getElementById("codelist");' }) %>
+    <%- include('./AlgorithmCodeEx.ejs', {pythoncontent:'let a=0 \n let list=document.getElementById("python");' }) %>
+      <%- include('./AlgorithmCodeEx.ejs', {javacontent:'let a=0 \n let list=document.getElementById("java");' }) %>
+        <%- include('./AlgorithmCodeEx.ejs', {csharpcontent:'let a=0 \n let list=document.getElementById("csharp");' })
+          %>
+
+
 
   </div>
 </div>

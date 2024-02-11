@@ -3,20 +3,25 @@
         
     </ol>
 </code>
-
 <script>
+    document.getElementById("python").addEventListener("click", function () {
+        SetLanguageCode(`<%= locals.pythoncontent %>`);
+    });
 
-    let content = `<%= locals.content %>`;
+    document.getElementById("java").addEventListener("click", function () {
+        SetLanguageCode(`<%= locals.javacontent %>`);
+    });
 
-    let code = document.getElementById('codelines');
-    let list = document.getElementById("codelist");
-    let lines = content.split('\n');
+    document.getElementById("csharp").addEventListener("click", function () {
+        SetLanguageCode(`<%= locals.csharpcontent %>`);
+    });
 
-    for (let i = 0; i < lines.length; i++) {
-
-
-        list.innerHTML += `<li>${lines[i]}</li>`;
-
+    function SetLanguageCode(content) {
+        let list = document.getElementById("codelist");
+        list.innerHTML = '';
+        let lines = content.split('\n');
+        for (let i = 0; i < lines.length; i++) {
+            list.innerHTML += `<li>${lines[i]}</li>`;
+        }
     }
-
 </script>
