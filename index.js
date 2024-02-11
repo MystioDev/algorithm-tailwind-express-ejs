@@ -5,6 +5,7 @@ const path = require("path");
 
 const algorithms = require("./src/algorithms");
 const algorithm = require("./src/algorithm");
+const searchResult = require("./src/searchResult");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -48,10 +49,13 @@ app.get("/search", (req, res) => {
   let rawSearchData = req.query.searchBar;
   let searchData = rawSearchData.toLowerCase().replace(/\s/g, "-")
 
-  res.render("SearchPage", {
-    title: ` - "${searchData}"`,
-    searchedKeys: { defaultSearch: rawSearchData, urlSetSearchData: searchData }
-  })
+  searchResult.searchResult(
+    req,
+    res,
+    rawSearchData,
+    searchData
+  )
+
 })
 
 app.get("*", (req, res, next) => {
