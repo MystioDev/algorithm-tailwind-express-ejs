@@ -1,0 +1,38 @@
+<div class="w-[90vw] lg:w-[50vw] absolute top-16">
+    <div
+class="h-[60px] w-full justify-around flex items-center bg-neutral-900 bg-opacity-20 rounded-full border focus-within:border-cyan-400 focus-within:border-4 border-neutral-700">
+<div class="w-full flex items-center">
+    <form id="searchForm" action="/search" class="relative w-full h-8 ml-5">
+    <input type="text" name="searchBar" id="searchBar"
+        class="absolute left-0 outline-0 border-0 bg-transparent text-white text-opacity-50 text-xl font-bold font-mono w-full h-7 md:h-8" />
+    <div
+        class="fake-place-holder absolute text-left text-white text-opacity-50 text-lg sm:text-xl md:text-2xl font-bold font-mono w-full h-7 md:h-8 -z-10">
+        Lineáris keresés...
+    </div>
+    </form>
+    <div class="h-8 w-[3px] mr-3 bg-neutral-700"></div>
+    <button class="" id="searchSubmit">
+    <img src="/images/search_light_gray.svg" alt="Kereső"
+        class="w-8 h-8 mr-5 transition-all hover:opacity-75" />
+    </button>
+    <script>
+    const inputField = document.getElementById("searchBar");
+    inputField.addEventListener("keydown", () => {
+        if (inputField.value.length >= 0) {
+        document
+            .querySelector(".fake-place-holder")
+            .classList.add("hidden");
+        } else {
+        document
+            .querySelector(".fake-place-holder")
+            .classList.remove("hidden");
+        }
+    });
+
+    document.getElementById("searchSubmit").addEventListener("click", () => {
+        window.location.href = `/search/?searchBar=${inputField.value}`;
+    })
+    </script>
+</div>
+</div>
+</div>

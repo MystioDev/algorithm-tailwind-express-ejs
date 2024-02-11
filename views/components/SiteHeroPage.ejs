@@ -1,4 +1,9 @@
 <main class="flex flex-col justify-center items-center h-[70svh] relative">
+
+  <% if ( locals.hasSearchBar === true ) { %>
+    <%- include('../components/SearchBarTag.ejs') %>
+  <% } %>
+  
   <img src="/images/<%= locals.imageName %>" alt="Oldal szinbólum" class="mt-48 w-[86px] h-[86px]" />
 
   <div
@@ -13,7 +18,7 @@
   </div>
 
   <% if (locals.arrow===true) { %>
-    <img src="/images/scroll_down.svg" alt="Görgess tovább" class="w-20 h-20 mt-24 animate-bounce" />
+    <img src="/images/scroll_down.svg" alt="Görgess tovább" class="absolute -bottom-12 w-20 h-20 animate-bounce" />
     <% } %>
 
       <% if (locals.sideBar===true) { %>
