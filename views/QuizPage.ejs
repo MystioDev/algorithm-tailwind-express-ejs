@@ -4,6 +4,17 @@
   <body class="bg-slate-900 overflow-x-hidden bg-[url('/images/blob_bg.png')]">
     <%- include('../views/components/NavBar.ejs') %>
 
+    <%- include('../views/components/SiteHeroPage.ejs', { 
+      title: "Szintfelmérő" ,
+      desc: `Teszteld tudásod, és vágj bele a tanulásba` , 
+      arrow: false, 
+      sideBar: true, 
+      hasSearchBar: false,
+      imageName: "icon_1024_1024_transparent.png" 
+    }) -%>
+
+    <%- include('../views/templates/Quiz/QuizBlock.ejs') %>
+
     <%- include('../views/components/Footer.ejs') %>
   </body>
 </html>
