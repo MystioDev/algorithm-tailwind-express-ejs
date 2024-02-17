@@ -19,14 +19,16 @@ const con = mysql.createConnection({
 exports.searchResult = (req, res, defaultSearch, urlSetSearchData) => {
     con.connect((err) => {
         if (err) {
-            res.render("SearchPage", {
-                title: ` - Sikertelen keresés`,
-                resp: [],
-                searchedKeys: { rawSearched: defaultSearch || 'Sikertelen keresés, kérlek próbáld újra', urlSearched: urlSetSearchData || 'Sikertelen keresés, kérlek próbáld újra' }
-            })
-
+            console.log(err.message);
+      
+            res.render("ErrorPage", {
+              title: " - Hupsz!",
+              errorMessage: "Nem lehet felvenni a kapcsolatot az adatbázissal :(",
+              errorCode: "500"
+            });
+      
             return;
-        }
+          }
 
         con.query(
             "SELECT `name`, `description`, `level`, `url` FROM `algorithms` HAVING LOWER(url) LIKE '%" + urlSetSearchData.toLowerCase() + "%' OR LOWER(name) LIKE '%" + defaultSearch.toLowerCase() + "%';",

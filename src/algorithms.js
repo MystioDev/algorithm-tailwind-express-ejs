@@ -21,9 +21,9 @@ exports.algorithms = (req, res) => {
       console.log(err.message);
 
       res.render("ErrorPage", {
-        title: " - Az algoritmus nem található",
-        errorMessage: "Az algoritmus nem találhatő :(",
-        errorCode: "404"
+        title: " - Hupsz!",
+        errorMessage: "Nem lehet felvenni a kapcsolatot az adatbázissal :(",
+        errorCode: "500"
       });
 
       return;
