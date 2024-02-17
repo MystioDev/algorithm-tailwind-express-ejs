@@ -1,0 +1,17 @@
+<article class="flex flex-col justify-center items-center h-[80svh] relative">
+  <img
+    src="/images/error_icon.png"
+    alt="Oldal szinbólum"
+    class="mt-48 w-[86px] h-[86px]" 
+  />
+
+  <div class="mt-20 text-8xl text-white font-bold font-mono text-center">
+    <span>
+      <%= locals.errorCode || "501" %>
+    </span>
+  </div>
+
+  <div class="mt-12 p-5 w-auto mx-auto text-center text-white text-opacity-50 text-[32px] font-bold font-mono">
+    <%= locals.errorMessage || "Something Went Wrong" %>
+  </div>
+</article>
