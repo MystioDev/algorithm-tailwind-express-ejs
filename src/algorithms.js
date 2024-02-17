@@ -18,10 +18,12 @@ const con = mysql.createConnection({
 exports.algorithms = (req, res) => {
   con.connect((err) => {
     if (err) {
+      console.log(err.message);
 
-      res.render("AlgorithmsPage", {
-        title: " - Algoritmusok",
-        data: [],
+      res.render("ErrorPage", {
+        title: " - Az algoritmus nem található",
+        errorMessage: "Az algoritmus nem találhatő :(",
+        errorCode: "404"
       });
 
       return;

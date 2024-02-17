@@ -17,7 +17,17 @@ const con = mysql.createConnection({
 
 exports.algorithm = (req, res, rawUrl) => {
   con.connect((err) => {
-    if (err) console.log(err.message);
+    if (err) {
+      console.log(err.message);
+
+      res.render("ErrorPage", {
+        title: " - Az algoritmus nem található",
+        errorMessage: "Az algoritmus nem találhatő :(",
+        errorCode: "404"
+      });
+
+      return;
+    }
 
     con.query("SELECT `name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;", (error, respond) => {
       if (error) console.log(error.message);
