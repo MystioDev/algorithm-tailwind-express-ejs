@@ -17,17 +17,7 @@ const con = mysql.createConnection({
 
 exports.algorithm = (req, res, rawUrl) => {
   con.connect((err) => {
-    if (err) {
-      console.log(err.message);
-
-      res.render("ErrorPage", {
-        title: " - Hupsz!",
-        errorMessage: "Nem lehet felvenni a kapcsolatot az adatbázissal :(",
-        errorCode: "500"
-      });
-
-      return;
-    }
+    if (err) console.log(err.message);
 
     con.query("SELECT `name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;", (error, respond) => {
       if (error) console.log(error.message);
