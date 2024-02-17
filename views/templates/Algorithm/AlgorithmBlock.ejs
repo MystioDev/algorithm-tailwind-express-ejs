@@ -1,11 +1,17 @@
-<div class="justify-around flex mt-48 mb-10">
+<div class="flex flex-col relative ml-32 mt-48 mb-10">
   <div
-    class="flex justify-center text-center text-white items-center w-[500px] h-[500px] bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
-    Ide jön a videó vagy anmáció
+    class="flex justify-center text-center text-white items-center w-[1200px] h-auto bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+    <video width="100%">
+      <source src="/images/rendezes.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="flex relative justify-evenly">
+    <button class="w-auto h-auto bg-slate-50">Másolás</button>
   </div>
 
   <div
-    class="w-[600px] h-[500px] bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+    class="absolute left-[45%] top-[30%] translate-x-[50%] w-[600px] h-[500px] bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
     <div class="flex">
       <button id="python"
         class="flex justify-start gap-2 items-center text-center w-[200px] h-[80px] bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 rounded-tl-lg border-fuchsia-500 border-opacity-20">
@@ -22,6 +28,7 @@
         <img class="w-[40px] h-[40px] ml-4" src="/images/c-sharp.png" alt="Java logo" />
         <p class="text-white text-[20px] font-bold font-mono">C-Sharp</p>
       </button>
+
     </div>
 
     <%- include('./AlgorithmCodeEx.ejs', {
@@ -29,6 +36,7 @@
       javacontent:'let a=0 \n let list=document.getElementById("java");',
       csharpcontent:'let a=0 \n let list=document.getElementById("csharp");'
     }) %>
-
+    
   </div>
 </div>
+

@@ -4,16 +4,32 @@
     </ol>
 </code>
 <script>
-    document.getElementById("python").addEventListener("click", function () {
+
+    let python = document.getElementById("python");
+    let java = document.getElementById("java");
+    let csharp = document.getElementById("csharp");
+
+    document.addEventListener("DOMContentLoaded", function () {
         SetLanguageCode(`<%= locals.pythoncontent %>`);
+        python.style.backgroundColor = "rgba(71, 67, 76, 0.6)";
     });
 
-    document.getElementById("java").addEventListener("click", function () {
+    python.addEventListener("click", function () {
+        SetLanguageCode(`<%= locals.pythoncontent %>`);
+        ResetButtonColors();
+        python.style.backgroundColor = "rgba(71, 67, 76, 0.6)";
+    });
+
+    java.addEventListener("click", function () {
         SetLanguageCode(`<%= locals.javacontent %>`);
+        ResetButtonColors();
+        java.style.backgroundColor = "rgba(71, 67, 76, 0.6)";
     });
 
-    document.getElementById("csharp").addEventListener("click", function () {
+    csharp.addEventListener("click", function () {
         SetLanguageCode(`<%= locals.csharpcontent %>`);
+        ResetButtonColors();
+        csharp.style.backgroundColor = "rgba(71, 67, 76, 0.6)";
     });
 
     function SetLanguageCode(content) {
@@ -23,5 +39,11 @@
         for (let i = 0; i < lines.length; i++) {
             list.innerHTML += `<li>${lines[i]}</li>`;
         }
+    }
+
+    function ResetButtonColors() {
+        python.style.backgroundColor = "";
+        java.style.backgroundColor = "";
+        csharp.style.backgroundColor = "";
     }
 </script>
