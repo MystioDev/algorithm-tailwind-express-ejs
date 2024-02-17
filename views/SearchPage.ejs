@@ -7,7 +7,7 @@
     <% if ( locals.resp.length === 0 ) { %>
       <%- include('../views/components/SiteHeroPage.ejs', { 
           title: "Keresés" ,
-          desc: `Keresési találatok "${locals.searchedKeys.rawSearched}"-ra` , 
+          desc: `Keresési találatok "${locals.searchedKeys.rawSearched || 'Sikertelen keresés, kérlek próbáld újra'}"-ra` , 
           arrow: false, 
           sideBar: true, 
           hasSearchBar: true,
@@ -21,7 +21,7 @@
     <% if ( locals.resp.length !== 0 ) { %>
         <%- include('../views/components/SiteHeroPage.ejs', { 
             title: "Keresés" ,
-            desc: `Keresési találatok "${locals.searchedKeys.rawSearched}"-ra` , 
+            desc: `Keresési találatok "${locals.searchedKeys.rawSearched || 'Sikertelen keresés, kérlek próbáld újra'}"-ra` , 
             arrow: true, 
             sideBar: true, 
             hasSearchBar: true,

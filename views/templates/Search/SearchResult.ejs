@@ -9,7 +9,7 @@
   </div>
 
   <% if (locals.LevelTitleBadge === true) { %> <%-
-  include('../../components/LevelTitleBadge.ejs', { content: locals.content, textColor:
+  include('../../components/LevelTitleBadge.ejs', { content: locals.content || "Sikertelen keresés, kérlek próbáld újra", textColor:
   locals.textColor }) %> <% } %> <% if (locals.LevelIconBadge===true) { %> <%-
   include('../../components/LevelIconBadge.ejs') %> <% } %>
 </div>

@@ -840,10 +840,6 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-\[400px\] {
-  margin-top: 400px;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -1892,8 +1888,8 @@ video {
     margin-right: 0px;
   }
 
-  .lg\:mt-64 {
-    margin-top: 16rem;
+  .lg\:mt-48 {
+    margin-top: 12rem;
   }
 
   .lg\:mt-\[100px\] {

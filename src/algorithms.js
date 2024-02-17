@@ -17,7 +17,15 @@ const con = mysql.createConnection({
 
 exports.algorithms = (req, res) => {
   con.connect((err) => {
-    if (err) console.log(err.message);
+    if (err) {
+
+      res.render("AlgorithmsPage", {
+        title: " - Algoritmusok",
+        data: [],
+      });
+
+      return;
+    }
 
     con.query(
       "SELECT `name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;",
