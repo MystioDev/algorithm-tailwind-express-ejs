@@ -16,22 +16,16 @@ const con = mysql.createConnection({
 });
 
 exports.algorithm = (req, res, rawUrl) => {
-  con.connect((err) => {
-    if (err) console.log(err.message);
+  con.query("SELECT `name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;", (error, respond) => {
+    if (error) console.log(error.message);
 
-    con.query("SELECT `name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;", (error, respond) => {
-      if (error) console.log(error.message);
-
-      respond.forEach((element, item) => {
-        if (rawUrl === element.url) {
-          res.render("AlgorithmPage", {
-            title: ` - ${element.name}`,
-            data: element,
-          });
-        }
-      });
+    respond.forEach((element, item) => {
+      if (rawUrl === element.url) {
+        res.render("AlgorithmPage", {
+          title: ` - ${element.name}`,
+          data: element,
+        });
+      }
     });
   });
 };
-
-

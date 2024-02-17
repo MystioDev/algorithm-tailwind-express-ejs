@@ -1400,6 +1400,10 @@ video {
   background-image: url('/images/Ellipse.png');
 }
 
+.bg-\[url\(\'\/images\/bg\.png\'\)\] {
+  background-image: url('/images/bg.png');
+}
+
 .bg-\[url\(\'\/images\/blob_bg\.png\'\)\] {
   background-image: url('/images/blob_bg.png');
 }
@@ -1457,6 +1461,10 @@ video {
 
 .bg-center {
   background-position: center;
+}
+
+.bg-top {
+  background-position: top;
 }
 
 .bg-no-repeat {
