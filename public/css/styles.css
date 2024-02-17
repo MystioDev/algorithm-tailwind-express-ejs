@@ -1355,24 +1355,8 @@ video {
   --tw-bg-opacity: 0.9;
 }
 
-.bg-\[url\(\'\/images\/Ellipse\.png\'\)\] {
-  background-image: url('/images/Ellipse.png');
-}
-
-.bg-\[url\(\'\/images\/blob_bg\.png\'\)\] {
-  background-image: url('/images/blob_bg.png');
-}
-
-.bg-\[url\(\'\/images\/purple_ellipse\.png\'\)\] {
-  background-image: url('/images/purple_ellipse.png');
-}
-
-.bg-\[url\(\'\/images\/red_ellipse\.png\'\)\] {
-  background-image: url('/images/red_ellipse.png');
-}
-
-.bg-\[url\(\'\/images\/yellow_ellipse\.png\'\)\] {
-  background-image: url('/images/yellow_ellipse.png');
+.bg-\[url\(\'\/images\/bg\.png\'\)\] {
+  background-image: url('/images/bg.png');
 }
 
 .bg-gradient-to-b {
@@ -1414,12 +1398,8 @@ video {
           background-clip: text;
 }
 
-.bg-center {
-  background-position: center;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
+.bg-top {
+  background-position: top;
 }
 
 .bg-origin-padding {
