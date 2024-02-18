@@ -936,6 +936,10 @@ video {
   height: 50px;
 }
 
+.h-\[50svh\] {
+  height: 50svh;
+}
+
 .h-\[60px\] {
   height: 60px;
 }
@@ -1443,10 +1447,6 @@ video {
 
 .pt-10 {
   padding-top: 2.5rem;
-}
-
-.pt-\[200px\] {
-  padding-top: 200px;
 }
 
 .text-left {
