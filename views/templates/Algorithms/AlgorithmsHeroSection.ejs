@@ -1,7 +1,4 @@
 <main class="flex flex-col justify-center items-center h-[80svh] relative">
-  <div
-    class="absolute inset-0 w-auto bg-origin-padding -z-50"
-  ></div>
   <img
     src="/images/<%= locals.imageName %>"
     alt="Oldal szinbólum"
@@ -19,5 +16,6 @@
   </div>
 
   <% if (locals.sideBar === true) { %> <%-
-  include('../../components/AskHelp.ejs') %> <% } %>
+    include('../../components/AskHelp.ejs') %> 
+  <% } %>
 </main>
