@@ -912,6 +912,10 @@ video {
   height: 100vh;
 }
 
+.h-\[15px\] {
+  height: 15px;
+}
+
 .h-\[20px\] {
   height: 20px;
 }
@@ -930,6 +934,10 @@ video {
 
 .h-\[50px\] {
   height: 50px;
+}
+
+.h-\[50svh\] {
+  height: 50svh;
 }
 
 .h-\[60px\] {
@@ -1024,6 +1032,10 @@ video {
   width: 100svw;
 }
 
+.w-\[15px\] {
+  width: 15px;
+}
+
 .w-\[20px\] {
   width: 20px;
 }
@@ -1046,6 +1058,10 @@ video {
 
 .w-\[46px\] {
   width: 46px;
+}
+
+.w-\[50\%\] {
+  width: 50%;
 }
 
 .w-\[50px\] {
@@ -1433,10 +1449,6 @@ video {
   padding-top: 2.5rem;
 }
 
-.pt-\[200px\] {
-  padding-top: 200px;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1704,10 +1716,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:absolute {
-    position: absolute;
-  }
-
   .md\:left-1\/2 {
     left: 50%;
   }
@@ -1782,9 +1790,8 @@ video {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .md\:translate-x-\[50\%\] {
-    --tw-translate-x: 50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:justify-end {
@@ -1958,6 +1965,51 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .xl\:absolute {
+    position: absolute;
+  }
+
+  .xl\:left-\[40\%\] {
+    left: 40%;
+  }
+
+  .xl\:top-\[40\%\] {
+    top: 40%;
+  }
+
+  .xl\:mr-60 {
+    margin-right: 15rem;
+  }
+
+  .xl\:h-\[25px\] {
+    height: 25px;
+  }
+
+  .xl\:h-\[30px\] {
+    height: 30px;
+  }
+
+  .xl\:w-\[200px\] {
+    width: 200px;
+  }
+
+  .xl\:w-\[25px\] {
+    width: 25px;
+  }
+
+  .xl\:w-\[30px\] {
+    width: 30px;
+  }
+
+  .xl\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .xl\:translate-x-\[20\%\] {
+    --tw-translate-x: 20%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .xl\:flex-nowrap {
     flex-wrap: nowrap;
   }
@@ -1965,9 +2017,21 @@ video {
   .xl\:gap-8 {
     gap: 2rem;
   }
+
+  .xl\:text-\[20px\] {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:left-\[45\%\] {
+    left: 45%;
+  }
+
+  .\32xl\:top-\[45\%\] {
+    top: 45%;
+  }
+
   .\32xl\:mt-0 {
     margin-top: 0px;
   }
