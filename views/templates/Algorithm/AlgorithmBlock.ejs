@@ -1,32 +1,39 @@
-<div class="flex flex-col relative ml-32 mt-48 mb-10">
-  <div
-    class="flex justify-center text-center text-white items-center w-[1200px] h-auto bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
-    <video width="100%">
-      <source src="/images/rendezes.mp4" type="video/mp4">
-    </video>
+<div class="flex flex-col relative mt-48 mb-10">
+  <div class="">
+    <div
+      class="flex justify-center text-center text-white items-center w-full h-full bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+      <video width="100%">
+        <source src="/images/rendezes.mp4" type="video/mp4">
+      </video>
+    </div>
+
   </div>
 
-  <div class="flex relative justify-evenly">
-    <button class="w-auto h-auto bg-slate-50">Másolás</button>
+  <div class="flex flex-col mt-20">
+    <button class="w-auto h-auto p-5 m-5 bg-slate-50">Másolás</button>
+    <button class="w-auto h-auto p-5 m-5 bg-slate-50">visszapörget</button>
+    <button class="w-auto h-auto p-5 m-5 bg-slate-50">előrepörget</button>
+    <button class="w-auto h-auto p-5 m-5 bg-slate-50">megállít/elindít</button>
   </div>
 
+
   <div
-    class="absolute left-[45%] top-[30%] translate-x-[50%] w-[600px] h-[500px] bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+    class="md:absolute md:translate-x-[50%]  w-100 m-5 h-auto bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
     <div class="flex">
       <button id="python"
-        class="flex justify-start gap-2 items-center text-center w-[200px] h-[80px] bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 rounded-tl-lg border-fuchsia-500 border-opacity-20">
-        <img class="w-[30px] h-[30px] ml-4" src="/images/pythonlogo.png" alt="Python logo" />
-        <p class="text-white text-[20px] font-bold font-mono">Python</p>
+        class="flex justify-start gap-2 items-center text-center w-1/3 h-14 bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 rounded-tl-lg border-fuchsia-500 border-opacity-20">
+        <img class="w-[20px] h-[20px] ml-4" src="/images/pythonlogo.png" alt="Python logo" />
+        <p class="text-white text-[10px] font-bold font-mono">Python</p>
       </button>
       <button id="java"
-        class="flex justify-start gap-2 items-center text-center w-[200px] h-[80px] bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 border-fuchsia-500 border-opacity-20">
-        <img class="w-[40px] h-[40px] ml-4" src="/images/java.png" alt="Java logo" />
-        <p class="text-white text-[20px] font-bold font-mono">Java</p>
+        class="flex justify-start gap-2 items-center text-center w-1/3 h-14 bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 border-fuchsia-500 border-opacity-20">
+        <img class="w-[20px] h-[20px] ml-4" src="/images/java.png" alt="Java logo" />
+        <p class="text-white text-[10px] font-bold font-mono">Java</p>
       </button>
       <button id="csharp"
-        class="flex justify-start gap-2 items-center text-center w-[200px] h-[80px] bg-neutral-800 bg-opacity-20 rounded-tr-[10px] border-r-2 border-t-4 border-fuchsia-500 border-opacity-20 backdrop-blur-sm">
-        <img class="w-[40px] h-[40px] ml-4" src="/images/c-sharp.png" alt="Java logo" />
-        <p class="text-white text-[20px] font-bold font-mono">C-Sharp</p>
+        class="flex justify-start gap-2 items-center text-center w-1/3 h-auto bg-neutral-800 bg-opacity-20 rounded-tr-[10px] border-r-2 border-t-4 border-fuchsia-500 border-opacity-20 backdrop-blur-sm">
+        <img class="w-[20px] h-[20px] ml-4" src="/images/c-sharp.png" alt="Java logo" />
+        <p class="text-white text-[10px] font-bold font-mono">C-Sharp</p>
       </button>
 
     </div>
@@ -36,7 +43,7 @@
       javacontent:'let a=0 \n let list=document.getElementById("java");',
       csharpcontent:'let a=0 \n let list=document.getElementById("csharp");'
     }) %>
-    
+
+
   </div>
 </div>
-

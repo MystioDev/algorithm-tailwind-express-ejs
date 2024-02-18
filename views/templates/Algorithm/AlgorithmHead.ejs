@@ -1,5 +1,8 @@
-<main class="flex flex-col justify-center items-center h-[80svh] relative">
-    <%- include('../../components/SearchBarTag.ejs') %>
+<main class="flex flex-col justify-center pt-[200px] items-center h-[80svh] relative">
+
+    <div class="relative flex justify-center pb-60">
+        <%- include('../../components/SearchBarTag.ejs') %>
+    </div>
 
     <div class="relative flex justify-center items-center">
         <%- include('../../components/LevelTitleBadge.ejs', { content: locals.data.level || "A Szint betöltése nem sikerült", textColor: "text-neutral-900" }) %>
