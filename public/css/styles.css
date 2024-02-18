@@ -1402,10 +1402,6 @@ video {
   background-position: top;
 }
 
-.bg-origin-padding {
-  background-origin: padding-box;
-}
-
 .p-10 {
   padding: 2.5rem;
 }
