@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+  <%- include('../views/components/Head.ejs') %>
+
+  <body class="bg-slate-900 relative min-h-screen w-auto bg-[url('/images/bg.png')] bg-top overflow-x-hidden">
+    <%- include('../views/components/NavBar.ejs') %>
+
+    <%- include('../views/components/AskHelp.ejs') %>
+
+    <% if ( locals.isFailed === true ) { %>
+        <%- include('../views/templates/PageErrors/Error.ejs', {
+            errorCode: "500",
+            errorMessage: "Sikertelen küldés, próbáld újra később"
+        }) %>
+    <% } %>
+
+    
+
+
+    <%- include('../views/components/Footer.ejs') %>
+  </body>
+</html>

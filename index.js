@@ -6,6 +6,7 @@ const path = require("path");
 const algorithms = require("./src/algorithms");
 const algorithm = require("./src/algorithm");
 const searchResult = require("./src/searchResult");
+const sendContact = require("./src/sendContact");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -62,6 +63,16 @@ app.get("/search", (req, res) => {
     searchData
   )
 
+})
+
+app.get("/sendContact", (req, res) => {
+  sendContact.sendContact(
+    req,
+    res,
+    req.query.emailInput,
+    req.query.subjectInput,
+    req.query.descInput
+  )
 })
 
 /* "404" oldal nem található oldal betöltése */
