@@ -9,7 +9,7 @@
   </div>
 
   <div class="flex flex-col text-center justify-center items-center md:flex-row mt-20">
-    <button id="masolasgomb" class="w-[50%] h-auto p-5 m-5 bg-slate-50" onclick="copyUrl()">Másolás</button>
+    <button id="masolasgomb" class="w-[50%] h-auto p-5 m-5 bg-slate-50" onclick="copyUrl()"><img src="/public/images/copybutton.png" alt=""></button>
     <button id="visszaporget" class="w-[50%] h-auto p-5 m-5 bg-slate-50">visszapörget</button>
     <button id="eloreporget" class="w-[50%] h-auto p-5 m-5 bg-slate-50">előrepörget</button>
     <button id="videocontrol" class="w-[50%] h-auto p-5 m-5 bg-slate-50">elindít</button>
@@ -20,6 +20,7 @@
   let algoritmhvideo = document.getElementById("algorithmvideo");
 
   let masolgomb = document.getElementById("masolasgomb");
+  masolgomb.style.background = "url('/public/images/copybutton.png')"
 
   masolgomb.addEventListener("click", () => {
 
