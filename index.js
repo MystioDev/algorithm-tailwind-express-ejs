@@ -11,21 +11,21 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
+/* Elsődleges oldal betöltése */
+
 app.get("/", (req, res) => {
   res.render("HomePage", {
     title: " - Főoldal",
   });
 });
 
-app.get("/algoritmus", (req, res) => {
-  res.render("AlgorithmPage", {
-    title: " - Algoritm"
-  });
-});
+/* Algoritmusok betöltése */
 
 app.get("/algoritmusok", (req, res) => {
   algorithms.algorithms(req, res);
 });
+
+/* Algoritmus betöltése */
 
 app.get("/algoritmusok/*", (req, res) => {
   let rawUrl = req.url.replace("/algoritmusok/", "")
@@ -33,17 +33,23 @@ app.get("/algoritmusok/*", (req, res) => {
   algorithm.algorithm(req, res, rawUrl);
 })
 
+/* Rólunk oldal beöltése */
+
 app.get("/rolunk", (req, res) => {
   res.render("AboutPage", {
     title: " - Rólunk",
   });
 });
 
+/* Szintfelmérő oldal betöltése */
+
 app.get("/teszt", (req, res) => {
   res.render("QuizPage", {
     title: " - Tesztek, kvízek",
   });
 });
+
+/* Keresőmező működése */
 
 app.get("/search", (req, res) => {
   let rawSearchData = req.query.searchBar;
@@ -58,6 +64,8 @@ app.get("/search", (req, res) => {
 
 })
 
+/* "404" oldal nem található oldal betöltése */
+
 app.get("*", (req, res, next) => {
   app.get("*", (request, respond, next) => {
     respond.render("ErrorPage", {
@@ -68,6 +76,8 @@ app.get("*", (req, res, next) => {
   });
   next();
 });
+
+/* App futtatása */
 
 app.listen(port, () => {
   console.log(
