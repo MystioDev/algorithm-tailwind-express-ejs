@@ -22,13 +22,14 @@
 					</form>
 					<script>
 						const inputField = document.getElementById("subjectInput");
-inputField.addEventListener("keydown", () => {
-if (inputField.value.length >= 0) {
-document.querySelector(".fake-place-holder-for-subject").classList.add("hidden");
-} else {
-document.querySelector(".fake-place-holder-for-subject").classList.remove("hidden");
-}
-});
+
+						inputField.addEventListener("keydown", () => {
+							if (inputField.value.length >= 0) {
+								document.querySelector(".fake-place-holder-for-subject").classList.add("hidden");
+							} else {
+								document.querySelector(".fake-place-holder-for-subject").classList.remove("hidden");
+							}
+						});
 					</script>
 				</div>
 			</div>
@@ -44,13 +45,14 @@ document.querySelector(".fake-place-holder-for-subject").classList.remove("hidde
 					</form>
 					<script>
 						const inputFieldEmail = document.getElementById("emailInput");
-inputFieldEmail.addEventListener("keydown", () => {
-if (inputFieldEmail.value.length >= 0) {
-document.querySelector(".fake-place-holder-for-email").classList.add("hidden");
-} else {
-document.querySelector(".fake-place-holder-for-email").classList.remove("hidden");
-}
-});
+							inputFieldEmail.addEventListener("keydown", () => {
+
+							if (inputFieldEmail.value.length >= 0) {
+								document.querySelector(".fake-place-holder-for-email").classList.add("hidden");
+							} else {
+								document.querySelector(".fake-place-holder-for-email").classList.remove("hidden");
+							}
+						});
 					</script>
 				</div>
 			</div>
@@ -67,13 +69,14 @@ document.querySelector(".fake-place-holder-for-email").classList.remove("hidden"
 				<img src="/images/desc_icon.png" alt="Kereső" class="w-8 h-8 mr-3 mt-2 transition-all"/>
 				<script>
 					let inputFieldDesc = document.getElementById("descInput");
-inputFieldDesc.addEventListener("keydown", () => {
-if (inputFieldDesc.value.length >= 0) {
-document.querySelector(".fake-place-holder-for-desc").classList.add("hidden");
-} else {
-document.querySelector(".fake-place-holder-for-desc").classList.remove("hidden");
-}
-});
+
+					inputFieldDesc.addEventListener("keydown", () => {
+						if (inputFieldDesc.value.length >= 0) {
+							document.querySelector(".fake-place-holder-for-desc").classList.add("hidden");
+						} else {
+							document.querySelector(".fake-place-holder-for-desc").classList.remove("hidden");
+						}
+					});
 				</script>
 			</div>
 		</div>
