@@ -1449,6 +1449,10 @@ video {
   padding-top: 2.5rem;
 }
 
+.pt-60 {
+  padding-top: 15rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1491,6 +1495,10 @@ video {
 
 .text-\[16px\] {
   font-size: 16px;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
 }
 
 .text-\[20px\] {
@@ -1995,8 +2003,8 @@ video {
     height: 30px;
   }
 
-  .xl\:w-\[200px\] {
-    width: 200px;
+  .xl\:w-\[185px\] {
+    width: 185px;
   }
 
   .xl\:w-\[25px\] {
@@ -2007,12 +2015,12 @@ video {
     width: 30px;
   }
 
-  .xl\:w-\[70\%\] {
-    width: 70%;
+  .xl\:w-\[60\%\] {
+    width: 60%;
   }
 
-  .xl\:translate-x-\[20\%\] {
-    --tw-translate-x: 20%;
+  .xl\:translate-x-\[30\%\] {
+    --tw-translate-x: 30%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
