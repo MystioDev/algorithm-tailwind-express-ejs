@@ -9,8 +9,8 @@
             <ol class="text-white md:text-[32px] font-bold font-mono">
               <li>max = t[0]</li>
               <li>ciklus i = 1 .. n - 1</li>
-              <li>ha t[i] <input type="text" id="dp1" class="w-20 text-center bg-neutral-500 drop z-0 relative" disabled="true"> max akkor</li>
-              <li><input type="text" id="dp2" class="w-20 text-center bg-neutral-500 drop" disabled="true"> = t[i]</li>
+              <li>ha t[i] <input type="text" id="dp1" class="w-20 text-center bg-neutral-500" ondrop="drop(event)" ondragover="allowDrop(event)" disabled="true"> max akkor</li>
+              <li><input type="text" id="dp2" class="w-20 text-center bg-neutral-500" ondrop="drop(event)" ondragover="allowDrop(event)" disabled="true"> = t[i]</li>
               <li>ha vége</li>
               <li>ciklus vége</li>
               <li>ki max</li>
@@ -18,16 +18,16 @@
       </div>
 
       <div class="w-32 mr-52 bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm p-10">
-        <div id="dg1" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono drag z-10 absolute inset-0" draggable="true">
+        <div id="drag1" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
           <
         </div>
-        <div id="dg2" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono drag z-10" draggable="true">
+        <div id="drag2" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
           >
         </div>
-        <div id="dg3" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono drag z-10" draggable="true">
+        <div id="drag3" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
           min
         </div>
-        <div id="dg4" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono drag z-10" draggable="true">
+        <div id="drag4" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
           max
         </div>
       </div>
@@ -40,25 +40,17 @@
 </article>
 
 <script>
-  let dragTemp;
- 
-  let a = document.querySelector('.drag')
-  let b = document.querySelector('.drop')
+function allowDrop(ev) {
+  ev.preventDefault();
+}
 
-  a.addEventListener("dragstart", (e) => {
-    dragTemp = e.target;
-    console.log('dragStart', dragTemp);
-  })
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
 
-  b.addEventListener("dragover", (e) => {
-    e.preventDefault();
-  })
-  
- document.querySelector("#dp1").addEventListener('drop', function () {
-   this.appendChild( dragTemp )
- })
- 
- document.querySelector("#dp2").addEventListener('drop', function () {
-     this.appendChild( dragTemp )
- })
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
 </script>
