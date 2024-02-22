@@ -915,6 +915,10 @@ video {
   margin-right: 0.75rem;
 }
 
+.mr-32 {
+  margin-right: 8rem;
+}
+
 .mr-5 {
   margin-right: 1.25rem;
 }
@@ -1149,6 +1153,10 @@ video {
 
 .w-28 {
   width: 7rem;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .w-4 {
@@ -1504,6 +1512,11 @@ video {
 .bg-gray-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 115 115 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-700 {
