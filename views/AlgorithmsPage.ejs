@@ -3,6 +3,10 @@
   <%- include('../views/components/Head.ejs') %>
 
   <body class="bg-slate-900 overflow-x-hidden bg-[url('/images/bg.png')] bg-top">
+    <%- include('../views/components/Loader.ejs', {
+      loading: true,
+      time: 1000
+    }) %>
 
     <%- include('../views/components/NavBar.ejs') %>
 
