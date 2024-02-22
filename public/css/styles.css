@@ -1215,6 +1215,10 @@ video {
   width: 50px;
 }
 
+.w-\[750px\] {
+  width: 750px;
+}
+
 .w-\[76px\] {
   width: 76px;
 }
