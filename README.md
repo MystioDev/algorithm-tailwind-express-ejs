@@ -6,6 +6,7 @@ npm i express
 npm i ejs
 npm i mysql
 npm i nodemon --save-dev
+npm i dotenv --save
 npx tailwindcss init
 npm i -D tailwindcss@latest postcss@latest autoprefixer@latest
 npm install -D @tailwindcss/typography

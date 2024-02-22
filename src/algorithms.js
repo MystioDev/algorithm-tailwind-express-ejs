@@ -1,5 +1,6 @@
-const mysql = require("mysql");
+require("dotenv").config()
 
+const mysql = require("mysql");
 const express = require("express");
 const path = require("path");
 
@@ -9,10 +10,11 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 const con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "", // admin
-  database: "algorithm", // database
+  host: process.env.DATABASE_HOST,
+  user: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PW,
+  database: process.env.DATABASE_DATABASE_NAME,
+  multipleStatements: false
 });
 
 exports.algorithms = (req, res) => {
