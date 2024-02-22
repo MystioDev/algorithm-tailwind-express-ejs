@@ -800,6 +800,10 @@ video {
   margin-top: 0px;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -894,10 +898,6 @@ video {
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-7 {
-  height: 1.75rem;
 }
 
 .h-8 {
@@ -1770,10 +1770,6 @@ video {
 
   .md\:flex {
     display: flex;
-  }
-
-  .md\:h-8 {
-    height: 2rem;
   }
 
   .md\:h-\[110px\] {
