@@ -1,6 +1,9 @@
+require("dotenv").config()
+
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.HOST_PORT || 3000;
+const host = process.env.HOST_URL || "localhost";
 const path = require("path");
 
 const algorithms = require("./src/algorithms");
@@ -109,8 +112,10 @@ app.get("*", (req, res, next) => {
 
 /* App futtatása */
 
-app.listen(port, () => {
+app.listen(port, host, (err) => {
+  if (err) console.log(err);
+
   console.log(
-    `\n\nAlgorithm ⚡️ App is running:\n\n  port: ${port}\n  url: http://localhost:${port}/\n  time: ${Date()}\n`
+    `\n\nAlgorithm ⚡️ App is running:\n\n  port: ${port}\n  url: http://${host}:${port}/\n  time: ${Date()}\n`
   );
 });
