@@ -2,6 +2,11 @@
 <html lang="hu" class="scroll-smooth">
   <%- include('../views/components/Head.ejs') %>
   <body class="bg-slate-900 overflow-x-hidden bg-[url('/images/bg.png')] bg-top">
+    <%- include('../views/components/Loader.ejs', {
+      loading: true,
+      time: 200
+    }) %>
+    
     <%- include('../views/components/NavBar.ejs') %>
 
     <%- include('../views/components/SiteHeroPage.ejs', { 

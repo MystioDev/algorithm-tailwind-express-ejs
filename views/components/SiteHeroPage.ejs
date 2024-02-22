@@ -1,5 +1,4 @@
 <main class="flex flex-col justify-center items-center h-[60svh] relative">
-
   <% if ( locals.hasSearchBar === true ) { %>
     <%- include('../components/SearchBarTag.ejs') %>
   <% } %>
@@ -7,11 +6,11 @@
   <img src="/images/<%= locals.imageName %>" alt="Oldal szinbólum" class="mt-48 w-[86px] h-[86px]" />
 
   <div
-    class="mt-12 text-3xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
+    class="animate-once animate-fade-down animate-delay-[200ms] mt-12 text-3xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
     <%= locals.title %>
   </div>
 
-  <div class="w-[240px] lg:w-[670px] h-[91px] text-center mt-3 leading-7">
+  <div class="animate-once animate-fade-up animate-delay-[300ms] w-[240px] lg:w-[670px] h-[91px] text-center mt-3 leading-7">
     <div class="text-white text-opacity-50 text-xl md:text-[32px] font-bold font-mono">
       <%= locals.desc %>
     </div>

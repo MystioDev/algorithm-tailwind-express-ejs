@@ -1884,12 +1884,20 @@ video {
   animation-delay: 2000ms;
 }
 
+.animate-delay-\[200ms\] {
+  animation-delay: 200ms;
+}
+
 .animate-delay-\[2100ms\] {
   animation-delay: 2100ms;
 }
 
 .animate-delay-\[2200ms\] {
   animation-delay: 2200ms;
+}
+
+.animate-delay-\[300ms\] {
+  animation-delay: 300ms;
 }
 
 .animate-reverse {

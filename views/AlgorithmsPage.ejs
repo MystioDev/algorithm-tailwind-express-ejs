@@ -20,10 +20,10 @@
     <%- include('../views/templates/Algorithms/AlgorithmsLevels.ejs') %>
 
     <article class="flex justify-center items-center flex-col gap-8 mt-32">
-      <div id="section--junior-title" class="flex justify-start w-[90%]">
+      <div id="section--kezdo-cim" class="flex justify-start w-[90%]">
         <h1 class="text-white text-[50px] font-bold text-left">Kezdő Szint</h1>
       </div>
-      <div id="section--junior" class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
+      <div id="section--kezdo" class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
         <% if (locals.data.length === 0) { %>
           <%- include('../views/components/Card.ejs', {
             LevelTitleBadge: true,
@@ -51,10 +51,10 @@
         <% } %>
       </div>
 
-      <div id="section--interior-title" class="flex justify-start w-[90%]">
+      <div id="section--kozep-cim" class="flex justify-start w-[90%]">
         <h1 class="text-white text-[50px] font-bold text-left">Közép Szint</h1>
       </div>
-      <div id="section--interior" class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
+      <div id="section--kozep" class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
         <% if (locals.data.length === 0) { %>
           <%- include('../views/components/Card.ejs', {
             LevelTitleBadge: true,
@@ -82,10 +82,10 @@
         <% } %>
       </div>
 
-      <div id="section--senior-title" class="flex justify-start w-[90%]">
+      <div id="section--halado-cim" class="flex justify-start w-[90%]">
         <h1 class="text-white text-[50px] font-bold text-left">Haladó Szint</h1>
       </div>
-      <div id="section--senior" class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
+      <div id="section--halado" class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
         <% if (locals.data.length === 0) { %>
           <%- include('../views/components/Card.ejs', {
             LevelTitleBadge: true,
@@ -133,17 +133,17 @@
         observer.observe(trigger)
       }
 
-      let sectionJuniorTitle = document.querySelector("#section--junior-title")
-      let sectionInteriorTitle = document.querySelector("#section--interior-title")
-      let sectionSeniorTitle = document.querySelector("#section--senior-title")
+      let sectionkezdoTitle = document.querySelector("#section--kezdo-cim")
+      let sectionkozepTitle = document.querySelector("#section--kozep-cim")
+      let sectionhaladoTitle = document.querySelector("#section--halado-cim")
 
-      let sectionJunior = document.querySelector("#section--junior")
-      let sectionInterior = document.querySelector("#section--interior")
-      let sectionSenior = document.querySelector("#section--senior")
+      let sectionkezdo = document.querySelector("#section--kezdo")
+      let sectionkozep = document.querySelector("#section--kozep")
+      let sectionhalado = document.querySelector("#section--halado")
 
-      animationElement(sectionJunior, sectionJuniorTitle)
-      animationElement(sectionInterior, sectionInteriorTitle)
-      animationElement(sectionSenior, sectionSeniorTitle)
+      animationElement(sectionkezdo, sectionkezdoTitle)
+      animationElement(sectionkozep, sectionkozepTitle)
+      animationElement(sectionhalado, sectionhaladoTitle)
     </script>
 
     <%- include('../views/components/Footer.ejs') %>
