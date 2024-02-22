@@ -1,5 +1,5 @@
 <code id="codelines" class="">
-    <ol start="0" class="font-bold p-5 list-inside list-decimal text-[10px]  text-white" id="codelist">
+    <ol start="0" class="font-bold p-5 list-inside list-decimal text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px]" id="codelist">
         
     </ol>
 </code>
@@ -37,7 +37,7 @@
         list.innerHTML = '';
         let lines = content.split('\n');
         for (let i = 0; i < lines.length; i++) {
-            list.innerHTML += `<li>${lines[i]}</li>`;
+            list.innerHTML += `<li class="bg-neutral-900 bg-opacity-20 rounded-[50px] border border-neutral-700 px-5 py-2 text-sky-500"><span class="text-white">${lines[i]}</span></li>`;
         }
     }
 
