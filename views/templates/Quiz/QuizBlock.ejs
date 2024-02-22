@@ -6,28 +6,28 @@
 
     <div class="flex gap-4 justify-between">
       <div class="w-[750px] ml-10 bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm p-10">
-            <ol class="text-white md:text-[32px] font-bold font-mono">
+            <ol class="text-white md:text-[32px] font-bold font-mono flex flex-col gap-2">
               <li>max = t[0]</li>
               <li>ciklus i = 1 .. n - 1</li>
-              <li>ha t[i] <input type="text" id="dp1" class="w-20 text-center bg-neutral-500 bg-opacity-20 border border-neutral-700 backdrop-blur-sm"  ondrop="drop(event)" ondragover="allowDrop(event)" disabled="true"> max akkor</li>
-              <li><input type="text" id="dp2" class="w-20 text-center bg-neutral-500 bg-opacity-20 border border-neutral-700 backdrop-blur-sm" ondrop="drop(event)" ondragover="allowDrop(event)" disabled="true"> = t[i]</li>
+              <li>ha t[i] <input type="text" id="dp1" class="w-60 text-center bg-neutral-900 bg-opacity-20 rounded-full border border-neutral-700 backdrop-blur-sm py-1 px-5"  ondrop="drop(event)" ondragover="allowDrop(event)" disabled="true"> max akkor</li>
+              <li><input type="text" id="dp2" class="w-60 text-center bg-neutral-900 bg-opacity-20 rounded-full border border-neutral-700 backdrop-blur-sm py-1 px-5" ondrop="drop(event)" ondragover="allowDrop(event)" disabled="true"> = t[i]</li>
               <li>ha vége</li>
               <li>ciklus vége</li>
               <li>ki max</li>
             </ol>
       </div>
 
-      <div class="w-32 mr-52 bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm p-10">
-        <div id="drag1" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
+      <div class="w-32 mr-52">
+        <div id="drag1" class="bg-neutral-900 bg-opacity-20 rounded-full border border-neutral-700 backdrop-blur-sm py-2 px-5 mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
           <
         </div>
-        <div id="drag2" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
+        <div id="drag2" class="bg-neutral-900 bg-opacity-20 rounded-full border border-neutral-700 backdrop-blur-sm py-2 px-5 mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
           >
         </div>
-        <div id="drag3" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
+        <div id="drag3" class="bg-neutral-900 bg-opacity-20 rounded-full border border-neutral-700 backdrop-blur-sm py-2 px-5 mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
           min
         </div>
-        <div id="drag4" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
+        <div id="drag4" class="bg-neutral-900 bg-opacity-20 rounded-full border border-neutral-700 backdrop-blur-sm py-2 px-5 mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono" draggable="true" ondragstart="drag(event)">
           max
         </div>
       </div>
