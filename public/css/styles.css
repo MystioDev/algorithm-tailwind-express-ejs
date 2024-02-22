@@ -1286,6 +1286,36 @@ video {
   animation: bounce 1s infinite;
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation: fade 1s both;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-down {
+  animation: fade-down 1s both;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1808,6 +1838,22 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-reverse {
+  animation-direction: reverse;
+}
+
+.animate-duration-500 {
+  animation-duration: 500ms;
+}
+
+.animate-once {
+  animation-iteration-count: 1;
+}
+
+.animate-ease-in-out {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .focus-within\:border-4:focus-within {

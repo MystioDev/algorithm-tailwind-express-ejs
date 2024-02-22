@@ -1,5 +1,5 @@
 <% if ( locals.loading === true || false ) { %>
-    <div class="z-50 bg-slate-900 h-screen w-screen flex justify-center items-center fixed">
+    <div id="page--loader" class="z-50 bg-slate-900 h-screen w-screen flex justify-center items-center fixed">
         <div class="inset-0 w-24 h-24">
             <div class="loader--code loader--line1"></div>
             <div class="loader--code loader--line2"></div>
@@ -8,4 +8,20 @@
             <div class="loader--code loader--line5"></div>
         </div>
     </div>
+
+    <script>
+        setTimeout(() => {
+            let laoder = document.querySelector("#page--loader")
+
+            laoder.classList.add("animate-fade")
+            laoder.classList.add("animate-reverse")
+            laoder.classList.add("animate-ease-in-out")
+            laoder.classList.add("animate-duration-500")
+
+            setTimeout(() => {
+                laoder.classList.remove("fixed")
+                laoder.classList.add("hidden")
+            }, 500)
+        }, 2000)
+    </script>
 <% } %>
