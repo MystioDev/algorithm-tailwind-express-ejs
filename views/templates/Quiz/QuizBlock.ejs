@@ -4,20 +4,67 @@
         Egészítsd ki a hiányzó algoritmust
       </div>
 
+    <div class="flex gap-4 justify-between">
       <div class="w-[750px] bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm p-10">
             <ol class="text-white md:text-[32px] font-bold font-mono">
               <li>max = t[0]</li>
               <li>ciklus i = 1 .. n - 1</li>
-              <li>ha t[i] <input type="text"> max akkor</li>
-              <li><input type="text"> = t[i]</li>
+              <li>ha t[i] <input type="text" id="dp1" class="w-20 bg-neutral-500 drop" droppable="true"> max akkor</li>
+              <li><input type="text" id="dp1" class="w-20 bg-neutral-500 drop" droppable="true"> = t[i]</li>
               <li>ha vége</li>
               <li>ciklus vége</li>
               <li>ki max</li>
             </ol>
       </div>
 
+      <div class="w-32 mr-32 bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm p-10">
+        <div id="dg1" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono drag" draggable="true">
+          <
+        </div>
+        <div id="dg2" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono drag" draggable="true">
+          >
+        </div>
+        <div id="dg3" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono drag" draggable="true">
+          min
+        </div>
+        <div id="dg4" class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono drag" draggable="true">
+          max
+        </div>
+      </div>
+    </div>
+
       <div class="w-full flex justify-center mt-20">
         <button type="submit" class="flex justify-center items-center w-full md:w-48 h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono mt-5 md:mt-0">
 				Ellenőrzés</button>
     </div>
 </article>
+
+<!--
+<script>
+  let dragTemp;
+ 
+  let a = document.querySelector('drag')
+  let b = document.querySelector('drop')
+
+  a.on('dragstart',function(e){
+     dragTemp = e.target;
+     console.log('dragStart',dragTemp);
+ })
+ 
+ b.on('dragover', function(e){
+     e.preventDefault();
+ })
+ 
+ 
+ document.getElementById("dp1").on('drop',function(){
+   this.appendChild( dragTemp )
+ })
+ 
+ document.getElementById("dp2").on('drop',function(){
+     this.appendChild( dragTemp )
+     document.getElementById("dp2").children('.drag').each(function() {
+         console.log(this.innerText);
+     })
+ })
+</script>
+-->
