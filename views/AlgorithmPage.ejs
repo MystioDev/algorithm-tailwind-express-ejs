@@ -14,7 +14,12 @@
       data: locals.data
     }) %>
 
-    <%- include('../views/templates/Algorithm/AlgorithmBlock.ejs') %>
+    <%- include('../views/templates/Algorithm/AlgorithmBlock.ejs', {
+      videoUrl: locals.data.visual,
+      pythonCode: locals.data.py,
+      javaCode: locals.data.java,
+      cSharpCode: locals.data.cs
+    }) %>
     
     <%- include('../views/components/Footer.ejs') %>
   </body>

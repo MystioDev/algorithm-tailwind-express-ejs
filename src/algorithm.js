@@ -18,7 +18,7 @@ const con = mysql.createConnection({
 });
 
 exports.algorithm = (req, res, rawUrl) => {
-  con.query("SELECT `name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;", (error, respond) => {
+  con.query("SELECT algorithms.name, `description`, `level`, `url`, solutions.visual, language_python.code AS 'py', language_java.code AS 'java', language_c_sharp.code AS 'cs' FROM `algorithms` INNER JOIN language_python ON language_python.id = algorithms.python_id INNER JOIN language_java ON language_java.id = algorithms.java_id INNER JOIN language_c_sharp ON language_c_sharp.id = algorithms.c_sharp_id INNER JOIN solutions ON solutions.id = algorithms.solution_id;", (error, respond) => {
     if (error) console.log(error.message);
 
     respond.forEach((element, item) => {
