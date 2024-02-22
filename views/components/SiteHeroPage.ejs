@@ -17,11 +17,11 @@
     </div>
   </div>
 
-  <% if (locals.arrow===true) { %>
-    <img src="/images/scroll_down.svg" alt="Görgess tovább" class="absolute -bottom-12 w-20 h-20 animate-bounce" />
-    <% } %>
+  <% if (locals.arrow === true) { %>
+    <img src="/images/scroll_down.svg" alt="Görgess tovább" class="absolute -bottom-32 lg:-bottom-24 w-20 h-20 mt-12 animate-bounce" />
+  <% } %>
 
-      <% if (locals.sideBar===true) { %>
-        <%- include('./AskHelp.ejs') %>
-          <% } %>
+  <% if (locals.sideBar === true) { %>
+    <%- include('./AskHelp.ejs') %>
+  <% } %>
 </main>

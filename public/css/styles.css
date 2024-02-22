@@ -633,8 +633,8 @@ video {
   bottom: -2.5rem;
 }
 
-.-bottom-12 {
-  bottom: -3rem;
+.-bottom-32 {
+  bottom: -8rem;
 }
 
 .-left-10 {
@@ -1886,6 +1886,10 @@ video {
 
   .lg\:inset-0 {
     inset: 0px;
+  }
+
+  .lg\:-bottom-24 {
+    bottom: -6rem;
   }
 
   .lg\:z-0 {
