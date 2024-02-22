@@ -1,41 +1,41 @@
-<div class="flex flex-col relative mt-48 mb-10">
+<div class="flex flex-col relative mt-12 xl:mt-52 mb-10">
   <div class="p-5">
     <div
-      class="flex justify-center text-center text-white items-center sm::w-full xl:w-[60%] h-full xl:mr-60 bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+      class="flex xl:mt-0 justify-center text-center text-white items-center sm::w-full xl:w-[60%] h-full xl:mr-60 bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
       <video id="algorithmvideo" width="100%">
         <source id="videosource" src="<%= locals.videoUrl %>" type="video/mp4">
       </video>
     </div>
   </div>
 
-  <div class="flex flex-col text-center justify-start w-100 xl:w-[50%] items-center md:flex-row">
+  <div class="flex flex-row text-center xl:justify-start justify-center w-100 items-center flex-wrap">
     <button id="masolasgomb"
-      class="bg-no-repeat bg-contain bg-transparent w-[40%] h-[40px] p-5 m-5 bg-slate-50"></button>
+      class="bg-no-repeat bg-contain bg-transparent w-[10%] h-[30px] p-5 m-5 bg-slate-50"></button>
     <button id="visszaporget"
-      class="bg-no-repeat bg-contain bg-transparent w-[40%] h-[40px] p-5 m-5 bg-slate-50"></button>
+      class="bg-no-repeat bg-contain bg-transparent w-[10%] h-[30px] p-5 m-5 bg-slate-50"></button>
     <button id="eloreporget"
-      class="bg-no-repeat bg-contain bg-transparent w-[40%] h-[40px] p-5 m-5 bg-slate-50"></button>
+      class="bg-no-repeat bg-contain bg-transparent w-[10%] h-[30px] p-5 m-5 bg-slate-50"></button>
     <button id="videocontrol"
-      class="bg-no-repeat bg-contain bg-transparent w-[40%] h-[40px] p-5 m-5 bg-slate-50"></button>
+      class="bg-no-repeat bg-contain bg-transparent w-[10%] h-[30px] p-5 m-5 bg-slate-50"></button>
   </div>
 
   <div 
-    class="xl:absolute xl:translate-x-[30%] xl:left-[40%] xl:top-[40%] 2xl:left-[45%] 2xl:top-[45%] w-[40vw] m-5 h-auto bg-neutral-900 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
+    class="xl:absolute xl:translate-x-[30%] xl:left-[40%] xl:top-[40%] 2xl:left-[45%] 2xl:top-[45%] w-100 xl:w-[40vw] m-5 h-auto bg-neutral-900 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
     <div class="flex">
       <button id="python"
         class="flex justify-center gap-2 items-center w-1/3  h-14 bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 rounded-tl-lg border-fuchsia-500 border-opacity-20">
-        <img class=" w-[15px] h-[15px] xl:w-[25px] xl:h-[25px] ml-4" src="/images/pythonlogo.png" alt="Python logo" />
-        <p class="text-white text-[10px] xl:text-[20px] font-bold font-mono">Python</p>
+        <img class=" w-[15px] h-[15px] md:w-[25px] md:h-[25px] xl:ml-4" src="/images/pythonlogo.png" alt="Python logo" />
+        <p class="text-white text-[10px] md:text-[20px] font-bold font-mono">Python</p>
       </button>
       <button id="java"
         class="flex justify-center gap-2 items-center w-1/3  h-14 bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 border-fuchsia-500 border-opacity-20">
-        <img class="w-[20px] h-[20px] xl:w-[30px] xl:h-[30px] ml-4" src="/images/java.png" alt="Java logo" />
-        <p class="text-white text-[10px] xl:text-[20px] font-bold font-mono">Java</p>
+        <img class="w-[20px] h-[20px] md:w-[30px] md:h-[30px] xl:ml-4" src="/images/java.png" alt="Java logo" />
+        <p class="text-white text-[10px] md:text-[20px] font-bold font-mono">Java</p>
       </button>
       <button id="csharp"
         class="flex justify-center gap-2 items-center w-1/3 h-auto bg-neutral-800 bg-opacity-20 rounded-tr-[10px] border-r-2 border-t-4 border-fuchsia-500 border-opacity-20 backdrop-blur-sm">
-        <img class="w-[20px] h-[20px] xl:w-[30px] xl:h-[30px] ml-4" src="/images/c-sharp.png" alt="C# logo" />
-        <p class="text-white text-[10px] xl:text-[20px] font-bold font-mono">C-Sharp</p>
+        <img class="w-[20px] h-[20px] md:w-[30px] md:h-[30px] xl:ml-4" src="/images/c-sharp.png" alt="C# logo" />
+        <p class="text-white text-[10px] md:text-[20px] font-bold font-mono">C-Sharp</p>
       </button>
 
     </div>
