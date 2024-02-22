@@ -67,12 +67,31 @@ app.get("/search", (req, res) => {
 
 app.get("/sendContact", (req, res) => {
   sendContact.sendContact(
-    req,
     res,
     req.query.emailInput,
     req.query.subjectInput,
     req.query.descInput
   )
+})
+
+app.get("/contact", (req, res) => {
+  let status = req.query.status;
+
+  switch (status) {
+    case "success":
+      res.render("FeedBackRespond", {
+        isFailed: false
+      });
+
+      break;
+  
+    case "failed":
+      res.render("FeedBackRespond", {
+        isFailed: true
+      });
+
+      break;
+  }
 })
 
 /* "404" oldal nem található oldal betöltése */

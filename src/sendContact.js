@@ -16,10 +16,17 @@ const con = mysql.createConnection({
     multipleStatements: false
 });
 
-exports.sendContact = (req, res, email, subject, text) => {
-    let preSql = "INSERT INTO `contact`(`email`, `subject`, `text`) VALUES ('?','?','?');";
+exports.sendContact = (res, email, subject, text) => {
+    let preSql = "INSERT INTO `contact`(`email`, `subject`, `text`) VALUES (?, ?, ?);";
 
-    con.query(preSql, [email, subject, text], () => {
-        
+    con.query(preSql, [email, subject, text], (error, respond) => {
+        if (error) {
+            console.log(error);
+
+            res.redirect("/contact/?status=failed")
+        }
+
+        res.redirect("/contact/?status=success")
+
     })
 }

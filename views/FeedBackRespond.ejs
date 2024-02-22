@@ -14,8 +14,9 @@
         }) %>
     <% } %>
 
-    
-
+    <% if ( locals.isFailed === false ) { %>
+      <%- include('../views/templates/About/SuccessResult.ejs') %>
+    <% } %>
 
     <%- include('../views/components/Footer.ejs') %>
   </body>
