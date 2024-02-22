@@ -4,23 +4,26 @@
       class="flex justify-center text-center text-white items-center sm::w-full xl:w-[60%] h-full xl:mr-60 bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
       <video id="algorithmvideo" width="100%">
         <source id="videosource" src="/animations/egyszeru_cseres_rendezes.mp4" type="video/mp4">
-      </video>
+      </video>   
     </div>
   </div>
 
-  <div class="flex flex-col text-center justify-center items-center md:flex-row mt-20">
-    <button id="masolasgomb" class="w-[50%] h-auto p-5 m-5 bg-slate-50" onclick="copyUrl()"><img src="/public/images/copybutton.png" alt=""></button>
-    <button id="visszaporget" class="w-[50%] h-auto p-5 m-5 bg-slate-50">visszapörget</button>
-    <button id="eloreporget" class="w-[50%] h-auto p-5 m-5 bg-slate-50">előrepörget</button>
-    <button id="videocontrol" class="w-[50%] h-auto p-5 m-5 bg-slate-50">elindít</button>
+  <div class="flex flex-col text-center justify-start w-100 xl:w-[50%] items-center md:flex-row mt-10">
+    <button id="masolasgomb" class="bg-no-repeat bg-contain bg-transparent w-[40%] h-[80px] p-5 m-5 bg-slate-50"></button>
+    <button id="visszaporget" class="bg-no-repeat bg-contain bg-transparent w-[40%] h-[80px] p-5 m-5 bg-slate-50"></button>
+    <button id="eloreporget" class="bg-no-repeat bg-contain bg-transparent w-[40%] h-[80px] p-5 m-5 bg-slate-50"></button>
+    <button id="videocontrol" class="bg-no-repeat bg-contain bg-transparent w-[40%] h-[80px] p-5 m-5 bg-slate-50"></button>
   </div>
+ 
 
   <script>
 
   let algoritmhvideo = document.getElementById("algorithmvideo");
 
   let masolgomb = document.getElementById("masolasgomb");
-  masolgomb.style.background = "url('/public/images/copybutton.png')"
+  masolgomb.style.backgroundImage = "url('/images/copybutton.png')";
+  masolgomb.style.backgroundPosition = "center";
+
 
   masolgomb.addEventListener("click", () => {
 
@@ -30,6 +33,8 @@
   })
 
   let visszaporget = document.getElementById("visszaporget");
+  visszaporget.style.backgroundImage = "url('/images/backbutton.png')";
+  visszaporget.style.backgroundPosition = "center";
 
   visszaporget.addEventListener("click", () => {
 
@@ -39,6 +44,8 @@
 
 
   let eloreporget = document.getElementById("eloreporget");
+  eloreporget.style.backgroundImage = "url('/images/forwardbutton.png')";
+  eloreporget.style.backgroundPosition = "center";
 
   eloreporget.addEventListener("click", () => {
 
@@ -47,17 +54,19 @@
   })
 
   let videocontrol = document.getElementById("videocontrol");
+  videocontrol.style.backgroundImage = "url('/images/pausebutton.png')";
+  videocontrol.style.backgroundPosition = "center";
   let isPlaying = false;
 
   videocontrol.addEventListener("click", () => {
     if (!isPlaying) {
       algoritmhvideo.play();
       isPlaying = true;
-      videocontrol.textContent = "megállít";
+      videocontrol.style.backgroundImage = "url('/images/playbutton.png')";
     } else {
       algoritmhvideo.pause();
       isPlaying = false;
-      videocontrol.textContent = "elindít";
+      videocontrol.style.backgroundImage = "url('/images/pausebutton.png')";
     }
   });
 
@@ -72,7 +81,7 @@
     <div class="flex">
       <button id="python"
         class="flex justify-center gap-2 items-center w-1/3 xl:w-[185px] h-14 bg-neutral-800 bg-opacity-20 border-r-2 border-t-4 rounded-tl-lg border-fuchsia-500 border-opacity-20">
-        <img class="w-[15px] h-[15px] xl:w-[25px] xl:h-[25px] ml-4" src="/images/pythonlogo.png" alt="Python logo" />
+        <img class=" w-[15px] h-[15px] xl:w-[25px] xl:h-[25px] ml-4" src="/images/pythonlogo.png" alt="Python logo" />
         <p class="text-white text-[10px] xl:text-[20px] font-bold font-mono">Python</p>
       </button>
       <button id="java"
