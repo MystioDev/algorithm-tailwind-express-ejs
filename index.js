@@ -68,6 +68,8 @@ app.get("/search", (req, res) => {
 
 })
 
+/* Contact feltöltése adatbázisba */
+
 app.get("/sendContact", (req, res) => {
   sendContact.sendContact(
     res,
@@ -76,6 +78,8 @@ app.get("/sendContact", (req, res) => {
     req.query.descInput
   )
 })
+
+/* Contact Sikeres - Nem Sikeres */
 
 app.get("/contact", (req, res) => {
   let status = req.query.status;
@@ -97,7 +101,7 @@ app.get("/contact", (req, res) => {
   }
 })
 
-/* "404" oldal nem található oldal betöltése */
+/* "404" | oldal nem található oldal betöltése */
 
 app.get("*", (req, res, next) => {
   app.get("*", (request, respond, next) => {
