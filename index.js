@@ -98,6 +98,13 @@ app.get("/contact", (req, res) => {
       });
 
       break;
+    
+    default:
+      res.render("HomePage", {
+        title: " - Főoldal",
+      });
+      
+      break;
   }
 })
 
