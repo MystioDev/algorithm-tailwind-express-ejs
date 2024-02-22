@@ -1316,6 +1316,38 @@ video {
   animation: fade-down 1s both;
 }
 
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-right {
+  animation: fade-right 1s both;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1s both;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1838,6 +1870,18 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-delay-\[2000ms\] {
+  animation-delay: 2000ms;
+}
+
+.animate-delay-\[2100ms\] {
+  animation-delay: 2100ms;
+}
+
+.animate-delay-\[2200ms\] {
+  animation-delay: 2200ms;
 }
 
 .animate-reverse {
