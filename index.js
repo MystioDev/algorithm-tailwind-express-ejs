@@ -103,7 +103,7 @@ app.get("*", (req, res, next) => {
   app.get("*", (request, respond, next) => {
     respond.render("ErrorPage", {
       title: " - Az oldal nem található",
-      errorMessage: "Az oldal nem találhatő :(",
+      errorMessage: "Az oldal nem található :(",
       errorCode: "404"
     });
   });
