@@ -45,7 +45,24 @@
 
       let algoritmhvideo = document.getElementById("algorithmvideo");
 
+      let videocontrol = document.getElementById("videocontrol");
+      videocontrol.style.backgroundImage = "url('/images/pausebutton.png')";
+      videocontrol.style.backgroundPosition = "center";
+      
+      console.log("asd");
 
+      let isPlaying = false;
+      videocontrol.addEventListener("click", () => {
+        if (!isPlaying) {
+          algoritmhvideo.play();
+          isPlaying = true;
+          videocontrol.style.backgroundImage = "url('/images/playbutton.png')";
+        } else {
+          algoritmhvideo.pause();
+          isPlaying = false;
+          videocontrol.style.backgroundImage = "url('/images/pausebutton.png')";
+        }
+      });
 
       let masolgomb = document.getElementById("masolasgomb");
       masolgomb.style.backgroundImage = "url('/images/copybutton.png')";
@@ -79,28 +96,6 @@
         algoritmhvideo.currentTime += 5;
 
       })
-
-      let videocontrol = document.getElementById("videocontrol");
-      videocontrol.style.backgroundImage = "url('/images/playbutton.png')";
-      videocontrol.style.backgroundPosition = "center";
-
-      let isPlaying = false;
-
-      videocontrol.addEventListener("click", () => {
-
-        if (!isPlaying) {
-          algoritmhvideo.play();
-          isPlaying = true;
-          videocontrol.style.backgroundImage = "url('/images/playbutton.png')";
-        } else {
-          algoritmhvideo.pause();
-          isPlaying = false;
-          videocontrol.style.backgroundImage = "url('/images/pausebutton.png')";
-        }
-      });
-
-
-
 
     </script>
 
