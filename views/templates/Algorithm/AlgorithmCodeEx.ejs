@@ -38,7 +38,7 @@
         list.innerHTML = '';
         let lines = content.replaceAll("%tab%","&nbsp;").split('\n');
         for (let i = 0; i < lines.length; i++) {
-            list.innerHTML += `<li class="relative px-5 py-2 text-sky-500"><span class="text-white">${lines[i].replaceAll(/\s/g,"&nbsp;")}</span></li>`;
+            list.innerHTML += `<li class="relative px-5 py-0 text-sky-500"><span class="text-white">${lines[i].replaceAll(/\s/g,"&nbsp;")}</span></li>`;
         }
     }
 
