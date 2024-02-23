@@ -1,5 +1,5 @@
 <code id="codelines" class="">
-    <ol start="0" class="p-5 break-words list-inside list-decimal text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px]" id="codelist">
+    <ol start="0" class="pl-14 py-5 pr-5 break-keep list-decimal text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px]" id="codelist">
         
     </ol>
 </code>
@@ -38,7 +38,7 @@
         list.innerHTML = '';
         let lines = content.replaceAll("%tab%","&nbsp;").split('\n');
         for (let i = 0; i < lines.length; i++) {
-            list.innerHTML += `<li class="relative px-5 py-0 text-sky-500"><span class="text-white">${lines[i].replaceAll(/\s/g,"&nbsp;")}</span></li>`;
+            list.innerHTML += `<li class="break-words relative px-5 py-0 text-sky-500"><span class="text-left text-white">${lines[i].replaceAll(/\s/g,"&nbsp;")}</span></li>`;
         }
     }
 
