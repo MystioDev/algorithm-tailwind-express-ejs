@@ -3,14 +3,15 @@
     <div
       class="flex xl:mt-0 justify-center text-center text-white items-center sm::w-full xl:w-[60%] h-full xl:mr-60 bg-neutral-900 bg-opacity-50 rounded-[10px] border border-neutral-700 backdrop-blur-sm">
       <video class="rounded-[10px] border border-neutral-700" loop id="algorithmvideo" width="100%">
-        <source class="rounded-[10px] border border-neutral-700" id="videosource" src="<%= locals.videoUrl %>" type="video/mp4">
+        <source class="rounded-[10px] border border-neutral-700" id="videosource" src="<%= locals.videoUrl %>"
+          type="video/mp4">
       </video>
     </div>
   </div>
 
   <div class="flex flex-row text-center xl:justify-start justify-center w-100 items-center flex-wrap">
     <button id="masolasgomb"
-      class="bg-no-repeat bg-contain bg-transparent w-[10%] h-[30px] p-5 m-5 scale-1 transition-all hover:scale-125 bg-slate-50"></button>
+      class="bg-no-repeat flex justify-center items-center text-center bg-contain bg-transparent w-[10%] h-[30px] p-5 m-5 scale-1 transition-all hover:scale-125 bg-slate-50"></button>
     <button id="visszaporget"
       class="bg-no-repeat bg-contain bg-transparent w-[10%] h-[30px] p-5 m-5 scale-1 transition-all hover:scale-125 bg-slate-50"></button>
     <button id="eloreporget"
@@ -48,8 +49,6 @@
       let videocontrol = document.getElementById("videocontrol");
       videocontrol.style.backgroundImage = "url('/images/pausebutton.png')";
       videocontrol.style.backgroundPosition = "center";
-      
-      console.log("asd");
 
       let isPlaying = false;
       videocontrol.addEventListener("click", () => {
@@ -68,13 +67,26 @@
       masolgomb.style.backgroundImage = "url('/images/copybutton.png')";
       masolgomb.style.backgroundPosition = "center";
 
+      async function copyPageUrl() {
+        try {
+          await navigator.clipboard.writeText(document.getElementById("videosource").src);
+        } catch (error) {
+          window.open(document.getElementById("videosource").src, '_blank');
+        }
+      }
 
       masolgomb.addEventListener("click", () => {
-
-        var url = document.getElementById("videosource").src;
-        navigator.clipboard.writeText(url);
-
-      })
+        copyPageUrl();
+        masolgomb.innerText = "Másolva!";
+        masolgomb.style.color = "white";
+        masolgomb.style.pointerEvents = "none";
+        masolgomb.style.backgroundImage = "none";
+        setTimeout(() => {
+          masolgomb.innerText = "";
+          masolgomb.style.backgroundImage = "url('/images/copybutton.png')";
+          masolgomb.style.pointerEvents = "auto";
+        }, 2000);
+      });
 
       let visszaporget = document.getElementById("visszaporget");
       visszaporget.style.backgroundImage = "url('/images/backbutton.png')";
