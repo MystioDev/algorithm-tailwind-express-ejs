@@ -36,15 +36,17 @@
 
         <% if (locals.data.length !== 0) { %>
           <% locals.data.forEach(element => { %>
-            <a href="/algoritmusok/<%= element.url %>" class="">
-              <%- include('../views/components/Card.ejs', {
-                LevelTitleBadge: true,
-                content: element.level,
-                title: element.name,
-                textColor: "text-neutral-900",
-                link: null
-              }) %>
-            </a>
+            <% if (element.level === "Ir.") { %>
+              <a href="/algoritmusok/<%= element.url %>" class="">
+                <%- include('../views/components/Card.ejs', {
+                  LevelTitleBadge: true,
+                  content: element.level,
+                  title: element.name,
+                  textColor: "text-neutral-900",
+                  link: null
+                }) %>
+              </a>
+            <% } %>
           <% }) %>
         <% } %>
       </div>
