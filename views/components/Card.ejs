@@ -1,25 +1,49 @@
 <% if ( locals.link === null ) { %>
-  <div class="relative w-48 lg:w-[396px] h-40 p-4 lg:h-[248px] flex justify-center items-center flex-col bg-neutral-900 bg-opacity-20 rounded-[10px] shadow-md border border-neutral-700 backdrop-blur-sm">
-    <span class="text-center text-white text-xl md:text-[32px] font-bold font-mono">
-      <%= locals.title %>
-    </span>
-  
-    <% if (locals.LevelTitleBadge === true) { %> <%-
-      include('./LevelTitleBadge.ejs', {
-        content: locals.content,
-        textColor: locals.textColor
-      }) %>
-    <% } %>
-  
-    <% if (locals.LevelIconBadge === true) { %> <%-
-      include('./LevelIconBadge.ejs') %>
-    <% } %>
-  </div>
+
+  <% if ( locals.active === false ) { %>
+    <div class="relative w-48 lg:w-[396px] h-40 p-4 lg:h-[248px] flex justify-center items-center flex-col bg-neutral-900 bg-opacity-20 rounded-[10px] shadow-md border border-neutral-700 backdrop-blur-sm">
+      <span class="text-center text-white text-xl md:text-[32px] font-bold font-mono">
+        <%= locals.title %>
+      </span>
+
+      <div class="text-2xl mt-8 text-white/85">🚧 Feltöltés alatt... 🚧</div>
+    
+      <% if (locals.LevelTitleBadge === true) { %> <%-
+        include('./LevelTitleBadge.ejs', {
+          content: locals.content,
+          textColor: locals.textColor
+        }) %>
+      <% } %>
+    
+      <% if (locals.LevelIconBadge === true) { %> <%-
+        include('./LevelIconBadge.ejs') %>
+      <% } %>
+    </div>
+  <% } %>
+
+  <% if ( locals.active === true ) { %>
+    <div class="relative w-48 lg:w-[396px] h-40 p-4 lg:h-[248px] flex justify-center items-center flex-col bg-sky-400 bg-opacity-20 rounded-[10px] shadow-md border border-neutral-700 backdrop-blur-sm">
+      <span class="text-center text-white text-xl md:text-[32px] font-bold font-mono">
+        <%= locals.title %>
+      </span>
+    
+      <% if (locals.LevelTitleBadge === true) { %> <%-
+        include('./LevelTitleBadge.ejs', {
+          content: locals.content,
+          textColor: locals.textColor
+        }) %>
+      <% } %>
+    
+      <% if (locals.LevelIconBadge === true) { %> <%-
+        include('./LevelIconBadge.ejs') %>
+      <% } %>
+    </div>
+  <% } %>
 <% } %>
 
 <% if ( locals.link !== null ) { %>
   <a href="<%= locals.link || '#' %>" class="">
-    <div class="relative w-48 lg:w-[396px] h-40 p-4 lg:h-[248px] flex justify-center items-center flex-col bg-neutral-900 bg-opacity-20 rounded-[10px] shadow-md border border-neutral-700 backdrop-blur-sm">
+    <div class="relative w-48 lg:w-[396px] h-40 p-4 lg:h-[248px] flex justify-center items-center flex-colbg-neutral-900 bg-opacity-20 rounded-[10px] shadow-md border border-neutral-700 backdrop-blur-sm">
       <span class="text-center text-white text-xl md:text-[32px] font-bold font-mono">
         <%= locals.title %>
       </span>

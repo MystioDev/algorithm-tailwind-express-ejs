@@ -19,7 +19,7 @@ const con = mysql.createConnection({
 
 
 exports.searchResult = (req, res, defaultSearch, urlSetSearchData) => {
-    let preSql = "SELECT `name`, `description`, `level`, `url` FROM `algorithms` HAVING LOWER(url) LIKE ? OR LOWER(name) LIKE ?;";
+    let preSql = "SELECT `name`, `description`, `level`, `url`, `active` FROM `algorithms` HAVING LOWER(url) LIKE ? OR LOWER(name) LIKE ?;";
 
     con.query(preSql, [`%${urlSetSearchData.toLowerCase()}%`, `%${defaultSearch.toLowerCase()}%`], (error, respond) => {
             if (error) {

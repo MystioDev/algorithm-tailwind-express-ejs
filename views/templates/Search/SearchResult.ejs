@@ -1,20 +1,45 @@
-<div class="relative w-[80vw] h-auto p-8 lg:p-24 lg:h-[128px] flex justify-center flex-col items-start bg-neutral-900 bg-opacity-20 rounded-[10px] shadow border border-neutral-700 backdrop-blur-sm">
-  <span
-    class="text-white text-xl text-left md:text-[38px] font-bold font-mono">
-    <%= locals.title %>
-  </span>
-
-  <div class="text-white text-lg text-left">
-    <%= locals.desc %>
+<% if ( locals.active === false ) { %>
+  <div class="relative w-[80vw] h-auto p-8 lg:p-24 lg:h-[128px] flex justify-center flex-col items-start bg-neutral-900 bg-opacity-20 rounded-[10px] shadow border border-neutral-700 backdrop-blur-sm">
+    <span
+      class="text-white text-xl text-left md:text-[38px] font-bold font-mono">
+      <%= locals.title %>
+    </span>
+  
+    <div class="text-white text-lg text-left">
+      🚧 Feltöltés alatt... 🚧
+    </div>
+  
+    <% if (locals.LevelTitleBadge === true) { %> 
+      <%- include('../../components/LevelTitleBadge.ejs', { 
+        content: locals.content || "Sikertelen keresés, kérlek próbáld újra", 
+        textColor: locals.textColor 
+      }) %> <% } %> 
+      
+      <% if (locals.LevelIconBadge === true) { %> 
+        <%- include('../../components/LevelIconBadge.ejs') %>
+      <% } %>
   </div>
+<% } %>
 
-  <% if (locals.LevelTitleBadge === true) { %> 
-    <%- include('../../components/LevelTitleBadge.ejs', { 
-      content: locals.content || "Sikertelen keresés, kérlek próbáld újra", 
-      textColor: locals.textColor 
-    }) %> <% } %> 
-    
-    <% if (locals.LevelIconBadge === true) { %> 
-      <%- include('../../components/LevelIconBadge.ejs') %>
-    <% } %>
-</div>
+<% if ( locals.active === true ) { %>
+  <div class="relative w-[80vw] h-auto p-8 lg:p-24 lg:h-[128px] flex justify-center flex-col items-start bg-sky-500 bg-opacity-20 rounded-[10px] shadow border border-neutral-700 backdrop-blur-sm">
+    <span
+      class="text-white text-xl text-left md:text-[38px] font-bold font-mono">
+      <%= locals.title %>
+    </span>
+  
+    <div class="text-white text-lg text-left">
+      <%= locals.desc %>
+    </div>
+  
+    <% if (locals.LevelTitleBadge === true) { %> 
+      <%- include('../../components/LevelTitleBadge.ejs', { 
+        content: locals.content || "Sikertelen keresés, kérlek próbáld újra", 
+        textColor: locals.textColor 
+      }) %> <% } %> 
+      
+      <% if (locals.LevelIconBadge === true) { %> 
+        <%- include('../../components/LevelIconBadge.ejs') %>
+      <% } %>
+  </div>  
+<% } %>
