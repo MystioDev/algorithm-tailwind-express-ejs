@@ -19,7 +19,7 @@ const con = mysql.createConnection({
 
 exports.algorithms = (req, res) => {
   con.query(
-    "SELECT `name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `id` FROM `algorithms`;",
+    "SELECT `name`, `description`, `level`, `url`, `solution_id`, `python_id`, `java_id`, `c_sharp_id`, `active`, `id` FROM `algorithms` ORDER BY active DESC;",
     (error, respond) => {
       if (error) {
         console.log(error);

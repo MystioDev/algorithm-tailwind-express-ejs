@@ -39,15 +39,31 @@
     
             <% locals.resp.forEach(element => { %>
               <% if (element.level === "Jr.") { %>
-                <a href="/algoritmusok/<%= element.url %>" class="">
-                  <%- include('../views/templates/Search/SearchResult.ejs', {
-                    LevelTitleBadge: true,
-                    content: element.level,
-                    title: element.name,
-                    desc: element.description,
-                    textColor: "text-neutral-900"
-                  }) %>
-                </a>
+                <% if (element.active === 0) { %>
+                  <a href="/feltoltes-alatt" class="">
+                    <%- include('../views/templates/Search/SearchResult.ejs', {
+                      LevelTitleBadge: true,
+                      content: element.level,
+                      title: element.name,
+                      desc: element.description,
+                      active: false,
+                      textColor: "text-neutral-900"
+                    }) %>
+                  </a>
+                <% } %>
+
+                <% if (element.active === 1) { %>
+                  <a href="/algoritmusok/<%= element.url %>" class="">
+                    <%- include('../views/templates/Search/SearchResult.ejs', {
+                      LevelTitleBadge: true,
+                      content: element.level,
+                      title: element.name,
+                      desc: element.description,
+                      active: true,
+                      textColor: "text-neutral-900"
+                    }) %>
+                  </a>
+                <% } %>
               <% } %>
             <% }) %>
           </div>
@@ -56,15 +72,31 @@
     
             <% locals.resp.forEach(element => { %>
               <% if (element.level === "Ir.") { %>
-                <a href="/algoritmusok/<%= element.url %>" class="">
-                  <%- include('../views/templates/Search/SearchResult.ejs', {
-                    LevelTitleBadge: true,
-                    content: element.level,
-                    title: element.name,
-                    desc: element.description,
-                    textColor: "text-neutral-900"
-                  }) %>
-                </a>
+                <% if (element.active === 0) { %>
+                  <a href="/feltoltes-alatt" class="">
+                    <%- include('../views/templates/Search/SearchResult.ejs', {
+                      LevelTitleBadge: true,
+                      content: element.level,
+                      title: element.name,
+                      desc: element.description,
+                      active: false,
+                      textColor: "text-neutral-900"
+                    }) %>
+                  </a>
+                <% } %>
+
+                <% if (element.active === 1) { %>
+                  <a href="/algoritmusok/<%= element.url %>" class="">
+                    <%- include('../views/templates/Search/SearchResult.ejs', {
+                      LevelTitleBadge: true,
+                      content: element.level,
+                      title: element.name,
+                      desc: element.description,
+                      active: true,
+                      textColor: "text-neutral-900"
+                    }) %>
+                  </a>
+                <% } %>
               <% } %>
             <% }) %>
           </div>
@@ -72,15 +104,31 @@
           <div class="flex justify-start items-center flex-wrap p-4 md:p-12 gap-16 w-[80%]">
             <% locals.resp.forEach(element => { %>
               <% if (element.level === "Sr.") { %>
-                <a href="/algoritmusok/<%= element.url %>" class="">
-                  <%- include('../views/templates/Search/SearchResult.ejs', {
-                    LevelTitleBadge: true,
-                    content: element.level,
-                    title: element.name,
-                    desc: element.description,
-                    textColor: "text-neutral-900"
-                  }) %>
-                </a>
+                <% if (element.active === 0) { %>
+                  <a href="/feltoltes-alatt" class="">
+                    <%- include('../views/templates/Search/SearchResult.ejs', {
+                      LevelTitleBadge: true,
+                      content: element.level,
+                      title: element.name,
+                      desc: element.description,
+                      active: false,
+                      textColor: "text-neutral-900"
+                    }) %>
+                  </a>
+                <% } %>
+
+                <% if (element.active === 1) { %>
+                  <a href="/algoritmusok/<%= element.url %>" class="">
+                    <%- include('../views/templates/Search/SearchResult.ejs', {
+                      LevelTitleBadge: true,
+                      content: element.level,
+                      title: element.name,
+                      desc: element.description,
+                      active: true,
+                      textColor: "text-neutral-900"
+                    }) %>
+                  </a>
+                <% } %>
               <% } %>
             <% }) %>
           </div>

@@ -37,15 +37,31 @@
         <% if (locals.data.length !== 0) { %>
           <% locals.data.forEach(element => { %>
             <% if (element.level === "Jr.") { %>
-              <a href="/algoritmusok/<%= element.url %>" class="">
-                <%- include('../views/components/Card.ejs', {
-                  LevelTitleBadge: true,
-                  content: element.level,
-                  title: element.name,
-                  textColor: "text-neutral-900",
-                  link: null
-                }) %>
-              </a>
+              <% if (element.active === 0) { %>
+                <a href="/feltoltes-alatt" class="">
+                  <%- include('../views/components/Card.ejs', {
+                    LevelTitleBadge: true,
+                    content: element.level,
+                    title: element.name,
+                    textColor: "text-neutral-900",
+                    link: null,
+                    active: false
+                  }) %>
+                </a>
+              <% } %>
+
+              <% if (element.active !== 0) { %>
+                <a href="/algoritmusok/<%= element.url %>" class="">
+                  <%- include('../views/components/Card.ejs', {
+                    LevelTitleBadge: true,
+                    content: element.level,
+                    title: element.name,
+                    textColor: "text-neutral-900",
+                    link: null,
+                    active: true
+                  }) %>
+                </a>
+              <% } %>
             <% } %>
           <% }) %>
         <% } %>
@@ -68,15 +84,31 @@
         <% if (locals.data.length !== 0) { %>
           <% locals.data.forEach(element => { %>
             <% if (element.level === "Ir.") { %>
-              <a href="/algoritmusok/<%= element.url %>" class="">
-                <%- include('../views/components/Card.ejs', {
-                  LevelTitleBadge: true,
-                  content: element.level,
-                  title: element.name,
-                  textColor: "text-neutral-900",
-                  link: null
-                }) %>
-              </a>
+              <% if (element.active === 0) { %>
+                <a href="/feltoltes-alatt" class="">
+                  <%- include('../views/components/Card.ejs', {
+                    LevelTitleBadge: true,
+                    content: element.level,
+                    title: element.name,
+                    textColor: "text-neutral-900",
+                    link: null,
+                    active: false
+                  }) %>
+                </a>
+              <% } %>
+
+              <% if (element.active !== 0) { %>
+                <a href="/algoritmusok/<%= element.url %>" class="">
+                  <%- include('../views/components/Card.ejs', {
+                    LevelTitleBadge: true,
+                    content: element.level,
+                    title: element.name,
+                    textColor: "text-neutral-900",
+                    link: null,
+                    active: true
+                  }) %>
+                </a>
+              <% } %>
             <% } %>
           <% }) %>
         <% } %>
@@ -99,15 +131,31 @@
         <% if (locals.data.length !== 0) { %>
           <% locals.data.forEach(element => { %>
             <% if (element.level === "Sr.") { %>
-              <a href="/algoritmusok/<%= element.url %>" class="">
-                <%- include('../views/components/Card.ejs', {
-                  LevelTitleBadge: true,
-                  content: element.level,
-                  title: element.name,
-                  textColor: "text-neutral-900",
-                  link: null
-                }) %>
-              </a>
+              <% if (element.active === 0) { %>
+                <a href="/feltoltes-alatt" class="">
+                  <%- include('../views/components/Card.ejs', {
+                    LevelTitleBadge: true,
+                    content: element.level,
+                    title: element.name,
+                    textColor: "text-neutral-900",
+                    link: null,
+                    active: false
+                  }) %>
+                </a>
+              <% } %>
+
+              <% if (element.active !== 0) { %>
+                <a href="/algoritmusok/<%= element.url %>" class="">
+                  <%- include('../views/components/Card.ejs', {
+                    LevelTitleBadge: true,
+                    content: element.level,
+                    title: element.name,
+                    textColor: "text-neutral-900",
+                    link: null,
+                    active: true
+                  }) %>
+                </a>
+              <% } %>
             <% } %>
           <% }) %>
         <% } %>
