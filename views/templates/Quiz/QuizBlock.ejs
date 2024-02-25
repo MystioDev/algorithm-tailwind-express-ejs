@@ -56,7 +56,20 @@
     </div>
 
       <div class="w-full flex justify-center mt-20">
-        <button type="submit" class="flex justify-center items-center w-full md:w-48 h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono mt-5 md:mt-0">
+        <button type="submit" id="checkButton" class="flex justify-center items-center w-full md:w-48 h-[60px] outline-0 border-0 bg-sky-500 rounded-[10px] text-white text-2xl font-bold font-mono mt-5 md:mt-0">
 				Ellenőrzés</button>
     </div>
 </article>
+
+<script>
+  checkButton.addEventListener("click", check);
+
+  function check() {
+    if (document.getElementById("option-c").checked == true) {
+      alert("YAAY")
+    }
+    else {
+      alert("OHH")
+    }
+  }
+</script>
