@@ -36,17 +36,15 @@
 
         <% if (locals.data.length !== 0) { %>
           <% locals.data.forEach(element => { %>
-            <% if (element.level === "Jr." && element.name === "Maximum Kiválasztás") { %>
-              <a href="/algoritmusok/<%= element.url %>" class="">
-                <%- include('../views/components/Card.ejs', {
-                  LevelTitleBadge: true,
-                  content: element.level,
-                  title: element.name,
-                  textColor: "text-neutral-900",
-                  link: null
-                }) %>
-              </a>
-            <% } %>
+            <a href="/algoritmusok/<%= element.url %>" class="">
+              <%- include('../views/components/Card.ejs', {
+                LevelTitleBadge: true,
+                content: element.level,
+                title: element.name,
+                textColor: "text-neutral-900",
+                link: null
+              }) %>
+            </a>
           <% }) %>
         <% } %>
       </div>
@@ -55,7 +53,6 @@
         <h1 class="text-white text-[50px] font-bold text-left">Közép Szint</h1>
       </div>
       <div id="section--kozep" class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
-        <!--
         <% if (locals.data.length === 0) { %>
           <%- include('../views/components/Card.ejs', {
             LevelTitleBadge: true,
@@ -81,14 +78,12 @@
             <% } %>
           <% }) %>
         <% } %>
-        -->
       </div>
 
       <div id="section--halado-cim" class="flex justify-start w-[90%]">
         <h1 class="text-white text-[50px] font-bold text-left">Haladó Szint</h1>
       </div>
       <div id="section--halado" class="flex justify-start items-center flex-wrap p-12 gap-16 w-[80%]">
-        <!--
         <% if (locals.data.length === 0) { %>
           <%- include('../views/components/Card.ejs', {
             LevelTitleBadge: true,
@@ -114,11 +109,8 @@
             <% } %>
           <% }) %>
         <% } %>
-        -->
       </div>
     </article>
-
-  
 
     <script>
       const animationElement = (element, trigger) => {
