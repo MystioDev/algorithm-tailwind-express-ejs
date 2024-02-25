@@ -5,7 +5,7 @@
       </div>
 
     <div class="flex gap-4 justify-between flex-col sm:flex-row">
-      <div class="lg:w-[750px] ml-10 bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm p-10">
+      <div class="lg:w-[750px] lg:ml-10 bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm p-10">
             <ol class="text-white md:text-[32px] font-bold font-mono flex flex-col gap-2">
               <li>max = t[0]</li>
               <li>ciklus i = 1 .. n - 1</li>
@@ -66,10 +66,30 @@
 
   function check() {
     if (document.getElementById("option-c").checked == true) {
-      alert("YAAY")
+      document.getElementById("")
     }
     else {
       alert("OHH")
     }
   }
 </script>
+
+<div class="hidden fixed z-10 left-5 top-5 items-center p-4 mb-4 text-sm border rounded-lg bg-neutral-900 bg-opacity-20 backdrop-blur-sm text-green-400 border-green-800" role="alert">
+  <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+  </svg>
+  <span class="sr-only">Info</span>
+  <div>
+    <span class="font-medium">A Válasz Helyes!</span>
+  </div>
+</div>
+
+<div class="hidden fixed z-10 left-5 top-5 items-center p-4 mb-4 text-sm border  rounded-lg bg-neutral-900 bg-opacity-20 backdrop-blur-sm text-red-400 border-red-800" role="alert">
+  <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+  </svg>
+  <span class="sr-only">Info</span>
+  <div>
+    <span class="font-medium">A Válasz Helytelen!</span>
+  </div>
+</div>
