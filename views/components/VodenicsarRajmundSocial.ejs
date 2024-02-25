@@ -1,0 +1,51 @@
+<div class="relative shadow-md w-[300px] sm:w-[396px] p-4 h-[248px] flex justify-center items-center flex-col bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm <%= locals.style || '' %>">
+    <span class="text-center text-white text-[32px] font-bold font-mono">
+      <%= locals.title %>
+    </span>
+  
+    <% if (locals.LevelTitleBadge === true) { %> 
+      <%- include('./LevelTitleBadge.ejs', { 
+        content: locals.content, 
+        textColor: locals.textColor 
+      }) %>
+    <% } %>
+  
+    <% if (locals.LevelIconBadge === true) { %> 
+      <%- include('./LevelIconBadge.ejs') %>
+    <% } %>
+  
+    <% if (locals.IconImgBadge === true) { %> 
+      <%- include('./IconImgBadge.ejs') %>
+    <% } %>
+  
+    <% if (locals.SocialBadge === true) { %>
+      <div class="flex justify-center items-center flex-col flex-wrap w-auto h-auto">
+        <div class="flex gap-4">
+          <%- include('./SocialBadge.ejs', {
+            Link: "https://www.facebook.com/mark.kiraly.315?locale=hu_HU",
+            SocialImgName:"f_icon.png"
+          } )%>
+  
+          <%- include('./SocialBadge.ejs', {
+            Link: "https://www.facebook.com/mark.kiraly.315?locale=hu_HU",
+            SocialImgName:"t_icon.png"
+          } ) %>
+  
+          <%- include('./SocialBadge.ejs', {
+            Link: "mailto:kiraly.mark@liveedu.mathiasz.hu",
+            SocialImgName:"e_icon.png"
+          } ) %>
+  
+          <%- include('./SocialBadge.ejs', {
+            Link: "https://www.facebook.com/mark.kiraly.315?locale=hu_HU",
+            SocialImgName:"d_icon.png"
+          } ) %>
+  
+          <%- include('./SocialBadge.ejs', {
+            Link: "discordapp.com/users/6944968841510912",
+            SocialImgName:"i_icon.png"
+          } ) %>
+        </div>
+      </div>
+      <% } %>
+  </div>
