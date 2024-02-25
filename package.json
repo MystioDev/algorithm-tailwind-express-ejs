@@ -4,6 +4,7 @@
   "description": "```\r npm init -y\r npm i express\r npm i ejs\r npm i nodemon --save-dev\r npx tailwindcss init\r npm i -D tailwindcss@latest postcss@latest autoprefixer@latest\r ```",
   "main": "index.js",
   "scripts": {
+    "systemd": "/root/.nvm/versions/node/v18.17.0/bin/node index.js --watch views -e ejs algorithm-tailwind-express-ejs/index.js --exec \"/root/.nvm/versions/node/v18.17.0/bin/npm run build\"",
     "dev": "nodemon index.js --watch views -e ejs algorithm-tailwind-express-ejs/index.js --exec \"npm run build\"",
     "initCss": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/styles.css --watch",
     "build": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/styles.css && nodemon index.js"
