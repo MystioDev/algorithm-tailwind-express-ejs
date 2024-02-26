@@ -887,6 +887,10 @@ video {
   margin-bottom: 5rem;
 }
 
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
 .mb-32 {
   margin-bottom: 8rem;
 }
@@ -2070,10 +2074,6 @@ video {
   animation-delay: 2200ms;
 }
 
-.animate-delay-\[300ms\] {
-  animation-delay: 300ms;
-}
-
 .animate-reverse {
   animation-direction: reverse;
 }
@@ -2234,10 +2234,6 @@ video {
     height: 70px;
   }
 
-  .md\:h-full {
-    height: 100%;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2270,10 +2266,6 @@ video {
     width: 70px;
   }
 
-  .md\:w-full {
-    width: 100%;
-  }
-
   .md\:-translate-y-8 {
     --tw-translate-y: -2rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2299,8 +2291,8 @@ video {
     padding: 3rem;
   }
 
-  .md\:pt-48 {
-    padding-top: 12rem;
+  .md\:pt-12 {
+    padding-top: 3rem;
   }
 
   .md\:text-2xl {
