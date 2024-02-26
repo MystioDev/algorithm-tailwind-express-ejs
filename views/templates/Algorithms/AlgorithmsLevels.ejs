@@ -1,25 +1,55 @@
 <article class="flex justify-center items-center mt-0 md:mt-12 2xl:mt-0 flex-wrap gap-12 mx-12">
-    <%- include('../../components/Card.ejs', { 
-        LevelTitleBadge: true, 
-        content: "Jr.", 
-        title: "Kezdő szint", 
-        color: "bg-cyan-900/50",
-        link: "/algoritmusok#section--kezdo"
-    }) %>
+    <div class="card animate-delay-300">
+        <%- include('../../components/Card.ejs', {
+            LevelTitleBadge: true,
+            content: "Jr.",
+            title: "Kezdő szint",
+            color: "bg-cyan-900/50",
+            link: "/algoritmusok#section--kezdo"
+        }) %>
+    </div>
 
-    <%- include('../../components/Card.ejs', { 
-        LevelTitleBadge: true, 
-        content: "Ir.", 
-        title: "Közép szint", 
-        color: "bg-red-900/50",
-        link: "/algoritmusok#section--kozep"
-    }) %>
+    <div class="card animate-delay-400">
+        <%- include('../../components/Card.ejs', {
+            LevelTitleBadge: true,
+            content: "Ir.",
+            title: "Közép szint",
+            color: "bg-red-900/50",
+            link: "/algoritmusok#section--kozep"
+        }) %>
+    </div>
 
-    <%- include('../../components/Card.ejs', { 
-        LevelTitleBadge: true, 
-        content: "Sr.", 
-        title: "Haladó szint", 
-        color: "bg-purple-900/50",
-        link: "/algoritmusok#section--halado"
-    }) %>
+    <div class="card animate-delay-500">
+        <%- include('../../components/Card.ejs', {
+            LevelTitleBadge: true,
+            content: "Sr.",
+            title: "Haladó szint",
+            color: "bg-purple-900/50",
+            link: "/algoritmusok#section--halado"
+        }) %>
+    </div>
 </article>
+
+<script>
+    const animationElementLevels = (element) => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                element.classList.add("animate-once") 
+                element.classList.add("animate-fade-down") 
+            }
+            })
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5,
+            
+        })
+
+        observer.observe(element)
+    }
+
+    document.querySelectorAll(".card").forEach(item => {
+        animationElementLevels(item)
+    })
+</script>
