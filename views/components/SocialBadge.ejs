@@ -1,9 +1,24 @@
 <div class="flex justify-center items-center translate-y-8 bg-white rounded-full <%= locals.social_style %> h-10 sm:h-14 w-10 sm:w-14 drop-shadow-lg">
   <div class="drop-shadow-xl">
-    <a href="<%= locals.Link %> flex justify-center items-center p-2">
+    <a id="icon--url" href="<%= locals.Link || '#' %>">
       <div class="flex justify-center items-center p-2">
         <img src="/images/<%= locals.SocialImgName %>" alt="Oldal szinbólum" class="w-[80%] h-[80%]"/>
       </div>
     </a>
   </div>
 </div>
+
+<script>
+
+  document.querySelector("#icon--url").addEventListener("click", () => {
+    try {
+          navigator.clipboard.writeText("<%= locals.DcName %>");
+        } catch (error) {
+         console.log("asd");
+        }
+   
+    console.log("asd");
+  
+  })
+
+</script>
