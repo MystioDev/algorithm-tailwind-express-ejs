@@ -2050,6 +2050,14 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
 .animate-delay-\[1000ms\] {
   animation-delay: 1000ms;
 }
