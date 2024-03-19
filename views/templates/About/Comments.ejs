@@ -4,25 +4,25 @@
     </div>
 
     <div class="w-full xl:w-[90%]">
-        <% for( let index = 0; index < 6; index++ ) { %>
+        <% locals.data.forEach(element => { %>
             <% if (index % 2 === 0) { %>
                 <%- include('./CommentCard.ejs', {
-                    authorName: "Someone",
-                    authorJob: "haha",
-                    authorProfileImage: "md_logo-black.png",
-                    comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quibusdam sint cumque, quas vitae assumenda molestias eveniet natus minus recusandae quis pariatur voluptatibus quo, aperiam excepturi delectus voluptatum laboriosam atque.",
+                    authorName: element.authorName,
+                    authorJob: element.authorJob,
+                    authorProfileImage: element.authorProfileImage,
+                    comment: element.authorComment,
                     justify: "justify-end"
                 }) %>
             <% } %>
             <% if (index % 2 !== 0) { %>
                 <%- include('./CommentCard.ejs', {
-                    authorName: "Someone",
-                    authorJob: "haha",
-                    authorProfileImage: "md_logo-black.png",
-                    comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quibusdam sint cumque, quas vitae assumenda molestias eveniet natus minus recusandae quis pariatur voluptatibus quo, aperiam excepturi delectus voluptatum laboriosam atque.",
+                    authorName: element.authorName,
+                    authorJob: element.authorJob,
+                    authorProfileImage: element.authorProfileImage,
+                    comment: element.authorComment,
                     justify: "justify-normal"
                 }) %>
             <% } %>
-        <% } %>
+        <% }) %>
     </div>
 </article>

@@ -47,8 +47,11 @@
 
     <%- include('../views/templates/About/Feedback.ejs') %>
 
-    <%- include('../views/templates/About/Comments.ejs') %>
-
+    <% if ( locals.data.length !== 0 ) { %>
+      <%- include('../views/templates/About/Comments.ejs', {
+        data: locals.data
+      }) %>
+    <% } %>
     <%- include('../views/components/Footer.ejs') %>
   </body>
 

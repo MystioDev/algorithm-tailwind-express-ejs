@@ -39,6 +39,23 @@ CREATE TABLE `algorithms` (
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
+CREATE TABLE `comments` (
+  `authorName` varchar(100) NOT NULL,
+  `authorComment` varchar(250) NOT NULL,
+  `authorJob` varchar(250) NOT NULL,
+  `authorProfileImage` varchar(250) NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+ALTER TABLE `comments`
+  ADD UNIQUE KEY `id` (`id`);
+
+ALTER TABLE `comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+INSERT INTO `comments` (`authorName`, `authorComment`, `authorJob`, `authorProfileImage`) VALUES ('Teszt Béla', 'Tesztelés szempontjából kifejezetten működnie kell, ennek a mondatnak nem lesz értelme, de tesztelésnek jó lesz V2', 'tesztelő lol V2', 'md_logo-black.png');
+
+INSERT INTO `comments` (`authorName`, `authorComment`, `authorJob`, `authorProfileImage`) VALUES ('Teszt Aladár', 'Tesztelés szempontjából kifejezetten működnie kell, ennek a mondatnak nem lesz értelme, de tesztelésnek jó lesz', 'tesztelő lol', 'md_logo-black.png');
 --
 -- A tábla adatainak kiíratása `algorithms`
 --

@@ -7,6 +7,7 @@ const host = process.env.HOST_URL || "localhost";
 const path = require("path");
 
 const algorithms = require("./src/algorithms");
+const comments = require("./src/comments");
 const algorithm = require("./src/algorithm");
 const searchResult = require("./src/searchResult");
 const sendContact = require("./src/sendContact");
@@ -50,9 +51,7 @@ app.get("/algoritmusok/*", (req, res) => {
 /* Rólunk oldal beöltése */
 
 app.get("/rolunk", (req, res) => {
-  res.render("AboutPage", {
-    title: " - Rólunk",
-  });
+  comments.comments(req, res);
 });
 
 /* Szintfelmérő oldal betöltése */
