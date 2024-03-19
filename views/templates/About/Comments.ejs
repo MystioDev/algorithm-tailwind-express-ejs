@@ -4,7 +4,7 @@
     </div>
 
     <div class="w-full xl:w-[90%]">
-        <% locals.data.forEach(element => { %>
+        <% locals.data.forEach((element, index) => { %>
             <% if (index % 2 === 0) { %>
                 <%- include('./CommentCard.ejs', {
                     authorName: element.authorName,
