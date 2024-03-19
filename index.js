@@ -67,6 +67,11 @@ app.get("/teszt", (req, res) => {
 
 app.get("/search", (req, res) => {
   let rawSearchData = req.query.searchBar;
+
+  if (rawSearchData === undefined) {
+    res.redirect("/")
+    return;
+  }
   let searchData = rawSearchData.toLowerCase().replace(/\s/g, "-")
 
   searchResult.searchResult(
