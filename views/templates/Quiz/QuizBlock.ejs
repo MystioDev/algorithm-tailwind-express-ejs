@@ -1,57 +1,32 @@
 <article class="flex flex-col justify-center items-center h-auto mt-32 md:mt-0 relative">
   <div class="relative w-full lg:w-[80%] lg:h-[800px] gap-4 m-8 p-8 mb-20 flex-col bg-neutral-900 bg-opacity-20 rounded-[10px] shadow border border-neutral-700 backdrop-blur-sm">
       <div class="mt-2 mb-12 text-center text-white md:text-[32px] font-bold font-mono">
-        Válassza ki a helyes algoritmust
+        Egészítsd ki a hiányzó algoritmust
       </div>
 
-    <div class="flex gap-4 justify-between flex-col sm:flex-row">
+    <div class="flex gap-4 justify-center flex-col sm:flex-row">
       <div class="lg:w-[750px] lg:ml-10 bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm p-10">
             <ol class="text-white md:text-[32px] font-bold font-mono flex flex-col gap-2">
               <li>max = t[0]</li>
               <li>ciklus i = 1 .. n - 1</li>
-              <li>ha t[i] > max akkor</li>
-              <li>max = t[i]</li>
-              <li>ha vége</li>
+              <li class="ml-20">ha t[i] <select class="bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm" name="" id="">
+                <option value=">">></option>
+                <option value="<"><</option>
+                <option value="=">=</option>
+                <option value="max">max</option>
+                <option value="min">min</option>
+              </select> max akkor</li>
+              <li class="ml-32"><select class="bg-neutral-900 bg-opacity-20 rounded-[10px] border border-neutral-700 backdrop-blur-sm" name="" id="">
+                <option value=">">></option>
+                <option value="<"><</option>
+                <option value="=">=</option>
+                <option value="max">max</option>
+                <option value="min">min</option>
+              </select> = t[i]</li>
+              <li class="ml-20">ha vége</li>
               <li>ciklus vége</li>
               <li>ki max</li>
             </ol>
-      </div>
-
-      <div class="w-64 mr-52">
-        <ul class="grid w-full gap-6 md:grid-cols-1">
-            <li>
-                <input type="radio" id="option-a" name="option" value="option-a" class="hidden peer" />
-                <label for="option-a" class="inline-flex items-center justify-between w-full p-5 border rounded-lg backdrop-blur-sm cursor-pointer hover:text-gray-300 border-neutral-700 peer-checked:border-blue-600 text-gray-400 bg-neutral-900 bg-opacity-20 hover:bg-gray-700">
-                    <div class="block">
-                        <div class="w-full text-lg font-semibold">A: Buborékrendezés</div>
-                    </div>
-                </label>
-            </li>
-            <li>
-                <input type="radio" id="option-b" name="option" value="option-b" class="hidden peer">
-                <label for="option-b" class="inline-flex items-center justify-between w-full p-5 border rounded-lg backdrop-blur-sm cursor-pointer hover:text-gray-300 border-neutral-700 peer-checked:border-blue-600 text-gray-400 bg-neutral-900 bg-opacity-20 hover:bg-gray-700">
-                    <div class="block">
-                        <div class="w-full text-lg font-semibold">B: Egyszerű cserés rendezés</div>
-                    </div>
-                </label>
-            </li>
-            <li>
-              <input type="radio" id="option-c" name="option" value="option-c" class="hidden peer">
-              <label for="option-c" class="inline-flex items-center justify-between w-full p-5 border rounded-lg backdrop-blur-sm cursor-pointer hover:text-gray-300 border-neutral-700 peer-checked:border-blue-600 text-gray-400 bg-neutral-900 bg-opacity-20 hover:bg-gray-700">
-                  <div class="block">
-                      <div class="w-full text-lg font-semibold">C: Maximum kiválasztás</div>
-                  </div>
-              </label>
-          </li>
-          <li>
-            <input type="radio" id="option-d" name="option" value="option-d" class="hidden peer">
-            <label for="option-d" class="inline-flex items-center justify-between w-full p-5 border rounded-lg backdrop-blur-sm cursor-pointer hover:text-gray-300 border-neutral-700 peer-checked:border-blue-600 text-gray-400 bg-neutral-900 bg-opacity-20 hover:bg-gray-700">
-                <div class="block">
-                    <div class="w-full text-lg font-semibold">D: Lineális keresés</div>
-                </div>
-            </label>
-        </li>
-        </ul>
       </div>
     </div>
 
