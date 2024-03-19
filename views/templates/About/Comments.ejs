@@ -26,3 +26,26 @@
         <% }) %>
     </div>
 </article>
+
+<script>
+    const animationElementCommentCards = (element) => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                element.classList.add("animate-once") 
+                element.classList.add("animate-fade-up") 
+            }
+        })
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1,
+        })
+
+        observer.observe(element)
+    }
+
+    document.querySelectorAll(".comment-card-for-animations").forEach(item => {
+        animationElementCommentCards(item)
+    })
+</script>
