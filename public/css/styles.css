@@ -2262,8 +2262,8 @@ video {
     width: 12rem;
   }
 
-  .md\:w-\[15vw\] {
-    width: 15vw;
+  .md\:w-\[20vw\] {
+    width: 20vw;
   }
 
   .md\:w-\[25px\] {
@@ -2301,10 +2301,6 @@ video {
 
   .md\:justify-center {
     justify-content: center;
-  }
-
-  .md\:justify-around {
-    justify-content: space-around;
   }
 
   .md\:gap-0 {
