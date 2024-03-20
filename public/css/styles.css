@@ -1775,8 +1775,8 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.pb-24 {
-  padding-bottom: 6rem;
+.pb-48 {
+  padding-bottom: 12rem;
 }
 
 .pb-52 {
@@ -2186,8 +2186,8 @@ video {
     flex-direction: row;
   }
 
-  .sm\:pt-48 {
-    padding-top: 12rem;
+  .sm\:pt-64 {
+    padding-top: 16rem;
   }
 
   .sm\:text-3xl {
