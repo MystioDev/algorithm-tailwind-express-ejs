@@ -1,5 +1,5 @@
 <article class="flex justify-center items-center mt-0 md:mt-12 2xl:mt-0 flex-wrap gap-12 mx-12">
-    <div class="card animate-delay-300">
+    <div class="card">
         <%- include('../../components/Card.ejs', {
             LevelTitleBadge: true,
             content: "Jr.",
@@ -9,7 +9,7 @@
         }) %>
     </div>
 
-    <div class="card animate-delay-400">
+    <div class="card animate-delay-200">
         <%- include('../../components/Card.ejs', {
             LevelTitleBadge: true,
             content: "Ir.",
@@ -19,7 +19,7 @@
         }) %>
     </div>
 
-    <div class="card animate-delay-500">
+    <div class="card animate-delay-400">
         <%- include('../../components/Card.ejs', {
             LevelTitleBadge: true,
             content: "Sr.",
@@ -41,9 +41,8 @@
             })
         }, {
             root: null,
-            rootMargin: '0px',
+            rootMargin: '200px',
             threshold: 0.1,
-            
         })
 
         observer.observe(element)
