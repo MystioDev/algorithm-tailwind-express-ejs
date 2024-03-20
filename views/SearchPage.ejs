@@ -136,6 +136,8 @@
     <% } %>
 
     <script>
+      let previousElement = document.querySelector("#searchSubmit")
+      
       const animationElementSearchedTags = (element) => {
           const observer = new IntersectionObserver((entries, observer) => {
               entries.forEach(entry => {
@@ -149,8 +151,10 @@
               rootMargin: '0px',
               threshold: 0.1,
           })
-  
-          observer.observe(element)
+
+          observer.observe(previousElement)
+
+          previousElement = element
       }
   
       document.querySelectorAll(".search-result-for-animation").forEach(item => {
