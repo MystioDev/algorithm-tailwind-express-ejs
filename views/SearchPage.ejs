@@ -135,6 +135,29 @@
         </article>
     <% } %>
 
+    <script>
+      const animationElementSearchedTags = (element) => {
+          const observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  element.classList.add("animate-once") 
+                  element.classList.add("animate-fade-up") 
+              }
+          })
+          }, {
+              root: null,
+              rootMargin: '0px',
+              threshold: 0.1,
+          })
+  
+          observer.observe(element)
+      }
+  
+      document.querySelectorAll(".search-result-for-animation").forEach(item => {
+          animationElementSearchedTags(item)
+      })
+  </script>
+
     <%- include('../views/components/Footer.ejs') %>
   </body>
 </html>
