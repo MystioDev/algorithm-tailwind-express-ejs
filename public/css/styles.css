@@ -812,6 +812,10 @@ video {
   top: 4rem;
 }
 
+.top-2 {
+  top: 0.5rem;
+}
+
 .top-5 {
   top: 1.25rem;
 }
@@ -1133,10 +1137,6 @@ video {
 
 .h-\[800px\] {
   height: 800px;
-}
-
-.h-\[80px\] {
-  height: 80px;
 }
 
 .h-\[80svh\] {
