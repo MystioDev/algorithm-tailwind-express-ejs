@@ -2117,8 +2117,8 @@ video {
   opacity: 0.75;
 }
 
-@media not all and (min-width: 768px) {
-  .max-md\:truncate {
+@media not all and (min-width: 1024px) {
+  .max-lg\:truncate {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
