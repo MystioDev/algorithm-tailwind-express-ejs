@@ -4,53 +4,31 @@
 
   <div class="mt-20 text-3xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
     Mi az
-    <span class="colored--span text-3xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl bg-gradient-to-b from-fuchsia-400 to-fuchsia-700 ... text-transparent bg-clip-text font-bold font-mono">
+    <span class="text-3xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl bg-gradient-to-b from-fuchsia-400 to-fuchsia-700 ... text-transparent bg-clip-text font-bold font-mono">
       algoritmizálás
     </span>
     ?
   </div>
 
-  <span class="mt-12 w-full md:w-[60%] text-center p-3 text-white text-opacity-50 text-xl md:text-[32px] font-bold font-mono">
+  <span class="mt-12 leading-8 w-full md:w-[60%] text-center p-3 text-white text-opacity-50 text-xl md:text-[32px] font-bold font-mono">
     Algoritmizálás azt jelenti, hogy egy adott problémát lépésekre bontunk, majd egy terv készítésével megpróbáljuk megoldani azokat. Ez olyan, mintha egy térképet készítenénk a probléma megoldásához. Először megértjük, hogy mi a probléma, majd kitaláljuk, hogyan tudnánk megoldani. Ezt a tervet hívjuk algoritmusnak.
   </span>
 
   <div class="w-[80%] flex flex-nowrap justify-center xl:justify-between flex-col xl:flex-row gap-4 xl:gap-20 mt-24 mb-12 text-2xl text-white/70 font-bold font-mono">
-    <span class="flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto xl:-translate-y-20">
+    <span class="algorithms-property flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto xl:-translate-y-20">
       Gondolkodás <span class="text-5xl">🧠</span>
     </span>
 
-    <span class="flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto">
+    <span class="algorithms-property flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto">
       Hibamegoldás <span class="text-5xl">💡</span>
     </span>
 
-    <span class="flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto">
+    <span class="algorithms-property flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto">
       Hatékonyság <span class="text-5xl">🏃</span>
     </span>
 
-    <span class="flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto xl:-translate-y-20">
+    <span class="algorithms-property flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto xl:-translate-y-20">
       Türelem <span class="text-5xl">⏱️</span>
     </span>
   </div>
-
-  <script>
-    const animationElementA = (element) => {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            element.classList.add("animate-once") 
-            element.classList.add("animate-fade-down") 
-          }
-        })
-      }, {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1,
-        
-      })
-
-      observer.observe(element)
-    }
-
-    animationElementA(document.querySelector(".colored--span"))
-  </script>
 </article>

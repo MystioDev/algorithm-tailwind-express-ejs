@@ -1901,6 +1901,10 @@ video {
   line-height: 1.75rem;
 }
 
+.leading-8 {
+  line-height: 2rem;
+}
+
 .tracking-\[14\.40px\] {
   letter-spacing: 14.40px;
 }

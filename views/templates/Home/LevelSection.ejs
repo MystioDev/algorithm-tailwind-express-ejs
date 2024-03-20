@@ -9,7 +9,7 @@
   <div class="mt-20 text-2xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold font-mono text-center">
     Nálunk a
     <span
-      class="colored--span-lvl text-2xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl bg-gradient-to-b from-yellow-50 via-yellow-500 to-yellow-800 ... text-transparent bg-clip-text font-bold font-mono">
+      class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl bg-gradient-to-b from-yellow-50 via-yellow-500 to-yellow-800 ... text-transparent bg-clip-text font-bold font-mono">
       szint
     </span>
     nem számít
@@ -19,28 +19,6 @@
     Legyél bármilyen szinten, mi mindenki számára biztosítunk tanulási
     lehetőséget
   </span>
-
-  <script>
-    const animationElementLevel = (element) => {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            element.classList.add("animate-once") 
-            element.classList.add("animate-fade-down") 
-          }
-        })
-      }, {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1,
-        
-      })
-
-      observer.observe(element)
-    }
-
-    animationElementLevel(document.querySelector(".colored--span-lvl"))
-  </script>
 
   <%- include('../Algorithms/AlgorithmsLevels.ejs') %>
 </article>
