@@ -1315,8 +1315,8 @@ video {
   width: 100vw;
 }
 
-.max-w-\[70vw\] {
-  max-width: 70vw;
+.max-w-\[60vw\] {
+  max-width: 60vw;
 }
 
 .flex-shrink-0 {
@@ -1524,12 +1524,6 @@ video {
 
 .scroll-smooth {
   scroll-behavior: smooth;
-}
-
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .break-words {
@@ -2123,6 +2117,14 @@ video {
   opacity: 0.75;
 }
 
+@media not all and (min-width: 768px) {
+  .max-md\:truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:-right-12 {
     right: -3rem;
@@ -2307,10 +2309,6 @@ video {
 
   .md\:gap-0 {
     gap: 0px;
-  }
-
-  .md\:whitespace-normal {
-    white-space: normal;
   }
 
   .md\:p-12 {
