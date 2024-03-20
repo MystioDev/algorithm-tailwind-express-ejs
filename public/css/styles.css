@@ -812,10 +812,6 @@ video {
   top: 4rem;
 }
 
-.top-2 {
-  top: 0.5rem;
-}
-
 .top-5 {
   top: 1.25rem;
 }
@@ -1797,6 +1793,10 @@ video {
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .text-left {
