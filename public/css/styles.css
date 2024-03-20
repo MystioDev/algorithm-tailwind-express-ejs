@@ -2182,8 +2182,8 @@ video {
     flex-direction: row;
   }
 
-  .sm\:pt-16 {
-    padding-top: 4rem;
+  .sm\:pt-20 {
+    padding-top: 5rem;
   }
 
   .sm\:text-3xl {
