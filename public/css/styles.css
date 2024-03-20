@@ -1315,8 +1315,8 @@ video {
   width: 100vw;
 }
 
-.max-w-\[80vw\] {
-  max-width: 80vw;
+.max-w-\[70vw\] {
+  max-width: 70vw;
 }
 
 .flex-shrink-0 {
@@ -2307,6 +2307,10 @@ video {
 
   .md\:gap-0 {
     gap: 0px;
+  }
+
+  .md\:whitespace-normal {
+    white-space: normal;
   }
 
   .md\:p-12 {
