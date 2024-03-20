@@ -1522,10 +1522,8 @@ video {
   scroll-behavior: smooth;
 }
 
-.truncate {
-  overflow: hidden;
+.text-ellipsis {
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .break-words {
