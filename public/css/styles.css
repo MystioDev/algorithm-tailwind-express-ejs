@@ -1135,6 +1135,10 @@ video {
   height: 800px;
 }
 
+.h-\[80px\] {
+  height: 80px;
+}
+
 .h-\[80svh\] {
   height: 80svh;
 }
