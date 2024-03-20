@@ -19,16 +19,39 @@
       Gondolkodás <span class="text-5xl">🧠</span>
     </span>
 
-    <span class="algorithms-property flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto">
+    <span class="algorithms-property animate-delay-200 flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto">
       Hibamegoldás <span class="text-5xl">💡</span>
     </span>
 
-    <span class="algorithms-property flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto">
+    <span class="algorithms-property animate-delay-400 flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto">
       Hatékonyság <span class="text-5xl">🏃</span>
     </span>
 
-    <span class="algorithms-property flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto xl:-translate-y-20">
+    <span class="algorithms-property animate-delay-600 flex items-center justify-between md:justify-center text-center flex-row w-full gap-3 lg:w-auto xl:-translate-y-20">
       Türelem <span class="text-5xl">⏱️</span>
     </span>
   </div>
 </article>
+
+<script>
+  const animationElementLevelsForProperties = (element) => {
+      const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                element.classList.add("animate-once") 
+                element.classList.add("animate-fade") 
+            }
+          })
+      }, {
+          root: null,
+          rootMargin: '100px',
+          threshold: 0.1,
+      })
+
+      observer.observe(element)
+  }
+
+  document.querySelectorAll(".algorithms-property").forEach(item => {
+      animationElementLevelsForProperties(item)
+  })
+</script>
