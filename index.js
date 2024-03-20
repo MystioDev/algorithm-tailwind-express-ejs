@@ -30,7 +30,7 @@ app.get("/feltoltes-alatt", (req, res) => {
   res.render("ErrorPage", {
     title: " - Hiányos tartalom",
     errorMessage: "Oldalunk jelenleg Demo fázisban van, így nem érhető el minden tartalom",
-    errorCode: ""
+    errorCode: " "
   });
 })
 
