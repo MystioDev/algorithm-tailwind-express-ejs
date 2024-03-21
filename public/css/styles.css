@@ -2262,6 +2262,10 @@ video {
     height: 70px;
   }
 
+  .md\:h-\[80svh\] {
+    height: 80svh;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
