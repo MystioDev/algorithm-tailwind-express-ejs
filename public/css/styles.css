@@ -1123,6 +1123,10 @@ video {
   height: 60px;
 }
 
+.h-\[60svh\] {
+  height: 60svh;
+}
+
 .h-\[76px\] {
   height: 76px;
 }
