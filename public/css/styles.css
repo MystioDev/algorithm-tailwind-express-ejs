@@ -1787,6 +1787,10 @@ video {
   padding-bottom: 15rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .pl-14 {
   padding-left: 3.5rem;
 }
@@ -2304,6 +2308,10 @@ video {
 
   .md\:w-\[70px\] {
     width: 70px;
+  }
+
+  .md\:w-\[80\%\] {
+    width: 80%;
   }
 
   .md\:-translate-y-8 {
